@@ -30,7 +30,7 @@ const Header = ({ open, setOpen }) => {
           </Link> */}
          
             <Link to="/authors-page" onClick={handleDropdown}>
-              The Authors33333333333333
+              The Authors
             </Link>
      
             <Link to="/books" onClick={handleDropdown}>

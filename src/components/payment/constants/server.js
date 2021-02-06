@@ -1,18 +1,6 @@
-import { Context } from "../../../context/Context";
-import { useContext } from "react";
-
-const PAYMENT_SERVER_URL = () => {
-  const context = useContext(Context);
-  context.state.productionOrDevelopment === "production"
-    ? `https://the-authors2.herokuapp.com/preorder`
-    : `http://localhost:8080/preorder`;
-};
+const PAYMENT_SERVER_URL =
+  process.env.NODE_ENV === "production"
+    ? "https://the-authors2.herokuapp.com"
+    : "https://localhost:8080";
 
 export default PAYMENT_SERVER_URL;
-
-// const PAYMENT_SERVER_URL =
-//   process.env.NODE_ENV === "production"
-//     ? "https://the-authors2.herokuapp.com"
-//     : "https://the-authors2.herokuapp.com";
-
-// export default PAYMENT_SERVER_URL;

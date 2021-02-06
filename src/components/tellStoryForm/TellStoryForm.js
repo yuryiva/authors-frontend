@@ -11,11 +11,11 @@ const TellStoryForm = () => {
   const [stateOfLoading, setStateOfLoading] = useState(0);
   const [uploadButton, setUploadButton] = useState("Upload");
 
-  const context = useContext(Context);
-  const localOrRemoteServer = "";
-  context.state.productionOrDevelopment === "production"
-    ? (localOrRemoteServer = `https://the-authors2.herokuapp.com`)
-    : (localOrRemoteServer = `http://localhost:8080`);
+  // const context = useContext(Context);
+  // const localOrRemoteServer = "";
+  // context.state.productionOrDevelopment === "production"
+  //   ? (localOrRemoteServer = `https://the-authors2.herokuapp.com`)
+  //   : (localOrRemoteServer = `http://localhost:8080`);
 
     console.log(context.state.productionOrDevelopment, 'production OR DEVELOPMENT IN TELLSTORYFORM')
   ///////////////// upload files

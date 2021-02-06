@@ -8,14 +8,8 @@ import PAYMENT_SERVER_URL from "./constants/server";
 
 const Checkout = ({ name, description, amount, label, type, email }) => {
   const context = useContext(Context);
-  const localOrRemoteServer = "";
-  context.state.productionOrDevelopment === "production"
-    ? (localOrRemoteServer = `https://the-authors2.herokuapp.com`)
-    : (localOrRemoteServer = "http://localhost:8080");
 
-  
-  
-    const CURRENCY = "EUR";
+  const CURRENCY = "EUR";
 
   const fromDollarToCent = (amount) => parseInt(amount * 100);
 
@@ -27,25 +21,31 @@ const Checkout = ({ name, description, amount, label, type, email }) => {
 
     alert("Payment Successful");
 
-    fetch(`https://the-authors2.herokuapp.com/preorder`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json;charset=utf-8",
-      },
-      body: JSON.stringify({
-        amount: context.state.amount,
-        name: context.state.name,
-        email: context.state.email,
-        phone: context.state.phone,
-        address: context.state.address,
-        city: context.state.city,
-        state: context.state.state,
-        country: context.state.country,
-        postcode: context.state.postcode,
-        message: context.state.message,
-        totalOrder: context.state.totalOrder,
-      }),
-    });
+    fetch(
+      context.state.productionOrDevelopment === "production"
+        ? `https://the-authors2.herokuapp.com/preorder`
+        : `http://localhost:8080/preorder`,
+
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json;charset=utf-8",
+        },
+        body: JSON.stringify({
+          amount: context.state.amount,
+          name: context.state.name,
+          email: context.state.email,
+          phone: context.state.phone,
+          address: context.state.address,
+          city: context.state.city,
+          state: context.state.state,
+          country: context.state.country,
+          postcode: context.state.postcode,
+          message: context.state.message,
+          totalOrder: context.state.totalOrder,
+        }),
+      }
+    );
   };
 
   const errorPayment = (data) => {

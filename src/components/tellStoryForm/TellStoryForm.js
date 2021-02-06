@@ -40,7 +40,7 @@ const TellStoryForm = () => {
 
 // .post("http://localhost:8080/upload", data, {
         .post("https://the-authors2.herokuapp.com/upload", data, {
-        // .post(`${localOrRemoteServer}/upload`, data, {
+        
           onUploadProgress: (ProgressEvent) => {
             setStateOfLoading(
               (ProgressEvent.loaded / ProgressEvent.total) * 100

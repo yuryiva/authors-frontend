@@ -27,7 +27,7 @@ const GetInTouchForm = () => {
       topicChosen,
     };
     // let response = await fetch("http://localhost:8080/get-in-touch", {
-    let response = await fetch("https://the-authors.herokuapp.com/get-in-touch", {
+    let response = await fetch("https://the-authors2.herokuapp.com/get-in-touch", {
       method: "POST",
       headers: {
         "Content-Type": "application/json;charset=utf-8",

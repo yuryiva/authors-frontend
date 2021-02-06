@@ -29,7 +29,7 @@ const TellStoryForm = () => {
       }
       axios
         // .post("http://localhost:8080/upload", data, {
-        .post("https://the-authors.herokuapp.com/upload", data, {
+        .post("https://the-authors2.herokuapp.com/upload", data, {
           ///////////////////////
           onUploadProgress: (ProgressEvent) => {
             setStateOfLoading(
@@ -71,7 +71,7 @@ const TellStoryForm = () => {
     };
     console.log(details);
     // let response = await fetch("http://localhost:8080/tell-story", {
-    let response = await fetch("https://the-authors.herokuapp.com/tell-story", {
+    let response = await fetch("https://the-authors2.herokuapp.com/tell-story", {
       method: "POST",
       headers: {
         "Content-Type": "application/json;charset=utf-8",

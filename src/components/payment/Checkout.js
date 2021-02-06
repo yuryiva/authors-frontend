@@ -15,7 +15,7 @@ const Checkout = ({ name, description, amount, label, type, email }) => {
   const successPayment = async (data) => {
     alert("Payment Successful");
     // fetch(`http://localhost:8080/preorder`, {
-    fetch(`https://the-authors.herokuapp.com/preorder`, {
+    fetch(`https://the-authors2.herokuapp.com/preorder`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json;charset=utf-8",

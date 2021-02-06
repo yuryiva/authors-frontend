@@ -19,7 +19,7 @@ const SubscribeForm = () => {
     };
 
     // let response = await fetch(`http://localhost:8080/subscribe`, {
-    let response = await fetch(`https://the-authors.herokuapp.com/subscribe`, {
+    let response = await fetch(`https://the-authors2.herokuapp.com/subscribe`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json;charset=utf-8",

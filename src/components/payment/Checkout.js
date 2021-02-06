@@ -13,7 +13,7 @@ const Checkout = ({ name, description, amount, label, type, email }) => {
     ? (localOrRemoteServer = `https://the-authors2.herokuapp.com`)
     : (localOrRemoteServer = "http://localhost:8080");
 
-  
+  console.log({localOrRemoteServer})
   
     const CURRENCY = "EUR";
 

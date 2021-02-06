@@ -9,6 +9,12 @@ const TellStoryForm = () => {
   const [sentMessage, setSentMessage] = useState(false);
   const [stateOfLoading, setStateOfLoading] = useState(0);
   const [uploadButton, setUploadButton] = useState("Upload");
+
+  const localOrRemoteServer = "";
+  context.state.productionOrDevelopment === "production"
+    ? (localOrRemoteServer = `https://the-authors2.herokuapp.com`)
+    : (localOrRemoteServer = `http://localhost:8080`);
+
   ///////////////// upload files
   const [filesToUpload, setFilesToUpload] = useState(null);
 
@@ -28,9 +34,8 @@ const TellStoryForm = () => {
         console.log(data);
       }
       axios
-        // .post("http://localhost:8080/upload", data, {
-        .post("https://the-authors2.herokuapp.com/upload", data, {
-          ///////////////////////
+
+        .post(`${localOrRemoteServer}/upload`, data, {
           onUploadProgress: (ProgressEvent) => {
             setStateOfLoading(
               (ProgressEvent.loaded / ProgressEvent.total) * 100
@@ -69,11 +74,9 @@ const TellStoryForm = () => {
       imageName: imageName,
       topic: topic.value,
     };
-    console.log(details);
+    // console.log(details);
 
-    
-    // let response = await fetch("http://localhost:8080/tell-story", {
-    let response = await fetch("https://the-authors2.herokuapp.com/tell-story", {
+    let response = await fetch(`${localOrRemoteServer}/tell-story`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json;charset=utf-8",

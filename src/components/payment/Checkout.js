@@ -24,9 +24,6 @@ const Checkout = ({ name, description, amount, label, type, email }) => {
     );
     alert("Payment Successful");
 
-    // fetch(`http://localhost:8080/preorder`, {
-    // fetch(`https://the-authors2.herokuapp.com/preorder`, {
-
     fetch(`${localOrRemoteServer}/preorder`, {
       method: "POST",
       headers: {

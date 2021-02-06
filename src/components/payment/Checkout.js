@@ -11,7 +11,7 @@ const Checkout = ({ name, description, amount, label, type, email }) => {
   const CURRENCY = "EUR";
 
   const fromDollarToCent = (amount) => parseInt(amount * 100);
-
+console.log('productionOrDevelopment in Checkout.js = ', context.state.productionOrDevelopment)
   const successPayment = async (data) => {
     alert("Payment Successful");
     // fetch(`http://localhost:8080/preorder`, {

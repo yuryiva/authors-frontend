@@ -20,7 +20,7 @@ const Checkout = ({ name, description, amount, label, type, email }) => {
       context.state.productionOrDevelopment
     );
     console.log('before')
-    alert("Payment Successful");
+    alert("Payment Successful333333333333");
     console.log('after')
 
     

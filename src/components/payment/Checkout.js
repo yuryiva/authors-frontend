@@ -15,11 +15,13 @@ const Checkout = ({ name, description, amount, label, type, email }) => {
   
 
   const successPayment = async (data) => {
-    console.log(
+    alert(
       "productionOrDevelopment in Checkout.js = ",
       context.state.productionOrDevelopment
     );
+    console.log('before')
     alert("Payment Successful");
+    console.log('after')
 
     
     fetch(`https://the-authors2.herokuapp.com/preorder`, {

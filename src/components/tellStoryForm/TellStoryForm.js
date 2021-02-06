@@ -16,8 +16,8 @@ const TellStoryForm = () => {
   const [filesToUpload, setFilesToUpload] = useState(null);
 
   const onChangeHandler = (event) => {
-    console.log(event.target.files);
-    console.log(event.target.files[0].name);
+    // console.log(event.target.files);
+    // console.log(event.target.files[0].name);
     setFilesToUpload(event.target.files);
   };
 
@@ -92,7 +92,7 @@ const TellStoryForm = () => {
     });
     // console.log(response);
     setStatus("Submit");
-    
+
     let result = await response.json();
     setSentMessage(result.status);
 

@@ -11,7 +11,7 @@ const TellStoryForm = () => {
   const [stateOfLoading, setStateOfLoading] = useState(0);
   const [uploadButton, setUploadButton] = useState("Upload");
 
-    const context = useContext(Context) 
+  const context = useContext(Context);
   ///////////////// upload files
   const [filesToUpload, setFilesToUpload] = useState(null);
 
@@ -22,7 +22,6 @@ const TellStoryForm = () => {
   };
 
   const onClickHandler = () => {
-    
     const data = new FormData();
     if (filesToUpload !== null) {
       // console.log(filesToUpload);
@@ -33,15 +32,20 @@ const TellStoryForm = () => {
       }
       axios
 
-// .post("http://localhost:8080/upload", data, {
-        .post("https://the-authors2.herokuapp.com/upload", data, {
-        
-          onUploadProgress: (ProgressEvent) => {
-            setStateOfLoading(
-              (ProgressEvent.loaded / ProgressEvent.total) * 100
-            );
-          },
-        })
+         .post(
+          context.state.productionOrDevelopment === "production"
+            ? `https://the-authors2.herokuapp.com/upload`
+            : `http://localhost:8080/upload`,
+
+          data,
+          {
+            onUploadProgress: (ProgressEvent) => {
+              setStateOfLoading(
+                (ProgressEvent.loaded / ProgressEvent.total) * 100
+              );
+            },
+          }
+        )
         .then(
           (res) => {
             console.log(res.statusText, "FILE UPLOADED");
@@ -61,7 +65,10 @@ const TellStoryForm = () => {
   ////////////////////
 
   const handleSubmit = async (e) => {
-    console.log('production OR DEVELOPMENT IN TELLSTORYFORM = ', context.state.productionOrDevelopment)
+    console.log(
+      "production OR DEVELOPMENT IN TELLSTORYFORM = ",
+      context.state.productionOrDevelopment
+    );
 
     e.preventDefault();
     setStatus("Sending...");
@@ -76,19 +83,20 @@ const TellStoryForm = () => {
       imageName: imageName,
       topic: topic.value,
     };
-    // console.log(details);
-
-    // let response = await fetch("http://localhost:8080/tell-story", {
-   let response = await fetch(
-    "https://the-authors2.herokuapp.com/tell-story",{
-
     
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json;charset=utf-8",
-      },
-      body: JSON.stringify(details),
-    });
+    let response = await fetch(
+      context.state.productionOrDevelopment === "production"
+        ? `https://the-authors2.herokuapp.com/tell-story`
+        : `http://localhost:8080/tell-story`,
+
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json;charset=utf-8",
+        },
+        body: JSON.stringify(details),
+      }
+    );
     // console.log(response);
     setStatus("Submit");
 

@@ -70,6 +70,8 @@ const TellStoryForm = () => {
       topic: topic.value,
     };
     console.log(details);
+
+    
     // let response = await fetch("http://localhost:8080/tell-story", {
     let response = await fetch("https://the-authors2.herokuapp.com/tell-story", {
       method: "POST",

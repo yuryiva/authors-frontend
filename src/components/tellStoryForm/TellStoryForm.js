@@ -17,7 +17,7 @@ const TellStoryForm = () => {
   //   ? (localOrRemoteServer = `https://the-authors2.herokuapp.com`)
   //   : (localOrRemoteServer = `http://localhost:8080`);
 
-    console.log(context.state.productionOrDevelopment, 'production OR DEVELOPMENT IN TELLSTORYFORM')
+    console.log(context.state.productionOrDevelopment, ' = production OR DEVELOPMENT IN TELLSTORYFORM')
   ///////////////// upload files
   const [filesToUpload, setFilesToUpload] = useState(null);
 

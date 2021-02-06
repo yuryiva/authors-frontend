@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { Progress } from "reactstrap";
 import { ProgressBar } from "react-bootstrap";
 import axios from "axios";
+import { Context } from "../../context/Context";
 
 const TellStoryForm = () => {
   const [status, setStatus] = useState("Submit");
@@ -10,6 +11,7 @@ const TellStoryForm = () => {
   const [stateOfLoading, setStateOfLoading] = useState(0);
   const [uploadButton, setUploadButton] = useState("Upload");
 
+  const context = useContext(Context);
   const localOrRemoteServer = "";
   context.state.productionOrDevelopment === "production"
     ? (localOrRemoteServer = `https://the-authors2.herokuapp.com`)

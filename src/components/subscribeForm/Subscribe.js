@@ -1,10 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import { Context } from "../../context/Context";
 
 const SubscribeForm = () => {
   const [status, setStatus] = useState("Subscribe");
   const [email, setEmail] = useState("");
   const [sentMessage, setSentMessage] = useState(false);
   const [showSubscribeComponent, setShowSubscribeComponent] = useState(true);
+
+  const context = useContext(Context);
+
+  console.log(
+    "productionOrDevelopment in Subscribe.js = ",
+    context.state.productionOrDevelopment
+  );
 
   const handleChange = (event) => {
     setEmail(event.target.value);
@@ -18,14 +26,19 @@ const SubscribeForm = () => {
       email: email,
     };
 
-    // let response = await fetch(`http://localhost:8080/subscribe`, {
-    let response = await fetch(`https://the-authors2.herokuapp.com/subscribe`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json;charset=utf-8",
-      },
-      body: JSON.stringify(details),
-    });
+    let response = await fetch(
+      context.state.productionOrDevelopment === "production"
+        ? `https://the-authors2.herokuapp.com/subscribe`
+        : `http://localhost:8080/subscribe`,
+
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json;charset=utf-8",
+        },
+        body: JSON.stringify(details),
+      }
+    );
 
     setStatus("Subscribe");
     let result = await response.json();

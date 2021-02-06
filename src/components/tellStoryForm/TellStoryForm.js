@@ -63,7 +63,7 @@ const TellStoryForm = () => {
   const handleSubmit = async (e) => {
     console.log(context.state.productionOrDevelopment, ' = production OR DEVELOPMENT IN TELLSTORYFORM')
 
-    
+
     e.preventDefault();
     setStatus("Sending...");
     const { name, email, topic, message } = e.target.elements;
@@ -90,7 +90,7 @@ const TellStoryForm = () => {
       },
       body: JSON.stringify(details),
     });
-    console.log(response);
+    // console.log(response);
     setStatus("Submit");
     let result = await response.json();
     setSentMessage(result.status);

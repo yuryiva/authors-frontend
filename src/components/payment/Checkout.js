@@ -6,16 +6,16 @@ import { Context } from "../../context/Context";
 import STRIPE_PUBLISHABLE from "./constants/stripe";
 import PAYMENT_SERVER_URL from "./constants/server";
 
-const context = useContext(Context);
-const localOrRemoteServer = "";
-context.state.productionOrDevelopment === "production"
-  ? (localOrRemoteServer = `https://the-authors2.herokuapp.com`)
-  : (localOrRemoteServer = "http://localhost:8080");
+const Checkout = ({ name, description, amount, label, type, email }) => {
+  const context = useContext(Context);
+  const localOrRemoteServer = "";
+  context.state.productionOrDevelopment === "production"
+    ? (localOrRemoteServer = `https://the-authors2.herokuapp.com`)
+    : (localOrRemoteServer = "http://localhost:8080");
 
   
-
-const Checkout = ({ name, description, amount, label, type, email }) => {
-  const CURRENCY = "EUR";
+  
+    const CURRENCY = "EUR";
 
   const fromDollarToCent = (amount) => parseInt(amount * 100);
 

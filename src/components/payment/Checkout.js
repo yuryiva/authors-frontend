@@ -6,18 +6,21 @@ import { Context } from "../../context/Context";
 import STRIPE_PUBLISHABLE from "./constants/stripe";
 import PAYMENT_SERVER_URL from "./constants/server";
 
+const localOrRemoteServer = "";
+    context.state.productionOrDevelopment === "production"
+      ? (localOrRemoteServer = `https://the-authors2.herokuapp.com`)
+      : (localOrRemoteServer = "http://localhost:8080");
+
+
 const Checkout = ({ name, description, amount, label, type, email }) => {
   const context = useContext(Context);
   const CURRENCY = "EUR";
 
   const fromDollarToCent = (amount) => parseInt(amount * 100);
 
-  const localOrRemoteServer = "";
-    context.state.productionOrDevelopment === "production"
-      ? (localOrRemoteServer = `https://the-authors2.herokuapp.com`)
-      : (localOrRemoteServer = "http://localhost:8080");
+  
 
-      console.log(localOrRemoteServer, 666)
+
 
   const successPayment = async (data) => {
     console.log(

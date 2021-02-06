@@ -63,7 +63,6 @@ const TellStoryForm = () => {
   const handleSubmit = async (e) => {
     console.log(context.state.productionOrDevelopment, ' = production OR DEVELOPMENT IN TELLSTORYFORM')
 
-
     e.preventDefault();
     setStatus("Sending...");
     const { name, email, topic, message } = e.target.elements;

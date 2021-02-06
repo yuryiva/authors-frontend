@@ -22,14 +22,14 @@ const TellStoryForm = () => {
   };
 
   const onClickHandler = () => {
-    console.log(context.state.productionOrDevelopment, ' = production OR DEVELOPMENT IN TELLSTORYFORM')
+    
     const data = new FormData();
     if (filesToUpload !== null) {
       // console.log(filesToUpload);
       // console.log(stateOfLoading);
       for (let i = 0; i < filesToUpload.length; i++) {
         data.append("file", filesToUpload[i]); /////????data.append("file", filesToUpload[i], filesToUpload[i].name);
-        console.log(data);
+        // console.log(data);
       }
       axios
 
@@ -61,6 +61,9 @@ const TellStoryForm = () => {
   ////////////////////
 
   const handleSubmit = async (e) => {
+    console.log(context.state.productionOrDevelopment, ' = production OR DEVELOPMENT IN TELLSTORYFORM')
+
+    
     e.preventDefault();
     setStatus("Sending...");
     const { name, email, topic, message } = e.target.elements;

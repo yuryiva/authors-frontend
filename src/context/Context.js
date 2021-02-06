@@ -28,7 +28,7 @@ class Provider extends Component {
   //preOrderForm function in charge of updating state..
 
   getDataFromForm = (data) => {
-    console.log("Hello from context", data);
+    // console.log("Hello from context", data);
 
     this.setState({
       amount: data.amount,

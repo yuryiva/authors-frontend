@@ -12,11 +12,24 @@ const Checkout = ({ name, description, amount, label, type, email }) => {
 
   const fromDollarToCent = (amount) => parseInt(amount * 100);
 
+  const localOrRemoteServer = "";
+  context.state.productionOrDevelopment === "production"
+    ? (localOrRemoteServer = `https://the-authors2.herokuapp.com`)
+    : (localOrRemoteServer = `http://localhost:8080`);
+
   const successPayment = async (data) => {
-    console.log('productionOrDevelopment in Checkout.js = ', context.state.productionOrDevelopment)
+    console.log(
+      "productionOrDevelopment in Checkout.js = ",
+      context.state.productionOrDevelopment
+    );
     alert("Payment Successful");
+
+
     // fetch(`http://localhost:8080/preorder`, {
-    fetch(`https://the-authors2.herokuapp.com/preorder`, {
+    // fetch(`https://the-authors2.herokuapp.com/preorder`, {
+
+fetch(`${localOrRemoteServer}/preorder`),{
+
       method: "POST",
       headers: {
         "Content-Type": "application/json;charset=utf-8",

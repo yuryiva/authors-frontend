@@ -18,9 +18,9 @@ const PreOrderForm = () => {
   const [postcode, setPostcode] = useState();
   const [message, setMessage] = useState();
 
-  //storing context in variable that I named context, to have access to everyhing
+  //storing context in variable that I named context, to have access to everything
   const context = useContext(Context);
-  console.log(context);
+  // console.log(context);
 
   const bookPrice = context.state.bookPrice;
 

@@ -1,3 +1,8 @@
+import { Context } from "../../../context/Context";
+import { useContext } from "react";
+
+const context = useContext(Context)
+
 const PAYMENT_SERVER_URL =
 context.state.productionOrDevelopment === "production"
 ? `https://the-authors2.herokuapp.com/preorder`

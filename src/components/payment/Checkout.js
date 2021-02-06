@@ -15,7 +15,10 @@ const Checkout = ({ name, description, amount, label, type, email }) => {
   
 
   const successPayment = async (data) => {
-    
+    console.log(
+      "productionOrDevelopment in Checkout.js = ",
+      context.state.productionOrDevelopment
+    );
     alert("Payment Successful");
 
     
@@ -38,7 +41,8 @@ const Checkout = ({ name, description, amount, label, type, email }) => {
         totalOrder: context.state.totalOrder,
       }),
     });
-    
+
+
     console.log(
       "productionOrDevelopment in Checkout.js = ",
       context.state.productionOrDevelopment

@@ -92,6 +92,7 @@ const TellStoryForm = () => {
     });
     // console.log(response);
     setStatus("Submit");
+    
     let result = await response.json();
     setSentMessage(result.status);
 

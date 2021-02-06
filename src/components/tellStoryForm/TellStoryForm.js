@@ -37,7 +37,7 @@ const TellStoryForm = () => {
         console.log(data);
       }
       axios
-      
+
 // .post("http://localhost:8080/upload", data, {
         .post("https://the-authors2.herokuapp.com/upload", data, {
         // .post(`${localOrRemoteServer}/upload`, data, {
@@ -85,7 +85,7 @@ const TellStoryForm = () => {
    let response = await fetch(
     "https://the-authors2.herokuapp.com/tell-story",{
 
-    // let response = await fetch(`${localOrRemoteServer}/tell-story`, {
+    
       method: "POST",
       headers: {
         "Content-Type": "application/json;charset=utf-8",

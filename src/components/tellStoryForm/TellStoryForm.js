@@ -11,9 +11,7 @@ const TellStoryForm = () => {
   const [stateOfLoading, setStateOfLoading] = useState(0);
   const [uploadButton, setUploadButton] = useState("Upload");
 
-  
-
-    console.log(context.state.productionOrDevelopment, ' = production OR DEVELOPMENT IN TELLSTORYFORM')
+     
   ///////////////// upload files
   const [filesToUpload, setFilesToUpload] = useState(null);
 

@@ -9,11 +9,6 @@ const SubscribeForm = () => {
 
   const context = useContext(Context);
 
-  console.log(
-    "productionOrDevelopment in Subscribe.js = ",
-    context.state.productionOrDevelopment
-  );
-
   const handleChange = (event) => {
     setEmail(event.target.value);
   };

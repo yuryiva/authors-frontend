@@ -12,11 +12,6 @@ const GetInTouchForm = () => {
 
   const context = useContext(Context);
 
-  console.log(
-    "productionOrDevelopment in GetInTouchForm.js = ",
-    context.state.productionOrDevelopment
-  );
-
   const handleTopicChoice = (event) => {
     event.preventDefault();
     setTopicChosen(event.target.value);

@@ -34,9 +34,9 @@ export default function Books() {
     <div>
       {books.map((book) => (
         <PageWrapper>
-          <BookWrapper key={book.id}>
+          {/* <BookWrapper key={book.id}> */}
             <BookImage>
-              <img src={book.bookUrl} alt="book-image" />
+              <img src={book.bookUrl} alt="book" />
             </BookImage>
             <BookDescription>
               <h3>{book.bookTitle}</h3>
@@ -58,7 +58,7 @@ export default function Books() {
                 <button>Pre-Order</button>
               </Link>
             </BookCheckout>
-          </BookWrapper>
+          {/* </BookWrapper> */}
           <ProductDetails>
             <h3>Product Details</h3>
             <h2> {book.bookTitle}</h2>
@@ -76,8 +76,11 @@ export default function Books() {
 }
 
 const ProductDetails = styled.div`
-  width: 50%;
-  margin: 100px;
+  /* width: 50%; */
+  /* margin: 100px; */
+  width: 400px;
+  margin: 3%;
+  margin-bottom: 100px;
   h3 {
     margin-bottom: 20px;
   }
@@ -89,29 +92,55 @@ const ProductDetails = styled.div`
     margin-bottom: 20px;
   }
 `;
-const PageWrapper = styled.div``;
-const BookWrapper = styled.div`
+
+const PageWrapper = styled.div`
+  margin: 0;  
+  padding: 5%;
+  padding-top: 100px;
   display: flex;
+  /* flex-direction: column; */
   flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: center;
-  margin: 20px;
-  font-family: "Space Mono", monospace;
+  justify-content: space-around;
+  /* justify-content: center; */
+  align-items: top;
 `;
+
+// const BookWrapper = styled.div`
+//   display: flex;
+//   flex-wrap: wrap;
+//   flex-direction: row;
+//   justify-content: center;  
+//   margin: 20px;
+//   font-family: "Space Mono", monospace;
+// `;
+
 const BookImage = styled.div`
-  img {
-    width: 360px;
-    height: 500px;
+  width: 400px;
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  margin: 3%;
+  margin-bottom: 100px;
+
+  img {    
+    /* width: 360px;     */
+    /* height: 500px; */
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;     
   }
-  margin: 40px;
+  /* margin: 40px; */
 `;
 const BookDescription = styled.div`
   width: 400px;
-  margin: 0 40px;
+  margin: 3%;
+  margin-bottom: 100px;
+  /* margin: 0 40px; */
   h3 {
-    font-size: 30px;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    font-size: 30px;    
+    /* margin-top: 30px; */
+    padding-bottom: 30px;
   }
 `;
 const BookCheckout = styled.div`
@@ -119,10 +148,13 @@ const BookCheckout = styled.div`
   display: flex;
   flex-direction: column;
   padding: 0 20px;
-  margin: 40px;
-
+  /* margin: 40px; */
   text-align: left;
-  width: 350px;
+  /* width: 350px; */
+  width: 400px;
+  margin: 3%;
+  margin-bottom: 100px;
+
   button {
     border-radius: 5px;
     width: 100%;
@@ -147,7 +179,7 @@ const BookCheckout = styled.div`
     color: red;
     font-size: 20px;
     display: flex;
-    align-item: center;
+    align-items: center;
     margin-top: 15px;
     margin-bottom: 15px;
   }

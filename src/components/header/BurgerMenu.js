@@ -21,15 +21,10 @@ const BurgerMenu = ({ open, setOpen }) => {
     setOpen(false);
   }
    
-  // This method will change the colour of the navbar on scroll
-  const changeBackground = () => { 
-    // console.log(window.scrollY);   
-    if(window.scrollY >= 727){      
-      setNavbar(true) 
-    } else {
-      setNavbar(false) 
-    }     
-  }  
+  // This method will change the colour of the burger on scroll
+  const changeBackground = () => window.scrollY >= 727 ? setNavbar(true) : setNavbar(false) 
+     
+    
   window.addEventListener('scroll', changeBackground);
 
     return (

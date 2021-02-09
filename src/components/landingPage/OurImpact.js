@@ -54,7 +54,7 @@ export default function OurImpact() {
 
 const AboutUsSection = styled.section`
     min-height: 100vh;
-    margin: 100px 0;
+    margin: 50px 0;
     display: flex;
     flex-direction: column;
     align-items: center;

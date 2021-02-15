@@ -2,24 +2,25 @@ import React, { useState, useContext } from "react";
 import axios from "axios";
 import StripeCheckout from "react-stripe-checkout";
 import { Context } from "../../context/Context";
-
+import SuccessfulModal from "./SuccessfulModal";
 import STRIPE_PUBLISHABLE from "./constants/stripe";
 import PAYMENT_SERVER_URL from "./constants/server";
 
 const Checkout = ({ name, description, amount, label, type, email }) => {
   const context = useContext(Context);
 
+  let [showModal, setShowModal] = useState(false);
   const CURRENCY = "EUR";
 
   const fromDollarToCent = (amount) => parseInt(amount * 100);
 
-  const successPayment = async (data) => {
+  const SuccessPayment = async (data) => {
     console.log(
       "productionOrDevelopment in Checkout.js = ",
       context.state.productionOrDevelopment
     );
 
-    alert("Payment Successful");
+    // alert("Payment Successful");
 
     fetch(
       context.state.productionOrDevelopment === "production"
@@ -46,9 +47,11 @@ const Checkout = ({ name, description, amount, label, type, email }) => {
         }),
       }
     );
+
+    setShowModal(true);
   };
 
-  const errorPayment = (data) => {
+  const ErrorPayment = (data) => {
     alert("Payment Error");
   };
 
@@ -60,25 +63,30 @@ const Checkout = ({ name, description, amount, label, type, email }) => {
         currency: CURRENCY,
         amount: fromDollarToCent(amount),
       })
-      .then(successPayment)
-      .catch(errorPayment);
+      .then(SuccessPayment)
+      .catch(ErrorPayment);
 
   return (
-    <StripeCheckout
-      name={name}
-      type={type}
-      label={label}
-      description={description}
-      amount={fromDollarToCent(amount)}
-      token={onToken(amount, description)}
-      currency={CURRENCY}
-      stripeKey={
-        "pk_test_51IAcqYDle1Cl217pMufz4egXcGPGMG2Ooko3tiOqf60DtUEz7ujPSkDfPbmga6qvel7NbmK9S0o5rOtfj8pSsbWq00vW0qtt4U"
-      }
-      zipCode
-      email={email}
-      allowRememberMe
-    />
+    <div>
+      <StripeCheckout
+        name={name}
+        type={type}
+        label={label}
+        description={description}
+        amount={fromDollarToCent(amount)}
+        token={onToken(amount, description)}
+        currency={CURRENCY}
+        stripeKey={
+          "pk_test_51IAcqYDle1Cl217pMufz4egXcGPGMG2Ooko3tiOqf60DtUEz7ujPSkDfPbmga6qvel7NbmK9S0o5rOtfj8pSsbWq00vW0qtt4U"
+        }
+        zipCode
+        email={email}
+        allowRememberMe
+      />
+
+      {showModal === true && <SuccessfulModal />}
+    </div>
   );
 };
+
 export default Checkout;

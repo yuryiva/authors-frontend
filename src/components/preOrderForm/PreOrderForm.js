@@ -184,7 +184,7 @@ const SendMessageWrapper = styled.div`
   border: 1px lightgray solid;
   button {
     border-radius: 5px;
-    width: 35%;
+    width: auto;
     height: 40px;
     text-align: center;
     background-color: white;

@@ -3,13 +3,15 @@ import axios from "axios";
 import StripeCheckout from "react-stripe-checkout";
 import { Context } from "../../context/Context";
 import SuccessfulModal from "./SuccessfulModal";
+import ErrorModal from "./ErrorModal";
 import STRIPE_PUBLISHABLE from "./constants/stripe";
 import PAYMENT_SERVER_URL from "./constants/server";
 
 const Checkout = ({ name, description, amount, label, type, email }) => {
   const context = useContext(Context);
 
-  let [showModal, setShowModal] = useState(false);
+  let [showSuccessModal, setShowSuccessModal] = useState(false);
+  let [showErrorModal, setShowErrorModal] = useState(false);
   const CURRENCY = "EUR";
 
   const fromDollarToCent = (amount) => parseInt(amount * 100);
@@ -48,11 +50,12 @@ const Checkout = ({ name, description, amount, label, type, email }) => {
       }
     );
 
-    setShowModal(true);
+    setShowSuccessModal(true);
   };
 
   const ErrorPayment = (data) => {
-    alert("Payment Error");
+    // alert("Payment Error");
+    setShowErrorModal(true);
   };
 
   const onToken = (amount, description) => (token) =>
@@ -84,7 +87,8 @@ const Checkout = ({ name, description, amount, label, type, email }) => {
         allowRememberMe
       />
 
-      {showModal === true && <SuccessfulModal />}
+      {showSuccessModal === true && <SuccessfulModal />}
+      {showErrorModal === true && <ErrorModal />}
     </div>
   );
 };

@@ -5,7 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import React, { useState, useContext } from "react";
 import { Context } from "../../context/Context";
 
-function SuccessfulModal() {
+function ErrorModal() {
   const context = useContext(Context);
 
   const [show, setShow] = useState(true);
@@ -21,12 +21,8 @@ function SuccessfulModal() {
         </Modal.Header> */}
         <Modal.Body>
           <p>
-            Thank you {context.state.name} for your purchase!
-            <p>
-              Your Payment was successful for the amount of €
-              {context.state.totalOrder}.
-            </p>{" "}
-            You will recieve a confirmation email at {context.state.email}.
+            Sorry there is a payment error wtih your purchase!
+            <p>Please try again.</p>
           </p>
         </Modal.Body>
         <Modal.Footer>
@@ -43,4 +39,4 @@ function SuccessfulModal() {
   );
 }
 
-export default SuccessfulModal;
+export default ErrorModal;

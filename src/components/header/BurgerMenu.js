@@ -2,13 +2,13 @@ import React, { useState, useEffect } from "react";
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
-const BurgerMenu = ({ open, setOpen }) => {
+const BurgerMenu = ({ dropdown, setDropdown }) => {
   const [navbar, setNavbar] = useState(false);   
 
   // This method will toggle the dropdown menu ON/OFF
   const handleBurgerMenu = () => {
-    let closed = !open;
-    setOpen(closed);    
+    let closed = !dropdown;
+    setDropdown(closed);    
   }
 
   // This method will scroll to the top of the page when clicking on the logo
@@ -18,7 +18,7 @@ const BurgerMenu = ({ open, setOpen }) => {
       left: 0,
       behavior: 'smooth'
     });    
-    setOpen(false);
+    setDropdown(false);
   }
    
   // This method will change the colour of the navbar on scroll
@@ -39,7 +39,7 @@ const BurgerMenu = ({ open, setOpen }) => {
           </Link>
 
           <StyledBurger 
-            open={open} 
+            dropdown={dropdown} 
             onClick={handleBurgerMenu}
           >
               <div />
@@ -57,7 +57,7 @@ const BurgerContainer = styled.div`
   position: fixed;
   /* width: 100vw; */
   width: 100%;
-  height: 100px;
+  height: 140px;
   display: flex; 
   justify-content: center;
   align-items: center; 
@@ -96,19 +96,19 @@ const StyledBurger = styled.button`
     
 
     :first-child {
-      transform: ${({ open }) => open ? 'rotate(45deg)' : 'rotate(0)'};      
-      background: ${({ open }) => window.scrollY >= 727 || open ? '#000' : '#fff'};      
+      transform: ${({ dropdown }) => dropdown ? 'rotate(45deg)' : 'rotate(0)'};      
+      background: ${({ dropdown }) => window.scrollY >= 727 || dropdown ? '#000' : '#fff'};      
     }
 
     :nth-child(2) {
-      opacity: ${({ open }) => open ? '0' : '1'};
-      transform: ${({ open }) => open ? 'translateX(20px)' : 'translateX(0)'};      
-      background: ${({ open }) => window.scrollY >= 727 || open ? '#000' : '#fff'};      
+      opacity: ${({ dropdown }) => dropdown ? '0' : '1'};
+      transform: ${({ dropdown }) => dropdown ? 'translateX(20px)' : 'translateX(0)'};      
+      background: ${({ dropdown }) => window.scrollY >= 727 || dropdown ? '#000' : '#fff'};      
     }
 
     :nth-child(3) {
-      transform: ${({ open }) => open ? 'rotate(-45deg)' : 'rotate(0)'};      
-      background: ${({ open }) => window.scrollY >= 727 || open ? '#000' : '#fff'};     
+      transform: ${({ dropdown }) => dropdown ? 'rotate(-45deg)' : 'rotate(0)'};      
+      background: ${({ dropdown }) => window.scrollY >= 727 || dropdown ? '#000' : '#fff'};     
     }
   }
 `
@@ -117,8 +117,10 @@ const LogoImage = styled.img`
   width: 30px;
   height: 50px;
   position: absolute;
-  top: 25px; 
-  left: 25px;  
+  /* top: 25px;  */
+  top: 45px; 
+  /* left: 25px;   */
+  left: 5%;  
 `
 
 export default BurgerMenu;

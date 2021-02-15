@@ -17,12 +17,12 @@ import PreOrderForm from "./components/preOrderForm/PreOrderForm";
 import AuthorsStory from "./components/authorsPage/AuthorsStory";
 
 const App = () => {
-  const [open, setOpen] = useState(false);
+  const [dropdown, setDropdown] = useState(false);
 
   return (
     <div>
-      <BurgerMenu open={open} setOpen={setOpen} />
-      <Header open={open} setOpen={setOpen} />
+      <BurgerMenu dropdown={dropdown} setDropdown={setDropdown} />
+      <Header dropdown={dropdown} setDropdown={setDropdown} />
       {/* <Banner /> */}
 
       <Switch>

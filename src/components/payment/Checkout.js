@@ -2,24 +2,27 @@ import React, { useState, useContext } from "react";
 import axios from "axios";
 import StripeCheckout from "react-stripe-checkout";
 import { Context } from "../../context/Context";
-
+import SuccessfulModal from "./SuccessfulModal";
+import ErrorModal from "./ErrorModal";
 import STRIPE_PUBLISHABLE from "./constants/stripe";
 import PAYMENT_SERVER_URL from "./constants/server";
 
 const Checkout = ({ name, description, amount, label, type, email }) => {
   const context = useContext(Context);
 
+  let [showSuccessModal, setShowSuccessModal] = useState(false);
+  let [showErrorModal, setShowErrorModal] = useState(false);
   const CURRENCY = "EUR";
 
   const fromDollarToCent = (amount) => parseInt(amount * 100);
 
-  const successPayment = async (data) => {
+  const SuccessPayment = async (data) => {
     console.log(
       "productionOrDevelopment in Checkout.js = ",
       context.state.productionOrDevelopment
     );
 
-    alert("Payment Successful");
+    // alert("Payment Successful");
 
     fetch(
       context.state.productionOrDevelopment === "production"
@@ -46,10 +49,13 @@ const Checkout = ({ name, description, amount, label, type, email }) => {
         }),
       }
     );
+
+    setShowSuccessModal(true);
   };
 
-  const errorPayment = (data) => {
-    alert("Payment Error");
+  const ErrorPayment = (data) => {
+    // alert("Payment Error");
+    setShowErrorModal(true);
   };
 
   const onToken = (amount, description) => (token) =>
@@ -60,25 +66,31 @@ const Checkout = ({ name, description, amount, label, type, email }) => {
         currency: CURRENCY,
         amount: fromDollarToCent(amount),
       })
-      .then(successPayment)
-      .catch(errorPayment);
+      .then(SuccessPayment)
+      .catch(ErrorPayment);
 
   return (
-    <StripeCheckout
-      name={name}
-      type={type}
-      label={label}
-      description={description}
-      amount={fromDollarToCent(amount)}
-      token={onToken(amount, description)}
-      currency={CURRENCY}
-      stripeKey={
-        "pk_test_51IAcqYDle1Cl217pMufz4egXcGPGMG2Ooko3tiOqf60DtUEz7ujPSkDfPbmga6qvel7NbmK9S0o5rOtfj8pSsbWq00vW0qtt4U"
-      }
-      zipCode
-      email={email}
-      allowRememberMe
-    />
+    <div>
+      <StripeCheckout
+        name={name}
+        type={type}
+        label={label}
+        description={description}
+        amount={fromDollarToCent(amount)}
+        token={onToken(amount, description)}
+        currency={CURRENCY}
+        stripeKey={
+          "pk_test_51IAcqYDle1Cl217pMufz4egXcGPGMG2Ooko3tiOqf60DtUEz7ujPSkDfPbmga6qvel7NbmK9S0o5rOtfj8pSsbWq00vW0qtt4U"
+        }
+        zipCode
+        email={email}
+        allowRememberMe
+      />
+
+      {showSuccessModal === true && <SuccessfulModal />}
+      {showErrorModal === true && <ErrorModal />}
+    </div>
   );
 };
+
 export default Checkout;

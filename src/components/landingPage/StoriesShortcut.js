@@ -28,49 +28,52 @@ const StoriesShortcut = () => {
                 <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words</p>
             </StoryText>
 
-            <Carousel breakPoints={breakPoints}>
-                <Stories>
-                    <ImgWrapper>                        
+            <Carousel breakPoints={breakPoints}>                
+                <Stories>  
+                    <ImageWrapper>
                         <img 
                             data-aos='fade-up' 
                             src='https://images.unsplash.com/photo-1509305717900-84f40e786d82?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjJ8fHBvcnRyYWl0fGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60' 
                             alt='portrait' 
-                        />                        
-                    </ImgWrapper>
+                        />   
+                    </ImageWrapper>                      
+                        
                     <TextWrapper>
                         <h3>Authors</h3>
                         <p>Contrary to popular belief, Lorem Ipsum is not simply random text.</p>
-                    </TextWrapper>
-                </Stories>
+                    </TextWrapper>                     
+                </Stories>                    
                 
                 <Stories>
-                    <ImgWrapper>
+                    <ImageWrapper>
                         <img 
                             data-aos='fade-up' 
                             // src='https://images.unsplash.com/photo-1610916975200-6d28742d4dd6?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw3M3x8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60' 
                             src={podcast} 
                             alt='portrait' 
-                        />                        
-                    </ImgWrapper>
+                        />  
+                    </ImageWrapper>
+                        
                     <TextWrapper>
                         <h3>Authors</h3>
                         <p>Contrary to popular belief, Lorem Ipsum is not simply random text.</p>
-                    </TextWrapper>
-                </Stories>    
-                
+                    </TextWrapper>                      
+                </Stories>                    
+              
                 <Stories>
-                    <ImgWrapper>
+                    <ImageWrapper>
                         <img 
                             data-aos='fade-up' 
                             src='https://images.unsplash.com/photo-1610801264293-588a3b6c3446?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxMjV8fHxlbnwwfHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60' 
                             alt='portrait' 
-                        />                        
-                    </ImgWrapper>
+                        />
+                    </ImageWrapper>
+                           
                     <TextWrapper>
                         <h3>Short Stories</h3>
                         <p>Contrary to popular belief, Lorem Ipsum is not simply random text.</p>
-                    </TextWrapper>
-                </Stories>                
+                    </TextWrapper>                     
+                </Stories>               
             </Carousel>
         </StoryWrapper>
     )
@@ -116,25 +119,15 @@ const StoryText = styled.div`
     }
 `
 
-const Stories = styled.div`
-    display: flex;
-    flex-direction: column;
-    max-height: 600px;
-    width: 100%;
-
-`
-
-const ImgWrapper = styled.div `
-    margin: 0 20px;    
-    width: 450px;    
-    /* max-height: 500px; */
+const ImageWrapper = styled.div`
     display: inline-block;
     overflow: hidden;
     position: relative;
+    /* max-height: 550px; */
 
     img {          
-        align-self: center;      
-        /* display: block;         */
+        /* max-height: 400px; */
+        display: block;        
         width: 100%;             
         background-repeat: no-repeat;
         background-position: center;
@@ -144,17 +137,25 @@ const ImgWrapper = styled.div `
         &:hover {
             cursor: pointer;
             transform: scale(1.1);
-            transform-origin: 50% 50%;
-            
+            transform-origin: 50% 50%;            
         }        
     }
+`
+
+const Stories = styled.div `
+    margin: 0 20px;    
+    /* width: 450px;     */
+    /* max-height: 600px; */
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
 `
 
 const TextWrapper = styled.section`
     display: flex;
     flex-direction: column;
     width: 450px;
-    text-align: center;
+    text-align: left;
 
     h4 {
         font-size: 1.5rem;       

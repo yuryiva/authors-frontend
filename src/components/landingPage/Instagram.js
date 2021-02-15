@@ -20,8 +20,8 @@ const Instagram = () => {
         <InstaWrapper>
             <InstaText>
                 <InstaContact>
-                    <h4>#AuthorsWeekly</h4>
-                    <p>@Authors</p>
+                    <h4>#Authxrs #writethechange</h4>
+                    <p>@Authxrs</p>
                 </InstaContact>
                 <Follow>
                     <button>Follow</button>
@@ -96,9 +96,9 @@ const ImgWrapper = styled.div `
         transition: transform 0.8s;
 
         &:hover {
-        cursor: pointer;
-        transform: scale(1.1);
-        transform-origin: 50% 50%;
+            cursor: pointer;
+            transform: scale(1.1);
+            transform-origin: 50% 50%;
         }        
     }   
 `

@@ -127,7 +127,7 @@ const OurImpactPhoto = styled.div`
     /* border-radius: 5px; */
 
     img {
-        display: block;        
+        /* display: block;         */
         width: 100%;
         /* height:300px;   */
         background-repeat: no-repeat;

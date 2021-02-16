@@ -12,11 +12,12 @@
     font-family: 'Space Mono', monospace;    
 }
 
-/* #root { 
+#root { 
+    position: relative;
     display: flex;
     flex-direction: column;   
-    background: rgba(0, 0, 0, 0.5);   
-} */
+    /* background: rgba(0, 0, 0, 0.5);    */
+}
 
 /* .main-active {
     display: flex;

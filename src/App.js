@@ -62,12 +62,17 @@ const App = () => {
 };
 
 const MainWrapper = styled.div` 
+  position: relative;
+  top: 0;
+  left: 0;
   z-index: 999; 
   display: flex;
   flex-direction: column;
   width: 100%;
   height: 100%;
-  background-color: ${({ dropdown }) => dropdown ? 'rgba(0, 0, 0, 0.8)' : ''};
+  background-color: ${({ dropdown }) => dropdown ? 'rgba(0, 0, 0, 0.7)' : ''};
+  transition-delay: 1s;
+  transition: 1s ease;
 `
 
 export default App;

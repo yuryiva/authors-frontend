@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import React, { useState, useContext } from "react";
-import { Progress } from "reactstrap";
-import { ProgressBar } from "react-bootstrap";
+// import { Progress } from "reactstrap";
+// import { ProgressBar } from "react-bootstrap";
 import axios from "axios";
 import { Context } from "../../context/Context";
 
@@ -156,9 +156,9 @@ const TellStoryForm = () => {
                 onChange={onChangeHandler}
               />
             </FileWrapper>
-            <ProgressBar>
+            {/* <ProgressBar> */}
               {stateOfLoading > 0 && Math.round(stateOfLoading, 2) + "%"}
-            </ProgressBar>
+            {/* </ProgressBar> */}
             <Button>
               <button type="button" onClick={onClickHandler}>
                 {uploadButton}

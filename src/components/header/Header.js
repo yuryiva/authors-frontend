@@ -2,12 +2,12 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from 'styled-components';
 import photo from '../../assets/photo6.jpg';
-import { motion, AnimatePresence } from 'framer-motion';
+// import { motion, AnimatePresence } from 'framer-motion';
 
-const backdrop = {
-  visible: { opacity: 1 },
-  hidden: { opacity: 0 }
-}
+// const backdrop = {
+//   visible: { opacity: 1 },
+//   hidden: { opacity: 0 }
+// }
 
 const Header = ({ dropdown, setDropdown }) => {  
 
@@ -21,47 +21,46 @@ const Header = ({ dropdown, setDropdown }) => {
     });
   }
 
-  return (
-    <NavigationMenu dropdown={ dropdown }> 
+  return (    
+      <NavigationMenu dropdown={ dropdown }> 
 
-      <PhotoSection>
-        <img src={photo} alt="authors" />
-      </PhotoSection>
+        <PhotoSection>
+          <img src={photo} alt="authors" />
+        </PhotoSection>
 
-      <LinkSection>
-        <LinkContainer>
+        <LinkSection>
+          <LinkContainer>
 
-          {/* <Link to="/" onClick={handleDropdown}>
-            <LogoImage />
-          </Link> */}
-         
-            <Link to="/authors-page" onClick={handleDropdown}>
-              The Authors
-            </Link>
-     
-            <Link to="/books" onClick={handleDropdown}>
-              Books
-            </Link>
-       
-            <Link to="/podcasts" onClick={handleDropdown}>
-              Podcast
-            </Link>
+            {/* <Link to="/" onClick={handleDropdown}>
+              <LogoImage />
+            </Link> */}
+          
+              <Link to="/authors-page" onClick={handleDropdown}>
+                The Authors
+              </Link>
+
+              <Link to="/books" onClick={handleDropdown}>
+                Books
+              </Link>
         
-            <Link to="/short-stories" onClick={handleDropdown}>
-              Short stories
-            </Link>  
-         
-            <Link to="/join-the-movement" onClick={handleDropdown}>
-              Join the movement
-            </Link>                
+              <Link to="/podcasts" onClick={handleDropdown}>
+                Podcast
+              </Link>
+          
+              <Link to="/short-stories" onClick={handleDropdown}>
+                Short stories
+              </Link>  
+          
+              <Link to="/join-the-movement" onClick={handleDropdown}>
+                Join the movement
+              </Link>                
 
-        </LinkContainer>
-      </LinkSection>               
-      
-    </NavigationMenu>
+          </LinkContainer>
+        </LinkSection>               
+
+      </NavigationMenu>   
   );
 }
-
 
 // Styling navigation menu 
 const NavigationMenu = styled.nav`  
@@ -91,8 +90,8 @@ const NavigationMenu = styled.nav`
   }
 
   a {
-    font-size: 1.5rem;        
-    padding: 1.7rem 0;
+    font-size: 1.4rem;        
+    padding: 1.5rem 0;
     font-weight: bold;
     letter-spacing: 0.5rem;
     /* color: #0D0C1D; */
@@ -101,12 +100,13 @@ const NavigationMenu = styled.nav`
     transform-origin: 0; 
     /* transition: color 0.3s linear; */
 
-    @media (max-width: 1560px) {
+    /* @media (max-width: 1560px) {
       font-size: 1.4rem;
-    }
+    } */
 
     @media (max-width: 1400px) {
       font-size: 1.3rem;
+      padding: 1.3rem 0;
     }
 
     @media (max-width: 1230px) {
@@ -114,8 +114,8 @@ const NavigationMenu = styled.nav`
     }
 
     @media (max-width: 900px) {
-      font-size: 1.4rem;
-      padding: 2rem 0;
+      font-size: 1.3rem;
+      padding: 1.5rem 0;
     }
 
     @media (max-width: 576px) {

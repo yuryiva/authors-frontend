@@ -33,8 +33,9 @@ const StoriesShortcut = () => {
                     <ImageWrapper>
                         <img 
                             data-aos='fade-up' 
-                            src='https://images.unsplash.com/photo-1509305717900-84f40e786d82?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjJ8fHBvcnRyYWl0fGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60' 
-                            alt='portrait' 
+                            // src='https://images.unsplash.com/photo-1509305717900-84f40e786d82?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjJ8fHBvcnRyYWl0fGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60' 
+                            alt='portrait'
+                            src='https://images.unsplash.com/photo-1610824771380-390c72f79f11?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxNXx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60' 
                         />   
                     </ImageWrapper>                      
                         
@@ -49,8 +50,9 @@ const StoriesShortcut = () => {
                         <img 
                             data-aos='fade-up' 
                             // src='https://images.unsplash.com/photo-1610916975200-6d28742d4dd6?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw3M3x8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60' 
-                            src={podcast} 
+                            // src={podcast} 
                             alt='portrait' 
+                            src='https://images.unsplash.com/photo-1610948237307-bbebf8da8a8d?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyNXx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'
                         />  
                     </ImageWrapper>
                         
@@ -64,8 +66,9 @@ const StoriesShortcut = () => {
                     <ImageWrapper>
                         <img 
                             data-aos='fade-up' 
-                            src='https://images.unsplash.com/photo-1610801264293-588a3b6c3446?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxMjV8fHxlbnwwfHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60' 
+                            // src='https://images.unsplash.com/photo-1610801264293-588a3b6c3446?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxMjV8fHxlbnwwfHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60' 
                             alt='portrait' 
+                            src='https://images.unsplash.com/photo-1610935591850-9a3bf14810c0?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzM3x8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'
                         />
                     </ImageWrapper>
                            
@@ -123,16 +126,17 @@ const ImageWrapper = styled.div`
     display: inline-block;
     overflow: hidden;
     position: relative;
-    /* max-height: 550px; */
+    width: 100%;   
+    max-height: 600px;    
 
-    img {          
-        /* max-height: 400px; */
+    img {         
         display: block;        
-        width: 100%;             
+        width: 100%;                                    
         background-repeat: no-repeat;
         background-position: center;
-        background-size: cover;    
-        transition: transform 0.8s;        
+        background-size: cover;          
+        transition: transform 0.8s; 
+        transform-origin: 50% 50%;       
 
         &:hover {
             cursor: pointer;
@@ -142,19 +146,16 @@ const ImageWrapper = styled.div`
     }
 `
 
-const Stories = styled.div `
-    margin: 0 20px;    
-    /* width: 450px;     */
-    /* max-height: 600px; */
-    display: inline-block;
-    overflow: hidden;
-    position: relative;
+const Stories = styled.div` 
+    width: 500px;       
+    margin: 0 20px;      
+    display: inline-block;   
 `
 
 const TextWrapper = styled.section`
     display: flex;
     flex-direction: column;
-    width: 450px;
+    /* width: 450px; */
     text-align: left;
 
     h4 {

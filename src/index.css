@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;1,100;1,200;1,400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap');
 /* =============
    Global styles
    ============= */
@@ -12,12 +13,24 @@
     font-family: 'Space Mono', monospace;    
 }
 
-/* This is the dropdown menu parent element */
-/* It's displayed to flex so I can easily adjust the position of the dropdown menu */
-#root > div {
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+#root { 
+    position: relative;
+    display: flex;
+    flex-direction: column;   
+    /* background: rgba(0, 0, 0, 0.5);    */
+}
+
+/* .main-active {
     display: flex;
     flex-direction: column;
 }
+.main-background {
+    background: rgba(0, 0, 0, 0.5);
+} */
 
 /* Carousel arrows in the Instagram section */
 .rec.rec-arrow,

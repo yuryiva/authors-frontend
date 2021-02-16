@@ -123,12 +123,14 @@ const ImageWrapper = styled.div`
     display: inline-block;
     overflow: hidden;
     position: relative;
+    width: 100%;
     /* max-height: 550px; */
 
     img {          
         /* max-height: 400px; */
         display: block;        
-        width: 100%;             
+        width: 100%;  
+        /* height: fit-content;                          */
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;    
@@ -142,19 +144,16 @@ const ImageWrapper = styled.div`
     }
 `
 
-const Stories = styled.div `
-    margin: 0 20px;    
-    /* width: 450px;     */
-    /* max-height: 600px; */
-    display: inline-block;
-    overflow: hidden;
-    position: relative;
+const Stories = styled.div` 
+    width: 500px;    
+    margin: 0 20px;      
+    display: inline-block;   
 `
 
 const TextWrapper = styled.section`
     display: flex;
     flex-direction: column;
-    width: 450px;
+    /* width: 450px; */
     text-align: left;
 
     h4 {

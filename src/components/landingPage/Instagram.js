@@ -120,7 +120,7 @@ const InstaContact = styled.div `
 
     h4 {
         font-size: 1rem;
-        font-weight:400;
+        font-weight:600;
         margin:0;
     }
     p{ 

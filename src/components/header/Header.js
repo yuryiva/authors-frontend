@@ -90,8 +90,8 @@ const NavigationMenu = styled.nav`
   }
 
   a {
-    font-size: 1.5rem;        
-    padding: 1.7rem 0;
+    font-size: 1.4rem;        
+    padding: 1.5rem 0;
     font-weight: bold;
     letter-spacing: 0.5rem;
     /* color: #0D0C1D; */
@@ -100,12 +100,13 @@ const NavigationMenu = styled.nav`
     transform-origin: 0; 
     /* transition: color 0.3s linear; */
 
-    @media (max-width: 1560px) {
+    /* @media (max-width: 1560px) {
       font-size: 1.4rem;
-    }
+    } */
 
     @media (max-width: 1400px) {
       font-size: 1.3rem;
+      padding: 1.3rem 0;
     }
 
     @media (max-width: 1230px) {
@@ -113,8 +114,8 @@ const NavigationMenu = styled.nav`
     }
 
     @media (max-width: 900px) {
-      font-size: 1.4rem;
-      padding: 2rem 0;
+      font-size: 1.3rem;
+      padding: 1.5rem 0;
     }
 
     @media (max-width: 576px) {

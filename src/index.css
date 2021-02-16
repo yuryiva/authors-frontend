@@ -12,6 +12,13 @@
     font-family: 'Space Mono', monospace;    
 }
 
+/* This is the dropdown menu parent element */
+/* It's displayed to flex so I can easily adjust the position of the dropdown menu */
+#root > div {
+    display: flex;
+    flex-direction: column;
+}
+
 /* Carousel arrows in the Instagram section */
 .rec.rec-arrow,
 .rec.rec-arrow:disabled {

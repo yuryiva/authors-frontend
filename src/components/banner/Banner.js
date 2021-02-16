@@ -16,7 +16,7 @@ export default function Banner() {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 1, duration: 1.5 }}
             >
-                Authors
+                Authxrs
             </motion.h1>
 
             <motion.h2
@@ -30,7 +30,7 @@ export default function Banner() {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 2, duration: 3.5 }}
             >
-                Join the movement and team up with authors of today
+                Join The Movement And Team Up With Authxrs Of Today
             </motion.h2>
         </BannerContainer>
     )

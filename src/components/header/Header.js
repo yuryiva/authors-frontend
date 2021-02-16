@@ -2,12 +2,18 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from 'styled-components';
 import photo from '../../assets/photo6.jpg';
+import { motion, AnimatePresence } from 'framer-motion';
 
-const Header = ({ open, setOpen }) => {  
+const backdrop = {
+  visible: { opacity: 1 },
+  hidden: { opacity: 0 }
+}
+
+const Header = ({ dropdown, setDropdown }) => {  
 
   const handleDropdown = () => {
-    let closed = !open;
-    setOpen(closed);
+    let closed = !dropdown;
+    setDropdown(closed);
     window.scrollTo({
       top: 0,
       left: 0,
@@ -16,7 +22,7 @@ const Header = ({ open, setOpen }) => {
   }
 
   return (
-    <NavigationMenu open={ open }> 
+    <NavigationMenu dropdown={ dropdown }> 
 
       <PhotoSection>
         <img src={photo} alt="authors" />
@@ -61,26 +67,27 @@ const Header = ({ open, setOpen }) => {
 const NavigationMenu = styled.nav`  
   position: fixed;
   display: flex;  
-  /* justify-content: center; */
   justify-content: space-evenly;
-  align-items: center;  
+  align-items: center; 
+  align-self: center; 
   background: #fff;
-  transform: ${({ open }) => open ? 'translateY(0)' : 'translateY(-100%)'};  
-  /* height: 100vh;      */
-  height: 100%;     
-  width: 100vw;
+  transform: ${({ dropdown }) => dropdown ? 'translateY(25px)' : 'translateY(-100%)'};    
+  height: 75%;     
+  /* width: 100vw; */
+  width: 94vw;  
   text-align: left;
   padding: 2rem;    
   top: 0;
-  left: 0;
+  /* left: 0;   */
   z-index: 1;
   transition: transform 0.5s ease-in-out;
-  
+   
 
-  @media (max-width: 576px) {
+  @media (max-width: 768px) {
     width: 100%;  
     min-height: 100vh;
-    height: auto;   
+    height: auto;  
+    transform: ${({ dropdown }) => dropdown ? 'translateY(0)' : 'translateY(-100%)'}; 
   }
 
   a {

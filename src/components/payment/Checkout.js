@@ -67,7 +67,11 @@ const Checkout = ({ name, description, amount, label, type, email }) => {
         amount: fromDollarToCent(amount),
       })
       .then(SuccessPayment)
-      .catch(ErrorPayment);
+      .catch(ErrorPayment)
+      .then(setShowSuccessModal(false))
+      .then(setShowErrorModal(false));
+  {
+  }
 
   return (
     <div>

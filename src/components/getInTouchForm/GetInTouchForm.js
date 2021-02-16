@@ -1,6 +1,5 @@
 import React, { useContext, useState } from "react";
 import styled from "styled-components";
-import { nanoid } from "nanoid";
 import { Context } from "../../context/Context";
 
 const topics = ["Press", "Partnership", "Feedback", "Other"];
@@ -12,11 +11,11 @@ const GetInTouchForm = () => {
 
   const context = useContext(Context);
 
-  const handleTopicChoice = (event) => {
-    event.preventDefault();
-    setTopicChosen(event.target.value);
-    console.log(event.target.value);
-  };
+  // const handleTopicChoice = (event) => {
+  //   event.preventDefault();
+  //   setTopicChosen(event.target.value);
+  //   console.log(event.target.value);
+  // };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -76,10 +75,10 @@ const GetInTouchForm = () => {
             </Email>
             <Topic>
               <label htmlFor="topic">Topic </label>
-              <select onChange={handleTopicChoice} required>
-                <option></option>
+              <select onChange={(event)=>setTopicChosen(event.target.value)} required>
+                <option>All</option>
                 {topics.map((element) => (
-                  <option key={nanoid()} id="topic">
+                  <option key={element} value={element} id="topic">
                     {element}
                   </option>
                 ))}

@@ -21,8 +21,7 @@ const Header = ({ dropdown, setDropdown }) => {
     });
   }
 
-  return (
-    // <NavigationWrapper>
+  return (    
       <NavigationMenu dropdown={ dropdown }> 
 
         <PhotoSection>
@@ -59,22 +58,9 @@ const Header = ({ dropdown, setDropdown }) => {
           </LinkContainer>
         </LinkSection>               
 
-      </NavigationMenu>
-    // </NavigationWrapper>
-    
+      </NavigationMenu>   
   );
 }
-
-// const NavigationWrapper = styled.div`
-//   display: flex;
-//   width: 100vw;
-//   height: 100vh;
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   background: ${({ dropdown }) => dropdown ? '0.5' : '0'};
-//   z-index: 1;
-// `
 
 // Styling navigation menu 
 const NavigationMenu = styled.nav`  

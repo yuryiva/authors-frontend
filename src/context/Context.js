@@ -17,7 +17,7 @@ class Provider extends Component {
     message: "",
     totalOrder: 0,
     bookPrice: 25.75,
-    productionOrDevelopment: "development",
+    productionOrDevelopment: "production",
   };
 
   //   Component did mount section

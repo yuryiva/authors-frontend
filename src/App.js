@@ -11,6 +11,7 @@ import ShortStories from "./components/shortStories/ShortStories";
 import JoinTheMovement from "./components/joinTheMovement/JoinTheMovement";
 import BurgerMenu from "./components/header/BurgerMenu";
 import styled from 'styled-components';
+import AboutUs from './components/AboutUs/AboutUs'
 
 // import Banner from "./components/banner/Banner";
 
@@ -50,6 +51,11 @@ const App = () => {
           exact
           path="/authorsStory"
           render={(props) => <AuthorsStory {...props} />}
+        />
+         <Route
+          exact
+          path="/about-us"
+          render={(props) => <AboutUs {...props} />}
         />
 
         {/* <Route path="/home" render={(props) => <MainSection {...props} />} /> */}

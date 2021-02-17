@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 import SubscribeForm from "../subscribeForm/Subscribe";
 <style>
   @import
@@ -12,7 +13,7 @@ const Footer = () => {
       <FooterWrapper>
         <FooterLinks>
           <AboutUs>
-            <h4>About Us</h4>
+          <Link to="/about-us" ><h4>About Us</h4></Link>    
             <p>Who We Are</p>
             <p>Our Vision</p>
             <p>Sustainability</p>

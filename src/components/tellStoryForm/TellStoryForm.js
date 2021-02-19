@@ -32,7 +32,7 @@ const TellStoryForm = () => {
       }
       axios
 
-         .post(
+        .post(
           context.state.productionOrDevelopment === "production"
             ? `https://the-authors2.herokuapp.com/upload`
             : `http://localhost:8080/upload`,
@@ -83,7 +83,7 @@ const TellStoryForm = () => {
       imageName: imageName,
       topic: topic.value,
     };
-    
+
     let response = await fetch(
       context.state.productionOrDevelopment === "production"
         ? `https://the-authors2.herokuapp.com/tell-story`
@@ -148,22 +148,24 @@ const TellStoryForm = () => {
               <input type="text" id="topic" required />
             </TopicSection>
             <FileWrapper>
-              <label>Add File </label>
+              <label htmlFor="file-upload">Add File</label>
               <input
+                id="file-upload"
                 type="file"
-                name="file"
                 // multiple- for multiple files upload
                 onChange={onChangeHandler}
               />
+
+              <Button>
+                <button type="button" onClick={onClickHandler}>
+                  {uploadButton}
+                </button>
+              </Button>
+              <div>
+                {stateOfLoading > 0 && Math.round(stateOfLoading, 2) + "%"}
+              </div>
             </FileWrapper>
-            {/* <ProgressBar> */}
-              {stateOfLoading > 0 && Math.round(stateOfLoading, 2) + "%"}
-            {/* </ProgressBar> */}
-            <Button>
-              <button type="button" onClick={onClickHandler}>
-                {uploadButton}
-              </button>
-            </Button>
+
             <MessageSection>
               <label htmlFor="message">Your Story: </label>
               <BoxButton>
@@ -328,6 +330,22 @@ const FileWrapper = styled.div`
   display: flex;
   flex-direction: row;
   width: 70%;
+  justify-content: space-between;
+  label {
+    border: 1px solid black;
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  input[type="file"] {
+    display: none;
+  }
+
+  /* display: flex;
+  flex-direction: row;
+  
 
   label {
     width: 20%;
@@ -338,7 +356,7 @@ const FileWrapper = styled.div`
   input {
     background-color: white;
     width: 90%;
-  }
+  } */
 `;
 
 const BoxButton = styled.div`
@@ -389,6 +407,9 @@ const Button = styled.div`
   width: 42%;
   margin: 10px 0;
 
+  div {
+    margin: 5%;
+  }
   button {
     width: 85px;
     align-items: center;

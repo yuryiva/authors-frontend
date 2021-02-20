@@ -204,10 +204,10 @@ const DivWrapper = styled.div`
   margin-top: 100px;
   width: 100%;
   display: flex;
-  flex-direction: row;
+  /* flex-direction: row; 
   text-align: right;
   align-items: right;
-  justify-content: left;
+  justify-content: left; */
 
   @media only screen and (max-width: 1200px) {
     flex-wrap: wrap;
@@ -287,25 +287,25 @@ const FNameSection = styled.div`
   }
 `;
 
-const LNameSection = styled.div`
-  display: flex;
-  flex-direction: row;
-  width: 50%;
+// const LNameSection = styled.div`
+//   display: flex;
+//   flex-direction: row;
+//   width: 50%;
 
-  label {
-    width: 20%;
-    text-align: right;
-    margin-right: 15px;
-  }
+//   label {
+//     width: 20%;
+//     text-align: right;
+//     margin-right: 15px;
+//   }
 
-  input {
-    width: 90%;
-    height: 30px;
-    margin-bottom: 30px;
-    border-radius: 5px;
-    border: 1px solid black;
-  }
-`;
+//   input {
+//     width: 90%;
+//     height: 30px;
+//     margin-bottom: 30px;
+//     border-radius: 5px;
+//     border: 1px solid black;
+//   }
+// `;
 
 const EmailSection = styled.div`
   display: flex;
@@ -368,6 +368,10 @@ const TopicSection = styled.div`
 `;
 const ProgressDiv = styled.div`
   margin-top: 2%;
+
+  @media only screen and (max-width: 576px) {
+    margin-top: 3%;
+  }
 `;
 const MessageSection = styled.div`
   display: flex;
@@ -461,7 +465,7 @@ const BoxButton = styled.div`
 `;
 
 const TextWrapper = styled.div`
-  width: 400px;
+  width: 40%;
   height: auto;
   text-align: left;
   font-size: 15px;
@@ -476,6 +480,22 @@ const TextWrapper = styled.div`
 
   h4 {
     margin: 20px 0 10px 0;
+  }
+  @media only screen and (max-width: 1230px) {
+    width: 70%;
+    p {
+      margin: 0 0 40px 5%;
+      font-size: 12px;
+    }
+    h4 {
+      margin: 20px 0 10px 5%;
+    }
+  }
+  @media only screen and (max-width: 900px) {
+    width: 80%;
+  }
+  @media only screen and (max-width: 576px) {
+    width: 100%;
   }
 `;
 

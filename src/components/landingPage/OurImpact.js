@@ -179,6 +179,7 @@ const OurValuesDescription = styled.section`
     font-size: 1.5rem;
     margin-bottom: 20px;
     padding: 0 25px;
+    text-align: center;
   }
 
   p {

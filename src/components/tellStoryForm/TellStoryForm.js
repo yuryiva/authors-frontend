@@ -123,57 +123,55 @@ const TellStoryForm = () => {
           </button>
         </div>
       ) : (
-        <FormWrapper>
-          <form onSubmit={handleSubmit}>
-            <TextSection>
-              <h2>TELL YOUR STORY</h2>
-            </TextSection>
-            <FNameSection>
-              <label htmlFor="name">First Name</label>
-              <input type="text" id="name" required />
-            </FNameSection>
+        <FormWrapper onSubmit={handleSubmit}>
+          <TextSection>
+            <h2>TELL YOUR STORY</h2>
+          </TextSection>
+          <FNameSection>
+            <label htmlFor="name">First Name</label>
+            <input type="text" id="name" required />
+          </FNameSection>
 
-            {/* <LNameSection>
+          {/* <LNameSection>
                 <label>Last Name</label>
                 <input/>
                 </LNameSection> */}
 
-            <EmailSection>
-              <label htmlFor="email">Email </label>
-              <input type="email" id="email" required />
-            </EmailSection>
+          <EmailSection>
+            <label htmlFor="email">Email </label>
+            <input type="email" id="email" required />
+          </EmailSection>
 
-            <TopicSection>
-              <label htmlFor="topic">Topic </label>
-              <input type="text" id="topic" required />
-            </TopicSection>
-            <FileWrapper>
-              <label htmlFor="file-upload">Add File</label>
-              <input
-                id="file-upload"
-                type="file"
-                // multiple- for multiple files upload
-                onChange={onChangeHandler}
-              />
+          <TopicSection>
+            <label htmlFor="topic">Topic </label>
+            <input type="text" id="topic" required />
+          </TopicSection>
+          <FileWrapper>
+            <label htmlFor="file-upload">Add File</label>
+            <input
+              id="file-upload"
+              type="file"
+              // multiple- for multiple files upload
+              onChange={onChangeHandler}
+            />
 
-              <Button>
-                <button type="button" onClick={onClickHandler}>
-                  {uploadButton}
-                </button>
-              </Button>
-              <div>
-                {stateOfLoading > 0 && Math.round(stateOfLoading, 2) + "%"}
-              </div>
-            </FileWrapper>
+            <Button>
+              <button type="button" onClick={onClickHandler}>
+                {uploadButton}
+              </button>
+            </Button>
+            <ProgressDiv>
+              {stateOfLoading > 0 && Math.round(stateOfLoading, 2) + "%"}
+            </ProgressDiv>
+          </FileWrapper>
 
-            <MessageSection>
-              <label htmlFor="message">Your Story: </label>
-              <BoxButton>
-                <textarea id="message" required />
-                <button type="submit">{status}</button>
-              </BoxButton>
-            </MessageSection>
-          </form>
+          <MessageSection>
+            <label htmlFor="message">Your Story: </label>
+            <BoxButton>
+              <textarea id="message" required />
+              <button type="submit">{status}</button>
+            </BoxButton>
+          </MessageSection>
         </FormWrapper>
       )}
       <TextWrapper>
@@ -210,20 +208,34 @@ const DivWrapper = styled.div`
   text-align: right;
   align-items: right;
   justify-content: left;
-  flex-wrap: wrap;
+
+  @media only screen and (max-width: 1200px) {
+    flex-wrap: wrap;
+  }
 `;
 
-const FormWrapper = styled.div`
-  width: 60%;
+const FormWrapper = styled.form`
+  width: 50%;
   display: flex;
   flex-direction: column;
   text-align: center;
   align-items: center;
   justify-content: center;
+
+  @media only screen and (max-width: 1230px) {
+    width: 80%;
+  }
+  @media only screen and (max-width: 900px) {
+    width: 90%;
+  }
+  @media only screen and (max-width: 576px) {
+    width: 100%;
+    font-size: 0.9rem;
+  }
 `;
 
 const TextSection = styled.div`
-  width: 40%;
+  width: 70%;
   display: block;
   text-align: left;
   margin: 20px 0 20px 0px;
@@ -231,6 +243,16 @@ const TextSection = styled.div`
   h2 {
     font-size: 25px;
     font-weight: 400;
+  }
+  @media only screen and (max-width: 1230px) {
+    width: 80%;
+  }
+  @media only screen and (max-width: 900px) {
+    width: 90%;
+  }
+  @media only screen and (max-width: 576px) {
+    width: 100%;
+    font-size: 0.9rem;
   }
 `;
 
@@ -252,12 +274,23 @@ const FNameSection = styled.div`
     border-radius: 5px;
     border: 1px solid black;
   }
+
+  @media only screen and (max-width: 1230px) {
+    width: 80%;
+  }
+  @media only screen and (max-width: 900px) {
+    width: 90%;
+  }
+  @media only screen and (max-width: 576px) {
+    width: 100%;
+    font-size: 0.9rem;
+  }
 `;
 
 const LNameSection = styled.div`
   display: flex;
   flex-direction: row;
-  width: 70%;
+  width: 50%;
 
   label {
     width: 20%;
@@ -292,6 +325,16 @@ const EmailSection = styled.div`
     border-radius: 5px;
     border: 1px solid black;
   }
+  @media only screen and (max-width: 1230px) {
+    width: 80%;
+  }
+  @media only screen and (max-width: 900px) {
+    width: 90%;
+  }
+  @media only screen and (max-width: 576px) {
+    width: 100%;
+    font-size: 0.9rem;
+  }
 `;
 
 const TopicSection = styled.div`
@@ -312,8 +355,20 @@ const TopicSection = styled.div`
     border-radius: 5px;
     border: 1px solid black;
   }
+  @media only screen and (max-width: 1230px) {
+    width: 80%;
+  }
+  @media only screen and (max-width: 900px) {
+    width: 90%;
+  }
+  @media only screen and (max-width: 576px) {
+    width: 100%;
+    font-size: 0.9rem;
+  }
 `;
-
+const ProgressDiv = styled.div`
+  margin-top: 2%;
+`;
 const MessageSection = styled.div`
   display: flex;
   flex-direction: row;
@@ -324,13 +379,23 @@ const MessageSection = styled.div`
     text-align: right;
     margin-right: 15px;
   }
+  @media only screen and (max-width: 1230px) {
+    width: 80%;
+  }
+  @media only screen and (max-width: 900px) {
+    width: 90%;
+  }
+  @media only screen and (max-width: 576px) {
+    width: 100%;
+    font-size: 0.9rem;
+  }
 `;
 
 const FileWrapper = styled.div`
   display: flex;
   flex-direction: row;
   width: 70%;
-  justify-content: space-between;
+  justify-content: space-around;
   label {
     border: 1px solid black;
     display: inline-block;
@@ -357,6 +422,16 @@ const FileWrapper = styled.div`
     background-color: white;
     width: 90%;
   } */
+  @media only screen and (max-width: 1230px) {
+    width: 80%;
+  }
+  @media only screen and (max-width: 900px) {
+    width: 90%;
+  }
+  @media only screen and (max-width: 576px) {
+    width: 100%;
+    font-size: 0.9rem;
+  }
 `;
 
 const BoxButton = styled.div`
@@ -379,6 +454,9 @@ const BoxButton = styled.div`
     background-color: white;
     border: 1px solid black;
     font-size: 20px;
+    @media only screen and (max-width: 576px) {
+      font-size: 0.9rem;
+    }
   }
 `;
 
@@ -407,11 +485,11 @@ const Button = styled.div`
   width: 42%;
   margin: 10px 0;
 
-  div {
+  /* div {
     margin: 5%;
-  }
+  } */
   button {
-    width: 85px;
+    width: 100%;
     align-items: center;
     text-align: center;
     height: 25px;
@@ -419,5 +497,8 @@ const Button = styled.div`
     background-color: white;
     border: 1px solid black;
     font-size: 15px;
+    @media only screen and (max-width: 576px) {
+      font-size: 0.9rem;
+    }
   }
 `;

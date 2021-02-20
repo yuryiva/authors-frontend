@@ -111,7 +111,7 @@ const TellStoryForm = () => {
   return (
     <DivWrapper>
       {sentMessage ? (
-        <div>
+        <ResultDiv>
           {sentMessage === "SENT" && (
             <p>THANK YOU! WE'LL GET BACK TO YOU ASAP</p>
           )}
@@ -119,9 +119,9 @@ const TellStoryForm = () => {
             <p>SOMETHING WENT WRONG. TRY AGAIN PLEASE</p>
           )}
           <button onClick={() => setSentMessage(false)}>
-            sent another message
+            Send another message
           </button>
-        </div>
+        </ResultDiv>
       ) : (
         <FormWrapper onSubmit={handleSubmit}>
           <TextSection>
@@ -155,14 +155,11 @@ const TellStoryForm = () => {
               onChange={onChangeHandler}
             />
 
-            <Button>
-              <button type="button" onClick={onClickHandler}>
-                {uploadButton}
-              </button>
-            </Button>
-            <ProgressDiv>
-              {stateOfLoading > 0 && Math.round(stateOfLoading, 2) + "%"}
-            </ProgressDiv>
+            <button type="button" onClick={onClickHandler}>
+              {uploadButton}
+            </button>
+
+            {stateOfLoading > 0 && Math.round(stateOfLoading, 2) + "%"}
           </FileWrapper>
 
           <MessageSection>
@@ -200,14 +197,11 @@ const TellStoryForm = () => {
 };
 
 export default TellStoryForm;
+
 const DivWrapper = styled.div`
   margin-top: 100px;
   width: 100%;
   display: flex;
-  /* flex-direction: row; 
-  text-align: right;
-  align-items: right;
-  justify-content: left; */
 
   @media only screen and (max-width: 1200px) {
     flex-wrap: wrap;
@@ -227,11 +221,15 @@ const FormWrapper = styled.form`
   }
   @media only screen and (max-width: 900px) {
     width: 90%;
+    margin-left:auto;
+    margin-right:auto;
   }
-  @media only screen and (max-width: 576px) {
-    width: 100%;
-    font-size: 0.9rem;
-  }
+  /* @media only screen and (max-width: 576px) {
+    width: 95%;
+    margin-left:auto;
+    margin-right:auto;
+
+  } */
 `;
 
 const TextSection = styled.div`
@@ -286,26 +284,6 @@ const FNameSection = styled.div`
     font-size: 0.9rem;
   }
 `;
-
-// const LNameSection = styled.div`
-//   display: flex;
-//   flex-direction: row;
-//   width: 50%;
-
-//   label {
-//     width: 20%;
-//     text-align: right;
-//     margin-right: 15px;
-//   }
-
-//   input {
-//     width: 90%;
-//     height: 30px;
-//     margin-bottom: 30px;
-//     border-radius: 5px;
-//     border: 1px solid black;
-//   }
-// `;
 
 const EmailSection = styled.div`
   display: flex;
@@ -366,13 +344,7 @@ const TopicSection = styled.div`
     font-size: 0.9rem;
   }
 `;
-const ProgressDiv = styled.div`
-  margin-top: 2%;
 
-  @media only screen and (max-width: 576px) {
-    margin-top: 3%;
-  }
-`;
 const MessageSection = styled.div`
   display: flex;
   flex-direction: row;
@@ -399,11 +371,16 @@ const FileWrapper = styled.div`
   display: flex;
   flex-direction: row;
   width: 70%;
-  justify-content: space-around;
+  justify-content: center;
+  margin-bottom: 4%;
+
   label {
+    width: 25%;
+    margin-left: 15%;
+    margin-top: auto;
+    margin-bottom: auto;
     border: 1px solid black;
     display: inline-block;
-    padding: 6px 12px;
     border-radius: 5px;
     cursor: pointer;
   }
@@ -412,20 +389,22 @@ const FileWrapper = styled.div`
     display: none;
   }
 
-  /* display: flex;
-  flex-direction: row;
-  
-
-  label {
-    width: 20%;
-    text-align: right;
-    margin-right: 15px;
+  button {
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 25%;
+    align-items: center;
+    text-align: center;
+    height: 25px;
+    border-radius: 5px;
+    background-color: white;
+    border: 1px solid black;
+    font-size: 15px;
+    @media only screen and (max-width: 576px) {
+      font-size: 0.9rem;
+    }
   }
 
-  input {
-    background-color: white;
-    width: 90%;
-  } */
   @media only screen and (max-width: 1230px) {
     width: 80%;
   }
@@ -458,9 +437,9 @@ const BoxButton = styled.div`
     background-color: white;
     border: 1px solid black;
     font-size: 20px;
-    @media only screen and (max-width: 576px) {
+    /* @media only screen and (max-width: 576px) {
       font-size: 0.9rem;
-    }
+    } */
   }
 `;
 
@@ -499,17 +478,18 @@ const TextWrapper = styled.div`
   }
 `;
 
-const Button = styled.div`
+const ResultDiv = styled.div`
+  width: 50%;
   display: flex;
-  flex-direction: row;
-  width: 42%;
-  margin: 10px 0;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 10%;
+  margin-left: auto;
+  margin-right: auto;
 
-  /* div {
-    margin: 5%;
-  } */
   button {
-    width: 100%;
+    margin-left: 33%;
+    width: 30%;
     align-items: center;
     text-align: center;
     height: 25px;
@@ -517,8 +497,34 @@ const Button = styled.div`
     background-color: white;
     border: 1px solid black;
     font-size: 15px;
-    @media only screen and (max-width: 576px) {
+
+    @media only screen and (max-width: 1600px) {
+      width: 40%;
+      margin-left: 30%;
+    }
+    @media only screen and (max-width: 1550px) {
+      width: 45%;
+      margin-left: 30%;
+    }
+
+    @media only screen and (max-width: 1230px) {
+      width: 45%;
+      margin-left: 25%;
       font-size: 0.9rem;
+    }
+    @media only screen and (max-width: 900px) {
+      width: 60%;
+      margin-left: 20%;
+    }
+    @media only screen and (max-width: 780px) {
+      width: 70%;
+      font-size: 0.9rem;
+      margin-left: 15%;
+    }
+    @media only screen and (max-width: 576px) {
+      width: 100%;
+      margin-left: 0;
+      font-size: 0.8rem;
     }
   }
 `;

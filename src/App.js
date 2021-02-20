@@ -10,13 +10,14 @@ import Podcasts from "./components/podcasts/Podcasts";
 import ShortStories from "./components/shortStories/ShortStories";
 import JoinTheMovement from "./components/joinTheMovement/JoinTheMovement";
 import BurgerMenu from "./components/header/BurgerMenu";
-import styled from 'styled-components';
-import AboutUs from './components/AboutUs/AboutUs'
+import styled from "styled-components";
+import AboutUs from "./components/AboutUs/AboutUs";
 
 // import Banner from "./components/banner/Banner";
 
 import PreOrderForm from "./components/preOrderForm/PreOrderForm";
 import AuthorsStory from "./components/authorsPage/AuthorsStory";
+import TellStoryForm from "./components/tellStoryForm/TellStoryForm";
 
 const App = () => {
   const [dropdown, setDropdown] = useState(false);
@@ -47,12 +48,17 @@ const App = () => {
           path="/join-the-movement"
           render={(props) => <JoinTheMovement {...props} />}
         />
+
+        <Route
+          path="/tell-your-story"
+          render={(props) => <TellStoryForm {...props} />}
+        />
         <Route
           exact
           path="/authorsStory"
           render={(props) => <AuthorsStory {...props} />}
         />
-         <Route
+        <Route
           exact
           path="/about-us"
           render={(props) => <AboutUs {...props} />}
@@ -67,18 +73,18 @@ const App = () => {
   );
 };
 
-const MainWrapper = styled.div` 
+const MainWrapper = styled.div`
   position: relative;
   top: 0;
   left: 0;
-  z-index: 999; 
+  z-index: 999;
   display: flex;
   flex-direction: column;
   width: 100%;
   height: 100%;
-  background-color: ${({ dropdown }) => dropdown ? 'rgba(0, 0, 0, 0.7)' : ''};
+  background-color: ${({ dropdown }) => (dropdown ? "rgba(0, 0, 0, 0.7)" : "")};
   transition-delay: 1s;
   transition: 1s ease;
-`
+`;
 
 export default App;

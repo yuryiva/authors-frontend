@@ -62,18 +62,6 @@ const PreOrderForm = () => {
     };
 
     context.getDataFromForm(details);
-    /* details["totalOrder"] = totalOrder;  */
-
-    /* let response = await fetch(`http://localhost:8080/preorder`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json;charset=utf-8",
-      },
-      body: JSON.stringify(details),
-    });
-    setStatus("Submit");
-    let result = await response.json();
-    setSentMessage(result.status); */
   };
   return (
     <SendMessageWrapper>
@@ -91,9 +79,12 @@ const PreOrderForm = () => {
         </ResponseDiv>
       ) : (
         <SentMessageForm onChange={handleChange}>
+          <ImageBook>
+            <img src={context.state.bookUrl} />
+          </ImageBook>
           <h5>PRICE PER BOOK: {bookPrice} EUR</h5>
           <div>
-            <label htmlFor="amount">Amount of books: </label>
+            <label htmlFor="amount"> </label>
             {/* need to fix burgermenu component */}
             <input
               // style={{ zIndex: 999 }}
@@ -101,57 +92,53 @@ const PreOrderForm = () => {
               id="amount"
               min="0"
               required
+              placeholder="Amount of books"
             />
           </div>
 
           <h5>TOTAL EUR: {totalOrder}</h5>
 
           <div>
-            <label htmlFor="name">Full name:</label>
-            <input type="text" id="name" required />
+            <label htmlFor="name"></label>
+            <input type="text" id="name" required placeholder="Full name" />
           </div>
           <div>
-            <label htmlFor="email">Email:</label>
-            <input type="email" id="email" required />
+            <label htmlFor="email"></label>
+            <input type="email" id="email" required placeholder="Email" />
           </div>
           <div>
-            <label htmlFor="phone">Phone number:</label>
-            <input type="tel" id="phone" required />
+            <label htmlFor="phone"></label>
+            <input type="tel" id="phone" required placeholder="Phone number" />
           </div>
           <div>
-            <label htmlFor="address">Address:</label>
-            <input type="text" id="address" required />
+            <label htmlFor="address"></label>
+            <input type="text" id="address" required placeholder="Address" />
           </div>
           <div>
-            <label htmlFor="city">City/town:</label>
-            <input type="text" id="city" required />
+            <label htmlFor="city"></label>
+            <input type="text" id="city" required placeholder="City/Town" />
           </div>
           <div>
-            <label htmlFor="state">State:</label>
-            <input type="text" id="state" />
+            <label htmlFor="state"></label>
+            <input type="text" id="state" placeholder="State" />
           </div>
           <div>
-            <label htmlFor="country">Country:</label>
-            <input type="text" id="country" required />
+            <label htmlFor="country"></label>
+            <input type="text" id="country" required placeholder="Country" />
           </div>
           <div>
-            <label htmlFor="postcode">Post code/ZIP:</label>
-            <input type="text" id="postcode" required />
+            <label htmlFor="postcode"></label>
+            <input
+              type="text"
+              id="postcode"
+              required
+              placeholder="Postal Code/ZIP"
+            />
           </div>
           <div>
-            <label htmlFor="message">Additional info:</label>
-            <textarea id="message" />
+            <label htmlFor="message"></label>
+            <textarea id="message" placeholder="Additional Info" />
           </div>
-          {/* send email button */}
-          {/* <SubmitDiv>
-            <button type="submit">{status}</button>
-          </SubmitDiv> */}
-          {/* checkout button */}
-          {/* <Checkout
-            name={"Authors LLC."}
-            description={"Book(s) you bought"}
-            amount={context.state.totalOrder}
-          /> */}
         </SentMessageForm>
       )}
       <Checkout
@@ -169,15 +156,13 @@ export default PreOrderForm;
 
 const SendMessageWrapper = styled.div`
   width: 60%;
-  //height: 40%;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  // margin: 20px;
-
-  margin: auto;
+  align-self: center;
+  margin-top: 180px;
+  margin-bottom: 3%;
 
   padding: 10px;
 
@@ -193,6 +178,7 @@ const SendMessageWrapper = styled.div`
     color: grey;
     outline: none;
     margin-top: 25px;
+    margin-bottom: 25px;
   }
   button:hover {
     background-color: lightgrey;
@@ -203,43 +189,52 @@ const SendMessageWrapper = styled.div`
 const SentMessageForm = styled.form`
   display: flex;
   flex-direction: column;
-  width: 60%;
-  margin-top: 100px;
-  label {
-    width: 40%;
-    margin-right: 30px;
-    text-align: right;
-    align-items: bottom;
-  }
+  width: 70%;
+  margin-top: 50px;
+
   textarea {
     height: 100px;
-    width: 100%;
+    width: 180%;
     margin-top: 10px;
+    padding: 2%;
+    border-radius: 4px;
+    font-size: 18px;
+    cursor: pointer;
   }
   h5 {
     margin-bottom: 5px;
+    color: red;
   }
   div {
-    width: 100%;
+    ${"" /* width: 100%; */}
     display: flex;
     flex-direction: row;
-    // justify-content: right;
     flex-wrap: no wrap;
   }
   input {
-    width: 100%;
-    height: 30px;
-    border: 0;
-    border-bottom: 1px solid black;
+    width: 180%;
+    height: 100%;
+    border: 1px solid black;
+    border-radius: 4px;
     margin: 10px 0;
     text-decoration: 0;
     outline: none;
     cursor: pointer;
     font-size: 18px;
+    padding: 2%;
   }
 
   input:hover {
     background-color: rgba(192, 192, 192, 0.3);
+  }
+`;
+
+const ImageBook = styled.div`
+  padding: 20px;
+  margin-bottom: 3%;
+  justify-content: center;
+  img {
+    height: 300px;
   }
 `;
 // const PriceTotal = styled.div`

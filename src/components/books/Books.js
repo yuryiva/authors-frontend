@@ -35,29 +35,29 @@ export default function Books() {
       {books.map((book) => (
         <PageWrapper>
           {/* <BookWrapper key={book.id}> */}
-            <BookImage>
-              <img src={book.bookUrl} alt="book" />
-            </BookImage>
-            <BookDescription>
-              <h3>{book.bookTitle}</h3>
-              <h4>{book.bookDescription}</h4>
-            </BookDescription>
+          <BookImage>
+            <img src={book.bookUrl} alt="book" />
+          </BookImage>
+          <BookDescription>
+            <h3>{book.bookTitle}</h3>
+            <p>{book.bookDescription}</p>
+          </BookDescription>
 
-            <BookCheckout>
-              <h3>
-                €<span>{bookPrice}</span>
-              </h3>
-              <p>
-                {book.bookAuthor} | {book.bookDate}
-              </p>
-              <p>{book.typeBook}</p>
-              <p> {` Category: ${book.bookCategory}`}</p>
-              <p>{`Delivery: ${book.deliveryTime}`}</p>
-              <p>{book.bookDiscount}</p>
-              <Link to="/preOrderForm">
-                <button>Pre-Order</button>
-              </Link>
-            </BookCheckout>
+          <BookCheckout>
+            <h3>
+              €<span>{bookPrice}</span>
+            </h3>
+            <p>
+              {book.bookAuthor} | {book.bookDate}
+            </p>
+            <p>{book.typeBook}</p>
+            <p> {` Category: ${book.bookCategory}`}</p>
+            <p>{`Delivery: ${book.deliveryTime}`}</p>
+            <p>{book.bookDiscount}</p>
+            <Link to="/preOrderForm">
+              <button>Pre-Order</button>
+            </Link>
+          </BookCheckout>
           {/* </BookWrapper> */}
           <ProductDetails>
             <h3>Product Details</h3>
@@ -94,7 +94,7 @@ const ProductDetails = styled.div`
 `;
 
 const PageWrapper = styled.div`
-  margin: 0;  
+  margin: 0;
   padding: 5%;
   padding-top: 100px;
   display: flex;
@@ -109,7 +109,7 @@ const PageWrapper = styled.div`
 //   display: flex;
 //   flex-wrap: wrap;
 //   flex-direction: row;
-//   justify-content: center;  
+//   justify-content: center;
 //   margin: 20px;
 //   font-family: "Space Mono", monospace;
 // `;
@@ -122,13 +122,13 @@ const BookImage = styled.div`
   margin: 3%;
   margin-bottom: 100px;
 
-  img {    
+  img {
     /* width: 360px;     */
     /* height: 500px; */
     width: 100%;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;     
+    background-size: cover;
   }
   /* margin: 40px; */
 `;
@@ -138,7 +138,7 @@ const BookDescription = styled.div`
   margin-bottom: 100px;
   /* margin: 0 40px; */
   h3 {
-    font-size: 30px;    
+    font-size: 30px;
     /* margin-top: 30px; */
     padding-bottom: 30px;
   }

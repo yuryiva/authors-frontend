@@ -32,7 +32,7 @@ const TellStoryForm = () => {
       }
       axios
 
-         .post(
+        .post(
           context.state.productionOrDevelopment === "production"
             ? `https://the-authors2.herokuapp.com/upload`
             : `http://localhost:8080/upload`,
@@ -83,7 +83,7 @@ const TellStoryForm = () => {
       imageName: imageName,
       topic: topic.value,
     };
-    
+
     let response = await fetch(
       context.state.productionOrDevelopment === "production"
         ? `https://the-authors2.herokuapp.com/tell-story`
@@ -111,7 +111,7 @@ const TellStoryForm = () => {
   return (
     <DivWrapper>
       {sentMessage ? (
-        <div>
+        <ResultDiv>
           {sentMessage === "SENT" && (
             <p>THANK YOU! WE'LL GET BACK TO YOU ASAP</p>
           )}
@@ -119,59 +119,56 @@ const TellStoryForm = () => {
             <p>SOMETHING WENT WRONG. TRY AGAIN PLEASE</p>
           )}
           <button onClick={() => setSentMessage(false)}>
-            sent another message
+            Send another message
           </button>
-        </div>
+        </ResultDiv>
       ) : (
-        <FormWrapper>
-          <form onSubmit={handleSubmit}>
-            <TextSection>
-              <h2>TELL YOUR STORY</h2>
-            </TextSection>
-            <FNameSection>
-              <label htmlFor="name">First Name</label>
-              <input type="text" id="name" required />
-            </FNameSection>
+        <FormWrapper onSubmit={handleSubmit}>
+          <TextSection>
+            <h2>TELL YOUR STORY</h2>
+          </TextSection>
+          <FNameSection>
+            <label htmlFor="name">First Name</label>
+            <input type="text" id="name" required />
+          </FNameSection>
 
-            {/* <LNameSection>
+          {/* <LNameSection>
                 <label>Last Name</label>
                 <input/>
                 </LNameSection> */}
 
-            <EmailSection>
-              <label htmlFor="email">Email </label>
-              <input type="email" id="email" required />
-            </EmailSection>
+          <EmailSection>
+            <label htmlFor="email">Email </label>
+            <input type="email" id="email" required />
+          </EmailSection>
 
-            <TopicSection>
-              <label htmlFor="topic">Topic </label>
-              <input type="text" id="topic" required />
-            </TopicSection>
-            <FileWrapper>
-              <label>Add File </label>
-              <input
-                type="file"
-                name="file"
-                // multiple- for multiple files upload
-                onChange={onChangeHandler}
-              />
-            </FileWrapper>
-            {/* <ProgressBar> */}
-              {stateOfLoading > 0 && Math.round(stateOfLoading, 2) + "%"}
-            {/* </ProgressBar> */}
-            <Button>
-              <button type="button" onClick={onClickHandler}>
-                {uploadButton}
-              </button>
-            </Button>
-            <MessageSection>
-              <label htmlFor="message">Your Story: </label>
-              <BoxButton>
-                <textarea id="message" required />
-                <button type="submit">{status}</button>
-              </BoxButton>
-            </MessageSection>
-          </form>
+          <TopicSection>
+            <label htmlFor="topic">Topic </label>
+            <input type="text" id="topic" required />
+          </TopicSection>
+          <FileWrapper>
+            <label htmlFor="file-upload">Add File</label>
+            <input
+              id="file-upload"
+              type="file"
+              // multiple- for multiple files upload
+              onChange={onChangeHandler}
+            />
+
+            <button type="button" onClick={onClickHandler}>
+              {uploadButton}
+            </button>
+
+            {stateOfLoading > 0 && Math.round(stateOfLoading, 2) + "%"}
+          </FileWrapper>
+
+          <MessageSection>
+            <label htmlFor="message">Your Story: </label>
+            <BoxButton>
+              <textarea id="message" required />
+              <button type="submit">{status}</button>
+            </BoxButton>
+          </MessageSection>
         </FormWrapper>
       )}
       <TextWrapper>
@@ -200,28 +197,43 @@ const TellStoryForm = () => {
 };
 
 export default TellStoryForm;
+
 const DivWrapper = styled.div`
   margin-top: 100px;
   width: 100%;
   display: flex;
-  flex-direction: row;
-  text-align: right;
-  align-items: right;
-  justify-content: left;
-  flex-wrap: wrap;
+
+  @media only screen and (max-width: 1200px) {
+    flex-wrap: wrap;
+  }
 `;
 
-const FormWrapper = styled.div`
-  width: 60%;
+const FormWrapper = styled.form`
+  width: 50%;
   display: flex;
   flex-direction: column;
   text-align: center;
   align-items: center;
   justify-content: center;
+
+  @media only screen and (max-width: 1230px) {
+    width: 80%;
+  }
+  @media only screen and (max-width: 900px) {
+    width: 90%;
+    margin-left:auto;
+    margin-right:auto;
+  }
+  /* @media only screen and (max-width: 576px) {
+    width: 95%;
+    margin-left:auto;
+    margin-right:auto;
+
+  } */
 `;
 
 const TextSection = styled.div`
-  width: 40%;
+  width: 70%;
   display: block;
   text-align: left;
   margin: 20px 0 20px 0px;
@@ -229,6 +241,16 @@ const TextSection = styled.div`
   h2 {
     font-size: 25px;
     font-weight: 400;
+  }
+  @media only screen and (max-width: 1230px) {
+    width: 80%;
+  }
+  @media only screen and (max-width: 900px) {
+    width: 90%;
+  }
+  @media only screen and (max-width: 576px) {
+    width: 100%;
+    font-size: 0.9rem;
   }
 `;
 
@@ -250,25 +272,16 @@ const FNameSection = styled.div`
     border-radius: 5px;
     border: 1px solid black;
   }
-`;
 
-const LNameSection = styled.div`
-  display: flex;
-  flex-direction: row;
-  width: 70%;
-
-  label {
-    width: 20%;
-    text-align: right;
-    margin-right: 15px;
+  @media only screen and (max-width: 1230px) {
+    width: 80%;
   }
-
-  input {
+  @media only screen and (max-width: 900px) {
     width: 90%;
-    height: 30px;
-    margin-bottom: 30px;
-    border-radius: 5px;
-    border: 1px solid black;
+  }
+  @media only screen and (max-width: 576px) {
+    width: 100%;
+    font-size: 0.9rem;
   }
 `;
 
@@ -290,6 +303,16 @@ const EmailSection = styled.div`
     border-radius: 5px;
     border: 1px solid black;
   }
+  @media only screen and (max-width: 1230px) {
+    width: 80%;
+  }
+  @media only screen and (max-width: 900px) {
+    width: 90%;
+  }
+  @media only screen and (max-width: 576px) {
+    width: 100%;
+    font-size: 0.9rem;
+  }
 `;
 
 const TopicSection = styled.div`
@@ -310,6 +333,16 @@ const TopicSection = styled.div`
     border-radius: 5px;
     border: 1px solid black;
   }
+  @media only screen and (max-width: 1230px) {
+    width: 80%;
+  }
+  @media only screen and (max-width: 900px) {
+    width: 90%;
+  }
+  @media only screen and (max-width: 576px) {
+    width: 100%;
+    font-size: 0.9rem;
+  }
 `;
 
 const MessageSection = styled.div`
@@ -322,22 +355,65 @@ const MessageSection = styled.div`
     text-align: right;
     margin-right: 15px;
   }
+  @media only screen and (max-width: 1230px) {
+    width: 80%;
+  }
+  @media only screen and (max-width: 900px) {
+    width: 90%;
+  }
+  @media only screen and (max-width: 576px) {
+    width: 100%;
+    font-size: 0.9rem;
+  }
 `;
 
 const FileWrapper = styled.div`
   display: flex;
   flex-direction: row;
   width: 70%;
+  justify-content: center;
+  margin-bottom: 4%;
 
   label {
-    width: 20%;
-    text-align: right;
-    margin-right: 15px;
+    width: 25%;
+    margin-left: 15%;
+    margin-top: auto;
+    margin-bottom: auto;
+    border: 1px solid black;
+    display: inline-block;
+    border-radius: 5px;
+    cursor: pointer;
   }
 
-  input {
+  input[type="file"] {
+    display: none;
+  }
+
+  button {
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 25%;
+    align-items: center;
+    text-align: center;
+    height: 25px;
+    border-radius: 5px;
     background-color: white;
+    border: 1px solid black;
+    font-size: 15px;
+    @media only screen and (max-width: 576px) {
+      font-size: 0.9rem;
+    }
+  }
+
+  @media only screen and (max-width: 1230px) {
+    width: 80%;
+  }
+  @media only screen and (max-width: 900px) {
     width: 90%;
+  }
+  @media only screen and (max-width: 576px) {
+    width: 100%;
+    font-size: 0.9rem;
   }
 `;
 
@@ -361,11 +437,14 @@ const BoxButton = styled.div`
     background-color: white;
     border: 1px solid black;
     font-size: 20px;
+    /* @media only screen and (max-width: 576px) {
+      font-size: 0.9rem;
+    } */
   }
 `;
 
 const TextWrapper = styled.div`
-  width: 400px;
+  width: 40%;
   height: auto;
   text-align: left;
   font-size: 15px;
@@ -381,16 +460,36 @@ const TextWrapper = styled.div`
   h4 {
     margin: 20px 0 10px 0;
   }
+  @media only screen and (max-width: 1230px) {
+    width: 70%;
+    p {
+      margin: 0 0 40px 5%;
+      font-size: 12px;
+    }
+    h4 {
+      margin: 20px 0 10px 5%;
+    }
+  }
+  @media only screen and (max-width: 900px) {
+    width: 80%;
+  }
+  @media only screen and (max-width: 576px) {
+    width: 100%;
+  }
 `;
 
-const Button = styled.div`
+const ResultDiv = styled.div`
+  width: 50%;
   display: flex;
-  flex-direction: row;
-  width: 42%;
-  margin: 10px 0;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 10%;
+  margin-left: auto;
+  margin-right: auto;
 
   button {
-    width: 85px;
+    margin-left: 33%;
+    width: 30%;
     align-items: center;
     text-align: center;
     height: 25px;
@@ -398,5 +497,34 @@ const Button = styled.div`
     background-color: white;
     border: 1px solid black;
     font-size: 15px;
+
+    @media only screen and (max-width: 1600px) {
+      width: 40%;
+      margin-left: 30%;
+    }
+    @media only screen and (max-width: 1550px) {
+      width: 45%;
+      margin-left: 30%;
+    }
+
+    @media only screen and (max-width: 1230px) {
+      width: 45%;
+      margin-left: 25%;
+      font-size: 0.9rem;
+    }
+    @media only screen and (max-width: 900px) {
+      width: 60%;
+      margin-left: 20%;
+    }
+    @media only screen and (max-width: 780px) {
+      width: 70%;
+      font-size: 0.9rem;
+      margin-left: 15%;
+    }
+    @media only screen and (max-width: 576px) {
+      width: 100%;
+      margin-left: 0;
+      font-size: 0.8rem;
+    }
   }
 `;

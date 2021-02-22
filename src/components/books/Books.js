@@ -33,7 +33,7 @@ export default function Books() {
   return (
     <div>
       {books.map((book) => (
-        <PageWrapper>
+        <PageWrapper key={book.id}>
           {/* <BookWrapper key={book.id}> */}
             <BookImage>
               <img src={book.bookUrl} alt="book" />
@@ -74,6 +74,8 @@ export default function Books() {
     </div>
   );
 }
+
+
 
 const ProductDetails = styled.div`
   /* width: 50%; */

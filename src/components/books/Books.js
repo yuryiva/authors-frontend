@@ -40,7 +40,7 @@ export default function Books() {
             </BookImage>
             <BookDescription>
               <h3>{book.bookTitle}</h3>
-              <h4>{book.bookDescription}</h4>
+              <p>{book.bookDescription}</p>
             </BookDescription>
 
             <BookCheckout>

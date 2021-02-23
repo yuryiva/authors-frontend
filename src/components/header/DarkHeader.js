@@ -74,7 +74,7 @@ const DarkNavigationMenu = styled.nav`
   top: 0;
   /* left: 0;   */
   z-index: 5;
-  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out; 
    
 
   @media (max-width: 768px) {

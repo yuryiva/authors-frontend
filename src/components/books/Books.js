@@ -103,7 +103,7 @@ const ProductDetails = styled.div`
 const PageWrapper = styled.div`
   margin: 0;  
   padding: 5%;
-  padding-top: 100px;
+  padding-top: 140px;
   display: flex;
   /* flex-direction: column; */
   flex-wrap: wrap;

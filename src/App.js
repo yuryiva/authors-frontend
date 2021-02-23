@@ -2,7 +2,7 @@ import { Route, Switch } from "react-router-dom";
 import React, { useState } from "react";
 import "./App.css";
 import Footer from "./components/footer/Footer";
-import Header from "./components/header/Header";
+// import Header from "./components/header/Header";
 import LandingPage from "./components/landingPage/LandingPage";
 import Authors from "./components/authorsPage/Authors";
 import Books from "./components/books/Books";
@@ -82,8 +82,7 @@ const MainWrapper = styled.div`
   flex-direction: column;
   width: 100%;
   height: 100%;
-  background-color: ${({ dropdown }) => (dropdown ? "rgba(0, 0, 0, 0.7)" : "")};
-  transition-delay: 1s;
+  background-color: ${({ dropdown }) => (dropdown ? "rgba(0, 0, 0, 0.7)" : "")};  
   transition: 1s ease;
 `;
 

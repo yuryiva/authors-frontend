@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import DarkHeader from "./DarkHeader";
 
 const DarkBurger = () => {
     const [darkDropdown, setDarkDropdown] = useState(false);
@@ -12,7 +13,7 @@ const DarkBurger = () => {
     }
   
     // This method will scroll to the top of the page when clicking on the logo
-    const handleBooksLogo = () => {
+    const handleDarkLogo = () => {
         window.scrollTo({
         top: 0,
         left: 0,
@@ -23,7 +24,7 @@ const DarkBurger = () => {
 
     return (
         <DarkBurgerWrapper>      
-          <Link to="/" onClick={handleBooksLogo}>
+          <Link to="/" onClick={handleDarkLogo}>
             <DarkLogo />
           </Link>
 
@@ -34,7 +35,8 @@ const DarkBurger = () => {
               <div />
               <div />
               <div />
-          </DarkBurgerStyle>              
+          </DarkBurgerStyle>  
+          <DarkHeader darkDropdown={darkDropdown} setDarkDropdown={setDarkDropdown} />            
       </DarkBurgerWrapper>
     )
 };

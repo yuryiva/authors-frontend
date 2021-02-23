@@ -3,9 +3,10 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { Context } from "../../context/Context";
 import DarkBurger from "../header/DarkBurger";
+// import DarkHeader from "../header/DarkHeader";
 // import PreOrderForm from "../preOrderForm/PreOrderForm";
 
-export default function Books() {
+export default function Books({dropdown, setDropdown}) {
   const context = useContext(Context);
   const bookPrice = context.state.bookPrice;
   
@@ -37,6 +38,7 @@ export default function Books() {
   return (
     <div>
       <DarkBurger />
+      
       {books.map((book) => (
         <PageWrapper key={book.id}>
           {/* <BookWrapper key={book.id}> */}

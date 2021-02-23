@@ -3,12 +3,12 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 const DarkBurger = () => {
-    const [booksDropdown, setbooksDropdown] = useState(false);
+    const [darkDropdown, setDarkDropdown] = useState(false);
 
     // This method will toggle the dropdown menu ON/OFF
-    const handleBooksBurger = () => {
-        let closed = !booksDropdown;
-        setbooksDropdown(closed);    
+    const handleDarkBurgerStyle = () => {
+        let closed = !darkDropdown;
+        setDarkDropdown(closed);    
     }
   
     // This method will scroll to the top of the page when clicking on the logo
@@ -18,29 +18,29 @@ const DarkBurger = () => {
         left: 0,
         behavior: 'smooth'
         });    
-        setbooksDropdown(false);
+        setDarkDropdown(false);
     }
 
     return (
-        <BooksBurgerWrapper>      
+        <DarkBurgerWrapper>      
           <Link to="/" onClick={handleBooksLogo}>
-            <BookLogo />
+            <DarkLogo />
           </Link>
 
-          <BooksBurger 
-            dropdown={booksDropdown} 
-            onClick={handleBooksBurger}
+          <DarkBurgerStyle 
+            dropdown={darkDropdown} 
+            onClick={handleDarkBurgerStyle}
           >
               <div />
               <div />
               <div />
-          </BooksBurger>              
-      </BooksBurgerWrapper>
+          </DarkBurgerStyle>              
+      </DarkBurgerWrapper>
     )
 };
 
 // Burger container
-const BooksBurgerWrapper = styled.div`
+const DarkBurgerWrapper = styled.div`
   position: fixed;  
   width: 100%;
   height: 140px;
@@ -51,7 +51,7 @@ const BooksBurgerWrapper = styled.div`
 `
 
 // Styled burger menu
-const BooksBurger = styled.button` 
+const DarkBurgerStyle = styled.button` 
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -100,7 +100,7 @@ const BooksBurger = styled.button`
   }
 `
 
-const BookLogo = styled.img`
+const DarkLogo = styled.img`
   width: 30px;
   height: 50px;
   position: absolute;  

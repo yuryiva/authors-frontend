@@ -47,10 +47,11 @@ const GetInTouchForm = () => {
     setSentMessage(result.status);
     setTopicChosen("");
   };
+
   return (
     <SendMessageWrapper>
       {sentMessage ? (
-        <div>
+        <ResultDiv>
           {sentMessage === "SENT" && (
             <p>THANK YOU! WE'LL GET BACK TO YOU ASAP</p>
           )}
@@ -60,37 +61,39 @@ const GetInTouchForm = () => {
           <button onClick={() => setSentMessage(false)}>
             sent another message
           </button>
-        </div>
+        </ResultDiv>
       ) : (
-        <FormWrapper>
-          <form onSubmit={handleSubmit}>
-            <h2>Get In Touch</h2>
-            <NameSection>
-              <label htmlFor="name">Full name </label>
-              <input type="text" id="name" required />
-            </NameSection>
-            <Email>
-              <label htmlFor="email">Email </label>
-              <input type="email" id="email" required />
-            </Email>
-            <Topic>
-              <label htmlFor="topic">Topic </label>
-              <select onChange={(event)=>setTopicChosen(event.target.value)} required>
-                <option>All</option>
-                {topics.map((element) => (
-                  <option key={element} value={element} id="topic">
-                    {element}
-                  </option>
-                ))}
-              </select>
-            </Topic>
+        <FormWrapper onSubmit={handleSubmit}>
+          <h2>Get In Touch</h2>
+          <NameSection>
+            {/* <label htmlFor="name"></label> */}
+            <input type="text" id="name" placeholder="Full name" required />
+          </NameSection>
+          <Email>
+            {/* <label htmlFor="email"></label> */}
+            <input type="email" id="email" placeholder="Email" required />
+          </Email>
+          <Topic>
+            {/* <label htmlFor="topic"></label> */}
+            <select
+              onChange={(event) => setTopicChosen(event.target.value)}
+              required
+            >
+              <option>Select a topic...</option>
+              {topics.map((element) => (
+                <option key={element} value={element} id="topic">
+                  {element}
+                </option>
+              ))}
+            </select>
+          </Topic>
 
-            <Message>
-              <label htmlFor="message">Your Message </label>
-              <textarea id="message" required />
-            </Message>
+          <Message>
+            {/* <label htmlFor="message"></label> */}
+
+            <textarea id="message" placeholder="Your Message" required />
             <button type="submit">{status}</button>
-          </form>
+          </Message>
         </FormWrapper>
       )}
     </SendMessageWrapper>
@@ -99,11 +102,6 @@ const GetInTouchForm = () => {
 
 export default GetInTouchForm;
 
-// const Pr = styled.div`
-// height: 20px;
-// background-color: yellow;
-// text-align: center;
-// `
 const SendMessageWrapper = styled.div`
   width: 100%;
   height: auto;
@@ -112,16 +110,14 @@ const SendMessageWrapper = styled.div`
   text-align: center;
   align-items: center;
   justify-content: center;
-  background-color: lightgray;
 `;
 
-const FormWrapper = styled.div`
+const FormWrapper = styled.form`
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: right;
-  align-items: center;
-  width: 60%;
+  width: 70%;
   border-radius: 10px;
   background-color: white;
 
@@ -132,40 +128,154 @@ const FormWrapper = styled.div`
     border-radius: 5px;
     margin: 10px;
   }
+  h2 {
+    text-align: left;
+    margin: 15px;
+    @media only screen and (max-width: 576px) {
+      font-size: 1.6rem;
+    }
+  }
+
+  @media only screen and (max-width: 576px) {
+    width: 100%;
+    font-size: 0.9rem;
+  }
 `;
 
 const NameSection = styled.div`
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  /* label {
+    width: 20%;
+    text-align: right;
+    margin-right: 15px;
+  } */
   input {
-    width: 300px;
+    width: 70%;
     border: 0;
     margin: 15px;
-    border-bottom: 1px solid black;
+    border: 1px solid black;
+    border-radius: 5px;
   }
 `;
 
 const Email = styled.div`
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  /* label {
+    width: 20%;
+    text-align: right;
+    margin-right: 15px;
+  } */
   input {
-    width: 300px;
+    width: 70%;
     border: 0;
     margin: 15px;
-    border-bottom: 1px solid black;
+    border: 1px solid black;
+    border-radius: 5px;
   }
 `;
 
 const Topic = styled.div`
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  /* label {
+    width: 20%;
+    text-align: right;
+    margin-right: 15px;
+  } */
   select {
-    width: 300px;
+    width: 70%;
     border: 0;
     margin: 15px;
-    border-bottom: 1px solid black;
+    border: 1px solid black;
+    border-radius: 5px;
   }
 `;
 
 const Message = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  /* label {
+    width: 23%;
+    text-align: right;
+    margin-right: 15px;
+  } */
   textarea {
-    width: 300px;
-    height: 100px;
-    margin: 0 15px;
+    width: 70%;
+    height: 150px;
+    margin: 15px;
+    border-radius: 5px;
+    border: 1px solid black;
+    overflow: scroll;
+    ::-webkit-scrollbar {
+      display: none;
+    }
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  button {
+    margin: 15px;
+  }
+
+  @media only screen and (max-width: 576px) {
+    width: 100%;
+    font-size: 0.9rem;
+  }
+`;
+
+const ResultDiv = styled.div`
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 10%;
+  margin-left: auto;
+  margin-right: auto;
+
+  button {
+    margin-left: 33%;
+    width: 30%;
+    align-items: center;
+    text-align: center;
+    height: 25px;
+    border-radius: 5px;
+    background-color: white;
+    border: 1px solid black;
+    font-size: 15px;
+
+    @media only screen and (max-width: 1600px) {
+      width: 40%;
+      margin-left: 30%;
+    }
+    @media only screen and (max-width: 1550px) {
+      width: 45%;
+      margin-left: 30%;
+    }
+
+    @media only screen and (max-width: 1230px) {
+      width: 45%;
+      margin-left: 25%;
+      font-size: 0.9rem;
+    }
+    @media only screen and (max-width: 900px) {
+      width: 60%;
+      margin-left: 20%;
+    }
+    @media only screen and (max-width: 780px) {
+      width: 70%;
+      font-size: 0.9rem;
+      margin-left: 15%;
+    }
+    @media only screen and (max-width: 576px) {
+      width: 100%;
+      margin-left: 0;
+      font-size: 0.8rem;
+    }
   }
 `;
 

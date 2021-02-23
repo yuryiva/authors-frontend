@@ -215,14 +215,15 @@ const FormWrapper = styled.form`
   text-align: center;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 
   @media only screen and (max-width: 1230px) {
     width: 80%;
   }
   @media only screen and (max-width: 900px) {
     width: 90%;
-    margin-left:auto;
-    margin-right:auto;
+    margin-left: auto;
+    margin-right: auto;
   }
   /* @media only screen and (max-width: 576px) {
     width: 95%;
@@ -428,8 +429,14 @@ const BoxButton = styled.div`
     margin-bottom: 30px;
     border-radius: 5px;
     border: 1px solid black;
-  }
 
+    overflow: scroll;
+    ::-webkit-scrollbar {
+      display: none;
+    }
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
   button {
     width: 75%;
     height: 35px;

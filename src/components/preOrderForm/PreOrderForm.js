@@ -100,7 +100,7 @@ const PreOrderForm = () => {
 
           <div>
             <label htmlFor="name"></label>
-            <input type="text" id="name" required placeholder="Full name" />
+            <input type="text" id="name" placeholder="Full name" required />
           </div>
           <div>
             <label htmlFor="email"></label>

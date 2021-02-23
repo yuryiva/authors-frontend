@@ -75,7 +75,7 @@ const GetInTouchForm = () => {
             </Email>
             <Topic>
               <label htmlFor="topic">Topic </label>
-              <select onChange={(event)=>setTopicChosen(event.target.value)} required>
+              <select onChange={(event) => setTopicChosen(event.target.value)}>
                 <option>All</option>
                 {topics.map((element) => (
                   <option key={element} value={element} id="topic">

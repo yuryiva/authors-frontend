@@ -110,6 +110,9 @@ const PageWrapper = styled.div`
   justify-content: space-around;
   /* justify-content: center; */
   align-items: top;
+
+  background-color: ${({ darkDropdown }) => (darkDropdown ? "rgba(0, 0, 0, 0.7)" : "")};  
+  transition: 1s ease;
 `;
 
 // const BookWrapper = styled.div`

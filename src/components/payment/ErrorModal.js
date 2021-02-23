@@ -21,7 +21,7 @@ function ErrorModal() {
         </Modal.Header> */}
         <Modal.Body>
           <p>
-            Sorry there is a payment error wtih your purchase!
+            Sorry there is a payment error with your purchase!
             <p>Please try again.</p>
           </p>
         </Modal.Body>
@@ -32,7 +32,7 @@ function ErrorModal() {
           {/* <Button variant="primary" onClick={handleClose}>
             Save Changes
           </Button> */}
-          <Modal.Header closeButton></Modal.Header>
+          {/* <Modal.Header closeButton></Modal.Header> */}
         </Modal.Footer>
       </Modal>
     </>

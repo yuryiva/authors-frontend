@@ -56,7 +56,7 @@ const BurgerContainer = styled.div`
   display: flex; 
   justify-content: center;
   align-items: center; 
-  z-index: 2;  
+  z-index: 100;  
 `
 
 // Styled burger menu
@@ -70,7 +70,7 @@ const StyledBurger = styled.button`
   border: none;
   cursor: pointer;
   padding: 0;
-  z-index: 999;
+  z-index: 100;
   /* color: #000; */
 
   &:focus {
@@ -111,10 +111,8 @@ const StyledBurger = styled.button`
 const LogoImage = styled.img`
   width: 30px;
   height: 50px;
-  position: absolute;
-  /* top: 25px;  */
-  top: 45px; 
-  /* left: 25px;   */
+  position: absolute;  
+  top: 45px;   
   left: 5%;  
 `
 

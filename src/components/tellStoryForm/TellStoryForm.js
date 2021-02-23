@@ -272,6 +272,7 @@ const FNameSection = styled.div`
     margin-bottom: 30px;
     border-radius: 5px;
     border: 1px solid black;
+    padding: 0.75%;
   }
 
   @media only screen and (max-width: 1230px) {
@@ -303,6 +304,7 @@ const EmailSection = styled.div`
     margin-bottom: 30px;
     border-radius: 5px;
     border: 1px solid black;
+    padding: 0.75%;
   }
   @media only screen and (max-width: 1230px) {
     width: 80%;
@@ -333,6 +335,7 @@ const TopicSection = styled.div`
     margin-bottom: 30px;
     border-radius: 5px;
     border: 1px solid black;
+    padding: 0.75%;
   }
   @media only screen and (max-width: 1230px) {
     width: 80%;
@@ -428,6 +431,7 @@ const BoxButton = styled.div`
     margin-bottom: 30px;
     border-radius: 5px;
     border: 1px solid black;
+    padding: 0.75%;
 
     overflow: scroll;
     ::-webkit-scrollbar {
@@ -498,6 +502,7 @@ const ResultDiv = styled.div`
   margin-top: 10%;
   margin-left: auto;
   margin-right: auto;
+  padding: 0.75%;
 
   button {
     margin-left: 33%;

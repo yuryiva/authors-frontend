@@ -157,6 +157,7 @@ const NameSection = styled.div`
     margin: 15px;
     border: 1px solid black;
     border-radius: 5px;
+    padding: 0.75%;
   }
 `;
 
@@ -175,6 +176,7 @@ const Email = styled.div`
     margin: 15px;
     border: 1px solid black;
     border-radius: 5px;
+    padding: 0.75%;
   }
 `;
 
@@ -193,6 +195,7 @@ const Topic = styled.div`
     margin: 15px;
     border: 1px solid black;
     border-radius: 5px;
+    padding: 0.75%;
   }
 `;
 
@@ -212,6 +215,7 @@ const Message = styled.div`
     border-radius: 5px;
     border: 1px solid black;
     overflow: scroll;
+    padding: 0.75%;
     ::-webkit-scrollbar {
       display: none;
     }
@@ -236,6 +240,7 @@ const ResultDiv = styled.div`
   margin-top: 10%;
   margin-left: auto;
   margin-right: auto;
+  padding: 0.75%;
 
   button {
     margin-left: 33%;
@@ -247,7 +252,7 @@ const ResultDiv = styled.div`
     background-color: white;
     border: 1px solid black;
     font-size: 15px;
-
+    
     @media only screen and (max-width: 1600px) {
       width: 40%;
       margin-left: 30%;

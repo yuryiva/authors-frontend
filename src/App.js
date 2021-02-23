@@ -25,7 +25,7 @@ const App = () => {
   return (
     <MainWrapper dropdown={dropdown} setDropdown={setDropdown}>
       <BurgerMenu dropdown={dropdown} setDropdown={setDropdown} />
-      <Header dropdown={dropdown} setDropdown={setDropdown} />
+      {/* <Header dropdown={dropdown} setDropdown={setDropdown} /> */}
       {/* <Banner /> */}
 
       <Switch>

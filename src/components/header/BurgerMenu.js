@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import Header from "./Header";
 
 const BurgerMenu = ({ dropdown, setDropdown }) => {
   const [navbar, setNavbar] = useState(false);   
@@ -40,7 +41,8 @@ const BurgerMenu = ({ dropdown, setDropdown }) => {
               <div />
               <div />
               <div />
-          </StyledBurger>              
+          </StyledBurger> 
+          <Header dropdown={dropdown} setDropdown={setDropdown} />             
       </BurgerContainer>
         
     )

@@ -115,7 +115,8 @@ const LogoImage = styled.img`
   height: 50px;
   position: absolute;  
   top: 45px;   
-  left: 5%;  
+  left: 5%;
+  z-index: 100;  
 `
 
 export default BurgerMenu;

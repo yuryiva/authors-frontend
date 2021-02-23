@@ -107,7 +107,8 @@ const DarkLogo = styled.img`
   height: 50px;
   position: absolute;  
   top: 45px;   
-  left: 5%;  
+  left: 5%;
+  z-index: 105;  
 `
 
 export default DarkBurger;

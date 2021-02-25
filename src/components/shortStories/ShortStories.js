@@ -8,8 +8,9 @@ export default function ShortStories() {
     <div>
       <h3>This is the Short stories page</h3>
       <hr />
+
       <TellStoryForm />
-      
+
       <hr />
       <GetInTouchForm />
       <hr />

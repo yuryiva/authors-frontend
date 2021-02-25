@@ -13,22 +13,65 @@ const Footer = () => {
       <FooterWrapper>
         <FooterLinks>
           <AboutUs>
-          <Link to="/about-us" ><h4>About Us</h4></Link>    
-            <p>Who We Are</p>
-            <p>Our Vision</p>
-            <p>Sustainability</p>
+            <Link
+              style={{ textDecoration: "none", color: "black" }}
+              to="/about-us"
+            >
+              <h4>About Us</h4>
+            </Link>
+            <Link
+              style={{ textDecoration: "none", color: "black" }}
+              to="our-team"
+            >
+              <p>Who We Are</p>
+            </Link>
+            <Link
+              style={{ textDecoration: "none", color: "black" }}
+              to="about-us"
+            >
+              <p>Our Vision</p>
+            </Link>
+            <Link
+              style={{ textDecoration: "none", color: "black" }}
+              to="about-us"
+            >
+              <p>Sustainability</p>
+            </Link>
           </AboutUs>
 
           <OurWork>
             <h4>Our Work</h4>
-            <p>How We Work</p>
-            <p>Our Partners</p>
+            <Link
+              style={{ textDecoration: "none", color: "black" }}
+              to="our-story"
+            >
+              {" "}
+              <p>How We Work</p>
+            </Link>
+            <Link
+              style={{ textDecoration: "none", color: "black" }}
+              to="/our-partners"
+            >
+              <p>Our Partners</p>
+            </Link>
           </OurWork>
 
           <ContactUs>
             <h4>Contact Us</h4>
-            <p>Send Email</p>
-            <p>Facebook</p>
+            <Link
+              style={{ textDecoration: "none", color: "black" }}
+              to="/send-email"
+            >
+              <p>Send Email</p>
+            </Link>
+
+            <a
+              style={{ textDecoration: "none", color: "black" }}
+              href="https://www.linkedin.com/company/authors-i-s/"
+            >
+              {" "}
+              <p>LinkedIn</p>
+            </a>
           </ContactUs>
         </FooterLinks>
         <Subscribe>
@@ -36,7 +79,6 @@ const Footer = () => {
           <p>Subscribe for latest updates, new stories and promotions</p>
 
           <SubscribeForm />
-          
         </Subscribe>
       </FooterWrapper>
       <Copyright>
@@ -95,11 +137,11 @@ const FooterLinks = styled.div`
   }
 
   @media (max-width: 850px) {
-    margin-bottom:40px;
+    margin-bottom: 40px;
 
     p {
-      font-weight:100;
-      color:rgb (92, 92, 92);
+      font-weight: 100;
+      color: rgb (92, 92, 92);
     }
   }
 `;
@@ -109,11 +151,21 @@ const AboutUs = styled.div`
   flex-direction: column;
   text-align: left;
 
-  @media (max-width: 850px) {
-    margin:0 10px;
-    margin-bottom:20px;
+  p  {
 
-    
+    -webkit-transition: 0.5s ease;
+
+    &:hover {
+      text-decoration: underline;
+      text-shadow: 0px -2px 0px rgba(0, 0, 0, 0.5),
+        0 0 5px rgba(255, 255, 255, 0.8), 0 -4px 15px rgba(255, 255, 255, 0.5);
+
+  }
+
+
+  @media (max-width: 850px) {
+    margin: 0 10px;
+    margin-bottom: 20px;
   }
 `;
 
@@ -121,11 +173,20 @@ const OurWork = styled.div`
   display: flex;
   flex-direction: column;
   text-align: left;
-  @media (max-width: 850px) {
-    margin:0 10px;
-    margin-bottom:20px;
+  p  {
 
-    
+-webkit-transition: 0.5s ease;
+
+&:hover {
+  text-decoration: underline;
+  text-shadow: 0px -2px 0px rgba(0, 0, 0, 0.5),
+    0 0 5px rgba(255, 255, 255, 0.8), 0 -4px 15px rgba(255, 255, 255, 0.5);
+
+}
+
+  @media (max-width: 850px) {
+    margin: 0 10px;
+    margin-bottom: 20px;
   }
 `;
 
@@ -133,10 +194,25 @@ const ContactUs = styled.div`
   display: flex;
   flex-direction: column;
   text-align: left;
-  @media (max-width: 850px) {
-    margin:0 10px;
 
-    
+  p , a {
+
+-webkit-transition: 0.5s ease;
+
+&:hover {
+  text-decoration: underline;
+  text-shadow: 0px -2px 0px rgba(0, 0, 0, 0.5),
+    0 0 5px rgba(255, 255, 255, 0.8), 0 -4px 15px rgba(255, 255, 255, 0.5);
+
+}
+
+
+
+
+
+
+  @media (max-width: 850px) {
+    margin: 0 10px;
   }
 `;
 

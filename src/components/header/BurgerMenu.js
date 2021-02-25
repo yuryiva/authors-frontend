@@ -49,10 +49,8 @@ const BurgerMenu = ({ dropdown, setDropdown }) => {
     )
 }
 
-const Background = styled.div`  
-  opacity: 0.7; 
-  transition: 1s ease; 
-  display: ${({ closed }) => closed && 'none' };
+const Background = styled.div` 
+  display: ${({ dropdown }) => dropdown ? 'initial' : 'none' };
   width: 100% !important;
   height: 100% !important;
   top: 0 !important;  
@@ -60,6 +58,8 @@ const Background = styled.div`
   position: fixed !important;  
   background: ${({ dropdown }) => dropdown ? '#000' : ''};  
   z-index: 99 !important;
+  opacity: 0.7; 
+  transition: 1s ease; 
 `
 
 // Burger container

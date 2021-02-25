@@ -12,6 +12,10 @@ import JoinTheMovement from "./components/joinTheMovement/JoinTheMovement";
 import BurgerMenu from "./components/header/BurgerMenu";
 import styled from "styled-components";
 import AboutUs from "./components/AboutUs/AboutUs";
+import OurTeam from "./components/AboutUs/OurTeam";
+import GetInTouchForm from "./components/getInTouchForm/GetInTouchForm";
+import OurPartners from "./components/AboutUs/OurPartners";
+import OurStory from "./components/AboutUs/OurStory";
 
 // import Banner from "./components/banner/Banner";
 
@@ -63,6 +67,26 @@ const App = () => {
           exact
           path="/about-us"
           render={(props) => <AboutUs {...props} />}
+        />
+        <Route
+          exact
+          path="/our-team"
+          render={(props) => <OurTeam {...props} />}
+        />
+        <Route
+          exact
+          path="/send-email"
+          render={(props) => <GetInTouchForm {...props} />}
+        />
+        <Route
+          exact
+          path="/our-partners"
+          render={(props) => <OurPartners {...props} />}
+        />
+        <Route
+          exact
+          path="/our-story"
+          render={(props) => <OurStory {...props} />}
         />
 
         {/* <Route path="/home" render={(props) => <MainSection {...props} />} /> */}

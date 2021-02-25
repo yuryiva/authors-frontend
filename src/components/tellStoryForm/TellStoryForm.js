@@ -128,8 +128,8 @@ const TellStoryForm = () => {
             <h2>TELL YOUR STORY</h2>
           </TextSection>
           <FNameSection>
-            <label htmlFor="name">First Name</label>
-            <input type="text" id="name" required />
+            {/* <label htmlFor="name">First Name</label> */}
+            <input type="text" id="name" placeholder="First Name" required />
           </FNameSection>
 
           {/* <LNameSection>
@@ -138,13 +138,13 @@ const TellStoryForm = () => {
                 </LNameSection> */}
 
           <EmailSection>
-            <label htmlFor="email">Email </label>
-            <input type="email" id="email" required />
+            {/* <label htmlFor="email">Email </label> */}
+            <input type="email" id="email" placeholder="Email" required />
           </EmailSection>
 
           <TopicSection>
-            <label htmlFor="topic">Topic </label>
-            <input type="text" id="topic" required />
+            {/* <label htmlFor="topic">Topic </label> */}
+            <input type="text" id="topic" placeholder="Topic" required />
           </TopicSection>
           <FileWrapper>
             <label htmlFor="file-upload">Add File</label>
@@ -163,9 +163,9 @@ const TellStoryForm = () => {
           </FileWrapper>
 
           <MessageSection>
-            <label htmlFor="message">Your Story: </label>
+            {/* <label htmlFor="message">Your Story: </label> */}
             <BoxButton>
-              <textarea id="message" required />
+              <textarea id="message" placeholder="Your Story" required />
               <button type="submit">{status}</button>
             </BoxButton>
           </MessageSection>
@@ -215,14 +215,15 @@ const FormWrapper = styled.form`
   text-align: center;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 
   @media only screen and (max-width: 1230px) {
     width: 80%;
   }
   @media only screen and (max-width: 900px) {
     width: 90%;
-    margin-left:auto;
-    margin-right:auto;
+    margin-left: auto;
+    margin-right: auto;
   }
   /* @media only screen and (max-width: 576px) {
     width: 95%;
@@ -259,11 +260,11 @@ const FNameSection = styled.div`
   flex-direction: row;
   width: 70%;
 
-  label {
+  /* label {
     width: 20%;
     text-align: right;
     margin-right: 15px;
-  }
+  } */
 
   input {
     width: 90%;
@@ -271,6 +272,7 @@ const FNameSection = styled.div`
     margin-bottom: 30px;
     border-radius: 5px;
     border: 1px solid black;
+    padding: 0.75%;
   }
 
   @media only screen and (max-width: 1230px) {
@@ -290,11 +292,11 @@ const EmailSection = styled.div`
   flex-direction: row;
   width: 70%;
 
-  label {
+  /* label {
     width: 20%;
     text-align: right;
     margin-right: 15px;
-  }
+  } */
 
   input {
     width: 90%;
@@ -302,6 +304,7 @@ const EmailSection = styled.div`
     margin-bottom: 30px;
     border-radius: 5px;
     border: 1px solid black;
+    padding: 0.75%;
   }
   @media only screen and (max-width: 1230px) {
     width: 80%;
@@ -320,11 +323,11 @@ const TopicSection = styled.div`
   flex-direction: row;
   width: 70%;
 
-  label {
+  /* label {
     width: 20%;
     text-align: right;
     margin-right: 15px;
-  }
+  } */
 
   input {
     width: 90%;
@@ -332,6 +335,7 @@ const TopicSection = styled.div`
     margin-bottom: 30px;
     border-radius: 5px;
     border: 1px solid black;
+    padding: 0.75%;
   }
   @media only screen and (max-width: 1230px) {
     width: 80%;
@@ -350,11 +354,11 @@ const MessageSection = styled.div`
   flex-direction: row;
   width: 70%;
 
-  label {
+  /* label {
     width: 20%;
     text-align: right;
     margin-right: 15px;
-  }
+  } */
   @media only screen and (max-width: 1230px) {
     width: 80%;
   }
@@ -376,7 +380,6 @@ const FileWrapper = styled.div`
 
   label {
     width: 25%;
-    margin-left: 15%;
     margin-top: auto;
     margin-bottom: auto;
     border: 1px solid black;
@@ -428,15 +431,28 @@ const BoxButton = styled.div`
     margin-bottom: 30px;
     border-radius: 5px;
     border: 1px solid black;
-  }
+    padding: 0.75%;
 
+    overflow: scroll;
+    ::-webkit-scrollbar {
+      display: none;
+    }
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
   button {
-    width: 75%;
+    /* width: 30%;
     height: 35px;
     border-radius: 5px;
     background-color: white;
     border: 1px solid black;
-    font-size: 20px;
+    font-size: 1rem; */
+
+    width: 30%;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+
     /* @media only screen and (max-width: 576px) {
       font-size: 0.9rem;
     } */
@@ -486,6 +502,7 @@ const ResultDiv = styled.div`
   margin-top: 10%;
   margin-left: auto;
   margin-right: auto;
+  padding: 0.75%;
 
   button {
     margin-left: 33%;

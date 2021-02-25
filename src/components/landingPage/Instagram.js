@@ -15,8 +15,28 @@ const breakPoints = [
     { width: 1750, itemsToShow: 6 },
 ];
 
-const Instagram = () => {
-    return (
+const profileId = '45295809413';
+const numberOfPosts = '8';
+
+class Instagram extends React.Component {
+    
+    state = {
+        data: []
+      }
+
+      componentDidMount() {
+        fetch(`https://www.instagram.com/graphql/query/?query_hash=e769aa130647d2354c40ea6a439bfc08&variables={"id":"${profileId}","first":${numberOfPosts}}`)
+          .then(res => res.json())
+          .then(data => {
+            console.log(data)
+            this.setState({ data: data.data.user.edge_owner_to_timeline_media.edges })
+          }
+        )
+      }
+    
+      render() {
+        console.log(this.state.data)
+        return (
         <InstaWrapper>
             <InstaText>
                 <InstaContact>
@@ -32,23 +52,17 @@ const Instagram = () => {
                 breakPoints={breakPoints}
                 // itemPadding={[10, 10]}                    
             >
+             {this.state.data.map((post, i) =>
                 <ImgWrapper>
-                    <img src='https://images.unsplash.com/photo-1610824771380-390c72f79f11?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxNXx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60' alt='portrait' />
+                    <img src={post['node'].display_resources[2].src} alt='portrait' />
                 </ImgWrapper>
-                <ImgWrapper>
-                    <img src='https://images.unsplash.com/photo-1610948237307-bbebf8da8a8d?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyNXx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60' alt='portrait' />
-                </ImgWrapper>
-                <ImgWrapper>
-                    <img src='https://images.unsplash.com/photo-1610935591850-9a3bf14810c0?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzM3x8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60' alt='portrait' />
-                </ImgWrapper>
-                    
-                <ImgWrapper>
-                    <img src='https://images.unsplash.com/photo-1610824771380-390c72f79f11?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxNXx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60' alt='portrait' />
-                </ImgWrapper>
+                
+             )}
             </Carousel>
         </InstaWrapper>                 
         
     )
+}
 }
 
 const InstaWrapper = styled.div`
@@ -80,9 +94,9 @@ const InstaWrapper = styled.div`
 // `
 
 const ImgWrapper = styled.div `   
-    margin: 0 20px;    
-    width: 500px;    
-    /* height: 500px; */
+    margin: 0 5%;    
+    width: 320px;    
+    height: 300px;
     display: inline-block;
     overflow: hidden;
     position: relative;
@@ -90,6 +104,7 @@ const ImgWrapper = styled.div `
     img {
         display: block;        
         width: 100%;  
+        height: 300px;
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;    

@@ -50,8 +50,7 @@ const BurgerMenu = ({ dropdown, setDropdown }) => {
 }
 
 const Background = styled.div`
-  opacity: 0.7;
-  /* opacity: ${({ dropdown }) => dropdown ? '0.7' : ''}; */
+  opacity: 0.7;  
   width: 100% !important;
   height: 100% !important;
   top: 0 !important;

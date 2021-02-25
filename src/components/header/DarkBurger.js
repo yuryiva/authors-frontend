@@ -36,10 +36,24 @@ const DarkBurger = () => {
               <div />
               <div />
           </DarkBurgerStyle>  
-          <DarkHeader darkDropdown={darkDropdown} setDarkDropdown={setDarkDropdown} />            
+          <DarkHeader darkDropdown={darkDropdown} setDarkDropdown={setDarkDropdown} />   
+          <DarkBackground darkDropdown={darkDropdown} setDarkDropdown={setDarkDropdown} />         
       </DarkBurgerWrapper>
     )
 };
+
+const DarkBackground = styled.div`
+  opacity: 0.7;  
+  width: 100% !important;
+  height: 100% !important;
+  top: 0 !important;
+  left: 0 !important;
+  position: fixed !important;
+  /* background: #000 !important; */
+  background: ${({ darkDropdown }) => darkDropdown ? '#000' : ''};   
+  transition: 1s ease;
+  z-index: 99 !important;
+`
 
 // Burger container
 const DarkBurgerWrapper = styled.div`

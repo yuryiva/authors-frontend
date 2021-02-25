@@ -122,7 +122,7 @@ const ImgWrapper = styled.div`
     background-size: cover; */
     transition: transform 0.8s;
     width: 100%;
-    height: 400px;
+    height: 500px;
     vertical-align: middle;
     object-fit: cover;
 

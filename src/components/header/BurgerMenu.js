@@ -42,11 +42,26 @@ const BurgerMenu = ({ dropdown, setDropdown }) => {
               <div />
               <div />
           </StyledBurger> 
-          <Header dropdown={dropdown} setDropdown={setDropdown} />             
+          <Header dropdown={dropdown} setDropdown={setDropdown} />  
+          <Background dropdown={dropdown} setDropdown={setDropdown} />           
       </BurgerContainer>
         
     )
 }
+
+const Background = styled.div`
+  opacity: 0.7;
+  /* opacity: ${({ dropdown }) => dropdown ? '0.7' : ''}; */
+  width: 100% !important;
+  height: 100% !important;
+  top: 0 !important;
+  left: 0 !important;
+  position: fixed !important;
+  /* background: #000 !important; */
+  background: ${({ dropdown }) => dropdown ? '#000' : ''};   
+  transition: 1s ease;
+  z-index: 99 !important;
+`
 
 // Burger container
 const BurgerContainer = styled.div`   
@@ -72,7 +87,7 @@ const StyledBurger = styled.button`
   border: none;
   cursor: pointer;
   padding: 0;
-  z-index: 100;
+  z-index: 101;
   /* color: #000; */
 
   &:focus {
@@ -116,7 +131,7 @@ const LogoImage = styled.img`
   position: absolute;  
   top: 45px;   
   left: 5%;
-  z-index: 100;  
+  z-index: 101;  
 `
 
 export default BurgerMenu;

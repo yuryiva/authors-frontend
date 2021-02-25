@@ -78,7 +78,7 @@ const NavigationMenu = styled.nav`
   padding: 2rem;    
   top: 0;
   /* left: 0;   */
-  z-index: 1;
+  z-index: 100;
   transition: transform 0.5s ease-in-out;
    
 

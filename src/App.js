@@ -23,7 +23,8 @@ const App = () => {
   const [dropdown, setDropdown] = useState(false);
 
   return (
-    <MainWrapper dropdown={dropdown} setDropdown={setDropdown}>
+    <>
+    {/* <MainWrapper dropdown={dropdown} setDropdown={setDropdown}> */}
       <BurgerMenu dropdown={dropdown} setDropdown={setDropdown} />
       {/* <Header dropdown={dropdown} setDropdown={setDropdown} /> */}
       {/* <Banner /> */}
@@ -69,21 +70,23 @@ const App = () => {
       <hr />
 
       <Footer />
-    </MainWrapper>
+    {/* </MainWrapper> */}
+    </>
+    
   );
 };
 
-const MainWrapper = styled.div`
-  position: relative;
-  top: 0;
-  left: 0;
-  z-index: 999;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 100%;
-  background-color: ${({ dropdown }) => (dropdown ? "rgba(0, 0, 0, 0.7)" : "")};  
-  transition: 1s ease;
-`;
+// const MainWrapper = styled.div`
+//   position: relative;
+//   top: 0;
+//   left: 0;
+//   z-index: 999;
+//   display: flex;
+//   flex-direction: column;
+//   width: 100%;
+//   height: 100%;
+//   background-color: ${({ dropdown }) => (dropdown ? "rgba(0, 0, 0, 0.7)" : "")};  
+//   transition: 1s ease;
+// `;
 
 export default App;

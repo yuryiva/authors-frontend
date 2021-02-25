@@ -42,10 +42,7 @@ export default function OurImpact() {
 
       <OurValuesSection>
         <OurValuesDescription>
-          <Link
-            to="/tell-your-story"
-            style={{ textDecoration: "none", color: "inherit" }}
-          >
+          <Link to="/tell-your-story" style={{ color: "inherit" }}>
             <h4>Tell your story here</h4>
 
             <p>
@@ -195,6 +192,7 @@ const OurValuesSection = styled.div`
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
+
   /* padding: 2rem; */
 
   @media (max-width: 1000px) {
@@ -209,6 +207,14 @@ const OurValuesDescription = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-decoration: underline;
+  transition: transform 0.3s;
+
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    transform-origin: 50% 50%;
+  }
 
   h4 {
     font-size: 1.5rem;

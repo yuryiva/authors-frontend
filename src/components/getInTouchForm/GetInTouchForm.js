@@ -252,7 +252,7 @@ const ResultDiv = styled.div`
     background-color: white;
     border: 1px solid black;
     font-size: 15px;
-    
+
     @media only screen and (max-width: 1600px) {
       width: 40%;
       margin-left: 30%;

@@ -2,7 +2,7 @@ import { Route, Switch } from "react-router-dom";
 import React, { useState } from "react";
 import "./App.css";
 import Footer from "./components/footer/Footer";
-import Header from "./components/header/Header";
+// import Header from "./components/header/Header";
 import LandingPage from "./components/landingPage/LandingPage";
 import Authors from "./components/authorsPage/Authors";
 import Books from "./components/books/Books";
@@ -27,9 +27,10 @@ const App = () => {
   const [dropdown, setDropdown] = useState(false);
 
   return (
-    <MainWrapper dropdown={dropdown} setDropdown={setDropdown}>
+    <>
+    {/* <MainWrapper dropdown={dropdown} setDropdown={setDropdown}> */}
       <BurgerMenu dropdown={dropdown} setDropdown={setDropdown} />
-      <Header dropdown={dropdown} setDropdown={setDropdown} />
+      {/* <Header dropdown={dropdown} setDropdown={setDropdown} /> */}
       {/* <Banner /> */}
 
       <Switch>
@@ -93,22 +94,23 @@ const App = () => {
       <hr />
 
       <Footer />
-    </MainWrapper>
+    {/* </MainWrapper> */}
+    </>
+    
   );
 };
 
-const MainWrapper = styled.div`
-  position: relative;
-  top: 0;
-  left: 0;
-  z-index: 999;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 100%;
-  background-color: ${({ dropdown }) => (dropdown ? "rgba(0, 0, 0, 0.7)" : "")};
-  transition-delay: 1s;
-  transition: 1s ease;
-`;
+// const MainWrapper = styled.div`
+//   position: relative;
+//   top: 0;
+//   left: 0;
+//   z-index: 999;
+//   display: flex;
+//   flex-direction: column;
+//   width: 100%;
+//   height: 100%;
+//   background-color: ${({ dropdown }) => (dropdown ? "rgba(0, 0, 0, 0.7)" : "")};  
+//   transition: 1s ease;
+// `;
 
 export default App;

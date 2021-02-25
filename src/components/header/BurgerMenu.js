@@ -1,14 +1,15 @@
 import React, { useState, useEffect } from "react";
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import Header from "./Header";
 
 const BurgerMenu = ({ dropdown, setDropdown }) => {
   const [navbar, setNavbar] = useState(false);   
 
   // This method will toggle the dropdown menu ON/OFF
-  const handleBurgerMenu = () => {
-    let closed = !dropdown;
-    setDropdown(closed);    
+  const handleBurgerMenu = () => {    
+      let closed = !dropdown;
+      setDropdown(closed);       
   }
 
   // This method will scroll to the top of the page when clicking on the logo
@@ -40,11 +41,26 @@ const BurgerMenu = ({ dropdown, setDropdown }) => {
               <div />
               <div />
               <div />
-          </StyledBurger>              
+          </StyledBurger> 
+          <Header dropdown={dropdown} setDropdown={setDropdown} />  
+          <Background dropdown={dropdown} setDropdown={setDropdown} />           
       </BurgerContainer>
         
     )
 }
+
+const Background = styled.div` 
+  display: ${({ dropdown }) => dropdown ? 'initial' : 'none' };
+  width: 100% !important;
+  height: 100% !important;
+  top: 0 !important;  
+  left: 0 !important;
+  position: fixed !important;  
+  background: ${({ dropdown }) => dropdown ? '#000' : ''};  
+  z-index: 99 !important;
+  opacity: 0.7; 
+  transition: 1s ease; 
+`
 
 // Burger container
 const BurgerContainer = styled.div`   
@@ -56,7 +72,7 @@ const BurgerContainer = styled.div`
   display: flex; 
   justify-content: center;
   align-items: center; 
-  z-index: 2;  
+  z-index: 100;  
 `
 
 // Styled burger menu
@@ -70,7 +86,7 @@ const StyledBurger = styled.button`
   border: none;
   cursor: pointer;
   padding: 0;
-  z-index: 999;
+  z-index: 101;
   /* color: #000; */
 
   &:focus {
@@ -111,11 +127,10 @@ const StyledBurger = styled.button`
 const LogoImage = styled.img`
   width: 30px;
   height: 50px;
-  position: absolute;
-  /* top: 25px;  */
-  top: 45px; 
-  /* left: 25px;   */
-  left: 5%;  
+  position: absolute;  
+  top: 45px;   
+  left: 5%;
+  z-index: 101;  
 `
 
 export default BurgerMenu;

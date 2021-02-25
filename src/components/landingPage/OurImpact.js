@@ -20,14 +20,20 @@ export default function OurImpact() {
       </MainHeading>
       <OurImpactSection>
         <OurImpactDescription>
-          <h4>How we work</h4>
-          <p>
-            Contrary to popular belief, Lorem Ipsum is not simply random text.
-            It has roots in a piece of classical Latin literature from 45 BC,
-            making it over 2000 years old. Richard McClintock, a Latin professor
-            at Hampden-Sydney College in Virginia, looked up one of the more
-            obscure Latin words.
-          </p>
+          <Link
+            to="/about-us"
+            style={{ textDecoration: "none", color: "inherit" }}
+          >
+            <h4>How we work</h4>
+            <div className="underbar"></div>
+            <p>
+              Contrary to popular belief, Lorem Ipsum is not simply random text.
+              It has roots in a piece of classical Latin literature from 45 BC,
+              making it over 2000 years old. Richard McClintock, a Latin
+              professor at Hampden-Sydney College in Virginia, looked up one of
+              the more obscure Latin words.
+            </p>
+          </Link>
         </OurImpactDescription>
         <OurImpactPhoto>
           <img src={ourImpactPhoto} alt="pen" />
@@ -38,6 +44,7 @@ export default function OurImpact() {
         <OurValuesDescription>
           <Link to="/tell-your-story" style={{ color: "inherit" }}>
             <h4>Tell your story here</h4>
+
             <p>
               Contrary to popular belief, Lorem Ipsum is not simply random text.
               It has roots in a piece of classical Latin literature from 45 BC,
@@ -108,10 +115,38 @@ const OurImpactDescription = styled.section`
   justify-content: center;
   align-items: center;
 
+  underbar {
+    width: 0;
+    height: 5px;
+    ${"" /* background: rgba(0, 0, 0, 0); */}
+    background: rgba(100, 100, 200, 0);
+    top: 20px;
+    position: absolute;
+    -webkit-transition: 0.5s ease;
+  }
+
   h4 {
     font-size: 1.5rem;
     margin-bottom: 20px;
     padding: 0 25px;
+    text-align: center;
+    -webkit-transition: 0.5s ease;
+
+    &:hover {
+      text-shadow: 0px -2px 0px rgba(0, 0, 0, 1),
+        0 0 5px rgba(255, 255, 255, 0.8), 0 -4px 15px rgba(255, 255, 255, 0.5);
+    }
+    &:hover ~ .underbar {
+      left: 150px;
+      width: 550px;
+      height: 1px;
+      -webkit-transition: 2.5s ease;
+
+      background: black;
+      ${"" /* background: rgba(150, 250, 250, 0.5); */}
+      ${"" /* box-shadow: grey; */}
+      box-shadow: 0 0 10px rgba(70, 100, 150, 4);
+    }
   }
 
   p {

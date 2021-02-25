@@ -43,15 +43,15 @@ const DarkBurger = () => {
 };
 
 const DarkBackground = styled.div`
-  opacity: 0.7;  
+  opacity: 0.7; 
+  transition: 1s ease; 
+  display: ${({ closed }) => closed && 'none' };
   width: 100% !important;
   height: 100% !important;
-  top: 0 !important;
+  top: 0 !important;  
   left: 0 !important;
-  position: fixed !important;
-  /* background: #000 !important; */
-  background: ${({ darkDropdown }) => darkDropdown ? '#000' : ''};   
-  transition: 1s ease;
+  position: fixed !important; 
+  background: ${({ darkDropdown }) => darkDropdown ? '#000' : ''};     
   z-index: 99 !important;
 `
 

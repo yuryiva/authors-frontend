@@ -7,9 +7,9 @@ const BurgerMenu = ({ dropdown, setDropdown }) => {
   const [navbar, setNavbar] = useState(false);   
 
   // This method will toggle the dropdown menu ON/OFF
-  const handleBurgerMenu = () => {
-    let closed = !dropdown;
-    setDropdown(closed);    
+  const handleBurgerMenu = () => {    
+      let closed = !dropdown;
+      setDropdown(closed);       
   }
 
   // This method will scroll to the top of the page when clicking on the logo
@@ -49,16 +49,16 @@ const BurgerMenu = ({ dropdown, setDropdown }) => {
     )
 }
 
-const Background = styled.div`
-  opacity: 0.7;  
+const Background = styled.div`  
+  opacity: 0.7; 
+  transition: 1s ease; 
+  display: ${({ closed }) => closed && 'none' };
   width: 100% !important;
   height: 100% !important;
-  top: 0 !important;
+  top: 0 !important;  
   left: 0 !important;
-  position: fixed !important;
-  /* background: #000 !important; */
-  background: ${({ dropdown }) => dropdown ? '#000' : ''};   
-  transition: 1s ease;
+  position: fixed !important;  
+  background: ${({ dropdown }) => dropdown ? '#000' : ''};  
   z-index: 99 !important;
 `
 

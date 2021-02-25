@@ -44,15 +44,14 @@ export default function OurImpact() {
         <OurValuesDescription>
           <Link to="/tell-your-story" style={{ color: "inherit" }}>
             <h4>Tell your story here</h4>
-
-            <p>
-              Contrary to popular belief, Lorem Ipsum is not simply random text.
-              It has roots in a piece of classical Latin literature from 45 BC,
-              making it over 2000 years old. Richard McClintock, a Latin
-              professor at Hampden-Sydney College in Virginia, looked up one of
-              the more obscure Latin words.
-            </p>
           </Link>
+          <p>
+            Contrary to popular belief, Lorem Ipsum is not simply random text.
+            It has roots in a piece of classical Latin literature from 45 BC,
+            making it over 2000 years old. Richard McClintock, a Latin professor
+            at Hampden-Sydney College in Virginia, looked up one of the more
+            obscure Latin words.
+          </p>
         </OurValuesDescription>
         <OurValuesPhoto>
           <img src={ourValuesPhoto} alt="pen" />
@@ -207,20 +206,24 @@ const OurValuesDescription = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-decoration: underline;
-  transition: transform 0.3s;
+  /* transition: transform 0.3s; */
 
-  &:hover {
-    cursor: pointer;
+  /* &:hover {
     transform: scale(1.05);
     transform-origin: 50% 50%;
-  }
+  } */
 
   h4 {
     font-size: 1.5rem;
     margin-bottom: 20px;
     padding: 0 25px;
     text-align: center;
+    text-decoration: underline;
+    &:hover {
+      cursor: pointer;
+      transition: transform 0.3s;
+      transform: scale(1.05);
+    }
   }
 
   p {

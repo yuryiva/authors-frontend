@@ -172,12 +172,12 @@ const OurValuesDescription = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  transition: transform 0.3s;
+  /* transition: transform 0.3s; */
 
-  &:hover {
+  /* &:hover {
     transform: scale(1.05);
     transform-origin: 50% 50%;
-  }
+  } */
 
   h4 {
     font-size: 1.5rem;
@@ -187,6 +187,8 @@ const OurValuesDescription = styled.section`
     text-decoration: underline;
     &:hover {
       cursor: pointer;
+      transition: transform 0.3s;
+      transform: scale(1.05);
     }
   }
 

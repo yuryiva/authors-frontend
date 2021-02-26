@@ -9,7 +9,9 @@ export default function OurImpact() {
   return (
     <AboutUsSection>
       <MainHeading>
-        <h3>Who We Are</h3>
+        <Link style={{ textDecoration: "none", color: "black" }} to="our-team">
+          <h3>Who We Are</h3>
+        </Link>
         <p>
           Contrary to popular belief, Lorem Ipsum is not simply random text. It
           has roots in a piece of classical Latin literature from 45 BC, making
@@ -20,7 +22,13 @@ export default function OurImpact() {
       </MainHeading>
       <OurImpactSection>
         <OurImpactDescription>
-          <h4>How we work</h4>
+          <Link
+            to="/about-us"
+            style={{ textDecoration: "none", color: "inherit" }}
+          >
+            <h4>How we work</h4>
+          </Link>
+          {/* <div className="underbar"></div> */}
           <p>
             Contrary to popular belief, Lorem Ipsum is not simply random text.
             It has roots in a piece of classical Latin literature from 45 BC,
@@ -36,19 +44,16 @@ export default function OurImpact() {
 
       <OurValuesSection>
         <OurValuesDescription>
-          <Link
-            to="/tell-your-story"
-            style={{ textDecoration: "none", color: "inherit" }}
-          >
+          <Link to="/tell-your-story" style={{ color: "inherit" }}>
             <h4>Tell your story here</h4>
-            <p>
-              Contrary to popular belief, Lorem Ipsum is not simply random text.
-              It has roots in a piece of classical Latin literature from 45 BC,
-              making it over 2000 years old. Richard McClintock, a Latin
-              professor at Hampden-Sydney College in Virginia, looked up one of
-              the more obscure Latin words.
-            </p>
           </Link>
+          <p>
+            Contrary to popular belief, Lorem Ipsum is not simply random text.
+            It has roots in a piece of classical Latin literature from 45 BC,
+            making it over 2000 years old. Richard McClintock, a Latin professor
+            at Hampden-Sydney College in Virginia, looked up one of the more
+            obscure Latin words.
+          </p>
         </OurValuesDescription>
         <OurValuesPhoto>
           <img src={ourValuesPhoto} alt="pen" />
@@ -75,7 +80,13 @@ const MainHeading = styled.div`
     border-top: 4px solid #000;
     width: 177px;
     margin: 50px auto;
+    text-align: center;
     /* margin-bottom: 0; */
+    &:hover {
+      cursor: pointer;
+      transition: transform 0.5s;
+      transform: scale(1.05);
+    }
   }
 
   p {
@@ -111,10 +122,45 @@ const OurImpactDescription = styled.section`
   justify-content: center;
   align-items: center;
 
+  /* .underbar {
+    width: 0;
+    height: 5px;
+    background: rgba(0, 0, 0, 0);
+    background: rgba(100, 100, 200, 0);
+    top: 20px;
+    position: absolute;
+    -webkit-transition: 0.5s ease;
+  } */
+
   h4 {
     font-size: 1.5rem;
     margin-bottom: 20px;
     padding: 0 25px;
+    text-align: center;
+    /* -webkit-transition: 0.5s ease;
+
+    &:hover {
+      text-shadow: 0px -2px 0px rgba(0, 0, 0, 1),
+        0 0 5px rgba(255, 255, 255, 0.8), 0 -4px 15px rgba(255, 255, 255, 0.5);
+    }
+    &:hover ~ .underbar {
+      left: 150px;
+      width: 550px;
+      height: 1px;
+      -webkit-transition: 2.5s ease;
+
+      background: black;
+      background: rgba(150, 250, 250, 0.5);
+      box-shadow: grey;
+      box-shadow: 0 0 10px rgba(70, 100, 150, 4);
+    } */
+
+    text-decoration: underline;
+    &:hover {
+      cursor: pointer;
+      transition: transform 0.5s;
+      transform: scale(1.05);
+    }
   }
 
   p {
@@ -160,6 +206,7 @@ const OurValuesSection = styled.div`
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
+
   /* padding: 2rem; */
 
   @media (max-width: 1000px) {
@@ -174,12 +221,24 @@ const OurValuesDescription = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  /* transition: transform 0.3s; */
+
+  /* &:hover {
+    transform: scale(1.05);
+    transform-origin: 50% 50%;
+  } */
 
   h4 {
     font-size: 1.5rem;
     margin-bottom: 20px;
     padding: 0 25px;
     text-align: center;
+    text-decoration: underline;
+    &:hover {
+      cursor: pointer;
+      transition: transform 0.5s;
+      transform: scale(1.05);
+    }
   }
 
   p {

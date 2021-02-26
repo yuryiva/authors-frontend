@@ -36,7 +36,7 @@ function SuccessfulModal() {
           {/* <Button variant="primary" onClick={handleClose}>
             Save Changes
           </Button> */}
-          <Modal.Header closeButton></Modal.Header>
+          {/* <Modal.Header closeButton></Modal.Header> */}
         </Modal.Footer>
       </Modal>
     </>

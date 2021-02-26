@@ -16,8 +16,10 @@ class Provider extends Component {
     postcode: "",
     message: "",
     totalOrder: 0,
-    bookPrice: 25.75,
     productionOrDevelopment: "production",
+    bookPrice: 23.75,
+    bookUrl:
+      "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQYFM7A8Fn0G23_-MxQ4kzKkxsR3qUh7Gv-wYYjgSB8oYugldi_",
   };
 
   //   Component did mount section

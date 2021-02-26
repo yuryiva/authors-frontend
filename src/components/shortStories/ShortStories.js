@@ -9,22 +9,22 @@ export default function ShortStories() {
   return (
     <>
       <DarkBurger />
-      <ShortStoriesWrapper>        
+      <ShortStoriesWrapper>
         <h3>This is the Short stories page</h3>
         <hr />
         <TellStoryForm />
-        
+
         <hr />
         <GetInTouchForm />
         <hr />
 
         <PreOrderForm />
       </ShortStoriesWrapper>
-    </>    
+    </>
   );
 }
 
 const ShortStoriesWrapper = styled.div`
   /* margin-top: 140px; */
   width: 100%;
-`
+`;

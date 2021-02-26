@@ -40,6 +40,7 @@ export default function Books({ dropdown, setDropdown }) {
       {books.map((book) => (
         <PageWrapper key={book.id}>
           {/* <BookWrapper key={book.id}> */}
+
           <BookImage>
             <img src={book.bookUrl} alt="book" />
           </BookImage>

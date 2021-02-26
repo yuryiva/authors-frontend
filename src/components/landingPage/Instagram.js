@@ -31,7 +31,7 @@ const Instagram = () => {
         console.log(data);
         setDataFromApi(data.data.user.edge_owner_to_timeline_media.edges);
       });
-  }, []);
+  }, [dataFromApi]);
 
   return (
     <InstaWrapper>

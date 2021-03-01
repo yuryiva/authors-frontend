@@ -9,7 +9,7 @@ export default function OurImpact() {
   return (
     <AboutUsSection>
       <MainHeading>
-        <h3>Who We Are</h3>
+      <Link to="/about-us" style={{ textDecoration: "none", color: "inherit" }} ><h3>Who We Are</h3></Link>
         <p>
           Contrary to popular belief, Lorem Ipsum is not simply random text. It
           has roots in a piece of classical Latin literature from 45 BC, making
@@ -67,6 +67,7 @@ const AboutUsSection = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-decoration:none;
 `;
 
 const MainHeading = styled.div`
@@ -75,11 +76,29 @@ const MainHeading = styled.div`
 
   h3 {
     font-size: 1.8rem;
-    border-top: 4px solid #000;
     width: 177px;
-    margin: 50px auto;
+    border-bottom: 4px solid black;
+    margin: 10px auto;
     /* margin-bottom: 0; */
+    text-decoration:none;
+    color:black;
+    outline:0;
   }
+
+  h3:hover {
+    z-index:1;
+    transform:scale(1.1);
+    transition: .4s;
+    cursor: pointer;
+    color:black;
+    outline:none;
+    text-decoration:none;
+  }
+
+  h3:focus, h3:hover, h3:visited, h3:link, h3:active {
+        text-decoration: none;
+        outline:none;
+    }
 
   p {
     font-size: 1.1rem;

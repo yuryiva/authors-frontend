@@ -6,8 +6,9 @@ const Podcast = () => {
       return (
             <>
                   <DarkBurger />
-                  <PodcastDiv>
-                        <iframe src="https://embed.podcasts.apple.com/us/podcast/the-pat-mcafee-show-2-0/id1435183458" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation"></iframe>
+                  <PodcastDiv>                  
+                       
+                        <iframe src="https://embed.podcasts.apple.com/us/podcast/what-we-can-learn-from-indigenous-communities-nina/id1542980507" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation"></iframe>
                   </PodcastDiv>
             </>
             

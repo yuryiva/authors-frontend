@@ -125,7 +125,7 @@ const TellStoryForm = () => {
       ) : (
         <FormWrapper onSubmit={handleSubmit}>
           <TextSection>
-            <h2>TELL YOUR STORY</h2>
+            <h4>Tell Your Story</h4>
           </TextSection>
           <FNameSection>
             {/* <label htmlFor="name">First Name</label> */}
@@ -199,32 +199,49 @@ const TellStoryForm = () => {
 export default TellStoryForm;
 
 const DivWrapper = styled.div`
-  margin-top: 100px;
+  /* margin-top: 100px; */
+  margin: 0;
+  padding: 5%;
+  padding-top: 140px;
   width: 100%;
+  height: 100%;
   display: flex;
+  justify-content: space-evenly;
+  /* align-items: center; */
+  flex-wrap: wrap;
 
-  @media only screen and (max-width: 1200px) {
+  /* @media only screen and (max-width: 1249px) {
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+  } */
+
+  /* @media only screen and (max-width: 1200px) {
     flex-wrap: wrap;
-  }
+  } */
 `;
 
-const FormWrapper = styled.form`
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
+const FormWrapper = styled.form`  
+  /* width: 50%; */
+  width: 400px;
+  margin: 0 5%;
+  margin-bottom: 50px;
+  /* display: flex;
+  flex-direction: column; */
+  /* text-align: center; */
+  text-align: left;
+  /* align-items: center; */
+  /* justify-content: center; */
+  /* overflow: hidden; */
 
-  @media only screen and (max-width: 1230px) {
+  /* @media only screen and (max-width: 1230px) {
     width: 80%;
   }
   @media only screen and (max-width: 900px) {
     width: 90%;
     margin-left: auto;
     margin-right: auto;
-  }
+  } */
   /* @media only screen and (max-width: 576px) {
     width: 95%;
     margin-left:auto;
@@ -234,16 +251,19 @@ const FormWrapper = styled.form`
 `;
 
 const TextSection = styled.div`
-  width: 70%;
-  display: block;
-  text-align: left;
-  margin: 20px 0 20px 0px;
+  /* width: 70%; */
+  width: 100%;  
+  display: flex;
+  justify-content: center;
+  /* text-align: left; */
+  /* margin: 20px 0 20px 0px; */
 
-  h2 {
-    font-size: 25px;
-    font-weight: 400;
+  h4 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 40px;    
   }
-  @media only screen and (max-width: 1230px) {
+  /* @media only screen and (max-width: 1230px) {
     width: 80%;
   }
   @media only screen and (max-width: 900px) {
@@ -252,13 +272,14 @@ const TextSection = styled.div`
   @media only screen and (max-width: 576px) {
     width: 100%;
     font-size: 0.9rem;
-  }
+  } */
 `;
 
 const FNameSection = styled.div`
   display: flex;
   flex-direction: row;
-  width: 70%;
+  /* width: 70%; */
+  width: 100%; 
 
   /* label {
     width: 20%;
@@ -267,15 +288,18 @@ const FNameSection = styled.div`
   } */
 
   input {
-    width: 90%;
-    height: 30px;
+    /* width: 90%; */
+    width: 100%;
+    /* height: 30px; */
+    height: 48px;
     margin-bottom: 30px;
     border-radius: 5px;
     border: 1px solid black;
-    padding: 0.75%;
+    /* padding: 0.75%; */
+    padding: 0 10px;
   }
 
-  @media only screen and (max-width: 1230px) {
+  /* @media only screen and (max-width: 1230px) {
     width: 80%;
   }
   @media only screen and (max-width: 900px) {
@@ -284,13 +308,14 @@ const FNameSection = styled.div`
   @media only screen and (max-width: 576px) {
     width: 100%;
     font-size: 0.9rem;
-  }
+  } */
 `;
 
 const EmailSection = styled.div`
   display: flex;
   flex-direction: row;
-  width: 70%;
+  /* width: 70%; */
+  width: 100%;
 
   /* label {
     width: 20%;
@@ -299,14 +324,17 @@ const EmailSection = styled.div`
   } */
 
   input {
-    width: 90%;
-    height: 30px;
+    /* width: 90%; */
+    width: 100%;
+    /* height: 30px; */
+    height: 48px;
     margin-bottom: 30px;
     border-radius: 5px;
     border: 1px solid black;
-    padding: 0.75%;
+    /* padding: 0.75%; */
+    padding: 0 10px;
   }
-  @media only screen and (max-width: 1230px) {
+  /* @media only screen and (max-width: 1230px) {
     width: 80%;
   }
   @media only screen and (max-width: 900px) {
@@ -315,13 +343,14 @@ const EmailSection = styled.div`
   @media only screen and (max-width: 576px) {
     width: 100%;
     font-size: 0.9rem;
-  }
+  } */
 `;
 
 const TopicSection = styled.div`
   display: flex;
   flex-direction: row;
-  width: 70%;
+  /* width: 70%; */
+  width: 100%;
 
   /* label {
     width: 20%;
@@ -330,14 +359,17 @@ const TopicSection = styled.div`
   } */
 
   input {
-    width: 90%;
-    height: 30px;
+    /* width: 90%; */
+    width: 100%;
+    /* height: 30px; */
+    height: 48px;
     margin-bottom: 30px;
     border-radius: 5px;
     border: 1px solid black;
-    padding: 0.75%;
+    /* padding: 0.75%; */
+    padding: 0 10px;
   }
-  @media only screen and (max-width: 1230px) {
+  /* @media only screen and (max-width: 1230px) {
     width: 80%;
   }
   @media only screen and (max-width: 900px) {
@@ -346,20 +378,21 @@ const TopicSection = styled.div`
   @media only screen and (max-width: 576px) {
     width: 100%;
     font-size: 0.9rem;
-  }
+  } */
 `;
 
 const MessageSection = styled.div`
   display: flex;
   flex-direction: row;
-  width: 70%;
+  /* width: 70%; */
+  width: 100%;
 
   /* label {
     width: 20%;
     text-align: right;
     margin-right: 15px;
   } */
-  @media only screen and (max-width: 1230px) {
+  /* @media only screen and (max-width: 1230px) {
     width: 80%;
   }
   @media only screen and (max-width: 900px) {
@@ -368,24 +401,40 @@ const MessageSection = styled.div`
   @media only screen and (max-width: 576px) {
     width: 100%;
     font-size: 0.9rem;
-  }
+  } */
 `;
 
 const FileWrapper = styled.div`
   display: flex;
   flex-direction: row;
-  width: 70%;
-  justify-content: center;
-  margin-bottom: 4%;
+  /* width: 70%; */
+  width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  /* margin-bottom: 4%; */
+  margin-bottom: 30px;
 
   label {
-    width: 25%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding: 7px 0;    */
+    /* width: 25%;  */
+    width: 130px; 
+    height: 42px;   
     margin-top: auto;
     margin-bottom: auto;
     border: 1px solid black;
-    display: inline-block;
+    /* display: inline-block; */
     border-radius: 5px;
-    cursor: pointer;
+    /* cursor: pointer; */
+
+    &:hover {
+      background-color: lightgray;
+      border: 0;
+      cursor: pointer;
+    }
   }
 
   input[type="file"] {
@@ -395,17 +444,26 @@ const FileWrapper = styled.div`
   button {
     margin-left: 5%;
     margin-right: 5%;
-    width: 25%;
+    /* width: 25%; */
+    width: 130px;
     align-items: center;
     text-align: center;
-    height: 25px;
+    /* height: 25px; */
+    height: 42px;
     border-radius: 5px;
     background-color: white;
     border: 1px solid black;
     font-size: 15px;
-    @media only screen and (max-width: 576px) {
-      font-size: 0.9rem;
+
+    &:hover {
+      background-color: lightgray;
+      border: 0;
+      cursor: pointer;
     }
+    
+    /* @media only screen and (max-width: 576px) {
+      font-size: 0.9rem;
+    } */
   }
 
   @media only screen and (max-width: 1230px) {
@@ -423,7 +481,8 @@ const FileWrapper = styled.div`
 const BoxButton = styled.div`
   display: flex;
   flex-direction: column;
-  width: 90%;
+  /* width: 90%; */
+  width: 100%;
 
   textarea {
     width: 100%;
@@ -431,7 +490,8 @@ const BoxButton = styled.div`
     margin-bottom: 30px;
     border-radius: 5px;
     border: 1px solid black;
-    padding: 0.75%;
+    /* padding: 0.75%; */
+    padding: 0 10px;
 
     overflow: scroll;
     ::-webkit-scrollbar {
@@ -448,10 +508,19 @@ const BoxButton = styled.div`
     border: 1px solid black;
     font-size: 1rem; */
 
-    width: 30%;
+    /* width: 30%; */
+    width: 130px;    
+    height: 42px;
+    border-radius: 5px;
     background-color: white;
     border: 1px solid black;
-    border-radius: 5px;
+    font-size: 15px;
+
+    &:hover {
+      background-color: lightgray;
+      border: 0;
+      cursor: pointer;
+    }
 
     /* @media only screen and (max-width: 576px) {
       font-size: 0.9rem;
@@ -459,24 +528,32 @@ const BoxButton = styled.div`
   }
 `;
 
-const TextWrapper = styled.div`
-  width: 40%;
-  height: auto;
+const TextWrapper = styled.div`  
+  /* width: 50%; */
+  width: 500px;
+  /* height: auto; */
   text-align: left;
-  font-size: 15px;
-  font-weight: 300;
-  line-height: 1.2em;
-  margin-top: 50px;
+  margin: 0 5%;
+  margin-bottom: 50px;
+  /* font-size: 15px; */
+  /* font-weight: 300; */
+  /* line-height: 1.2em; */
+  /* margin-top: 50px; */
 
   p {
     margin: 0 0 40px 0;
-    font-size: 12px;
+    /* font-size: 12px; */
+    font-size: 14px;
   }
 
   h4 {
-    margin: 20px 0 10px 0;
+    /* margin: 20px 0 10px 0; */
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 24px;
+    font-weight: 600;
   }
-  @media only screen and (max-width: 1230px) {
+  /* @media only screen and (max-width: 1230px) {
     width: 70%;
     p {
       margin: 0 0 40px 5%;
@@ -491,9 +568,11 @@ const TextWrapper = styled.div`
   }
   @media only screen and (max-width: 576px) {
     width: 100%;
-  }
+  } */
 `;
 
+
+// Please style as above
 const ResultDiv = styled.div`
   width: 50%;
   display: flex;

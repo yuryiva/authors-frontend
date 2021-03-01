@@ -1,221 +1,158 @@
 import React from 'react';
-import styled from 'styled-components'
+import styled from 'styled-components';
+import cris from '../../assets/Cris_authxrs.jpg';
+import crisandsara from '../../assets/cris&sara_authxrs.jpg'
+
 
 export default function OurStory() {
     return (
-        <AboutUsSection>
-        <MainHeading>
-            <h3>Who We Are</h3>
-            <p>Contrary to popular belief, Lorem Ipsum is not simply 
-                random text. It has roots in a piece of classical Latin 
-                literature from 45 BC, making it over 2000 years old. 
-                Richard McClintock, a Latin professor at Hampden-Sydney 
-                College in Virginia, looked up one of the more obscure Latin 
-                words.
-            </p>
-        </MainHeading>
-        <OurImpactSection>
-            <OurImpactDescription>
-                <h4>How we work</h4>
-                <p>Contrary to popular belief, Lorem Ipsum is not simply 
-                    random text. It has roots in a piece of classical Latin 
-                    literature from 45 BC, making it over 2000 years old. 
-                    Richard McClintock, a Latin professor at Hampden-Sydney 
-                    College in Virginia, looked up one of the more obscure Latin 
-                    words.
-                </p>
-            </OurImpactDescription>
-            <OurImpactPhoto>
-                {/* <img src={ourImpactPhoto} alt="pen" /> */}
-            </OurImpactPhoto>
-        </OurImpactSection>
-
-        <OurValuesSection>
-            <OurValuesDescription>
-                <h4>Tell your story</h4>
-                <p>Contrary to popular belief, Lorem Ipsum is not simply 
-                    random text. It has roots in a piece of classical Latin 
-                    literature from 45 BC, making it over 2000 years old. 
-                    Richard McClintock, a Latin professor at Hampden-Sydney 
-                    College in Virginia, looked up one of the more obscure Latin 
-                    words.
-                </p>
-            </OurValuesDescription>
-            <OurValuesPhoto>
-                {/* <img src={ourValuesPhoto} alt="pen" /> */}
-            </OurValuesPhoto>
-        </OurValuesSection>
-    </AboutUsSection>
-)
+        <OurStoryWrapper>
+                <OurStorySection>
+                <OurStory1>
+                    <div>
+                    <h5>Authxrs |</h5>
+                    <p>Our Story</p>
+                    </div>
+                    <img src={cris} alt=""/>
+                </OurStory1>
+                <OurStory2>
+                    <img src={crisandsara} alt=""/>
+                    <div>
+                    <h5>Sara & Cristina |</h5>
+                    <p> Authxrs have worked with some amazing organizations to make this dream a reality. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+                    </div>
+                </OurStory2>
+                </OurStorySection>
+                <QuoteSection>
+                <h5>
+                    Authxrs have worked with some amazing organizations to make this dream a reality. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+                </h5>
+            </QuoteSection>
+            <TextSection3>
+        <TextSection3Text>
+          <p>
+            Contrary to popular belief, Lorem Ipsum is not simply random text.
+            It has roots in a piece of classical Latin literature from 45 BC,
+            making it over 2000 years old. Richard McClintock, a Latin professor
+            at Hampden-Sydney College in Virginia, looked up one of the more
+            obscure Latin words, consectetur, from a Lorem Ipsum passage, and
+            going through the cites of the word Contrary to popular belief,
+            Lorem Ipsum is not simply random text. It has roots in a piece of
+            classical Latin literature from 45 BC, making it over 2000 years
+            old. Richard McClintock, a Latin professor at Hampden-Sydney College
+            in Virginia, looked up one of the more obscure Latin words,
+            consectetur, from a Lorem Ipsum passage, and going through the cites
+            of the wordContrary to popular belief, Lorem Ipsum is not simply
+            random text.
+          </p>
+          <p>
+            Contrary to popular belief, Lorem Ipsum is not simply random text.
+            It has roots in a piece of classical Latin literature from 45 BC,
+            making it over 2000 years old. Richard McClintock, a Latin professor
+            at Hampden-Sydney College in Virginia, looked up one of the more
+            obscure Latin words, consectetur, from a Lorem Ipsum passage, and
+            going through the cites of the wordContrary to popular belief, Lorem
+            Ipsum is not simply random text. It has roots in a piece of
+            classical Latin literature from 45 BC, making it over 2000 years
+            old. Richard McClintock, a Latin professor at Hampden-Sydney College
+            in Virginia, 
+          </p>
+        </TextSection3Text>
+      </TextSection3>
+        </OurStoryWrapper>
+    )
 }
 
-const AboutUsSection = styled.section`
-min-height: 100vh;
-margin: 100px 0;
-display: flex;
-flex-direction: column;
-align-items: center;
-
+const OurStoryWrapper = styled.div`
+display:flex;
+flex-direction:column;
+justify-content:space-between;
+text-align:left;
 `
 
-const MainHeading = styled.div`  
-margin: 100px 0;    
-width: 50%;
-
-h3 {
-    font-size: 1.8rem;
-    border-top: 4px solid #000;
-    width: 177px;
-    margin: 50px auto;
-    /* margin-bottom: 0; */
-}
-
-p {
-    font-size: 1.1rem;
-    margin: 50px auto;
-}
-
-@media (max-width: 1000px) {
-    width: 80%;
-    align-self: center;
-    margin: 50px 0;
-}
-`
-
-const OurImpactSection = styled.div`
-height: 50%;
-width: 100%;
-display: flex;
-justify-content: space-between;
-margin-bottom: 50px;
-/* padding: 2rem; */
-
-@media (max-width: 1000px) {
-    flex-direction: column;
-}
-`
-
-const OurImpactDescription = styled.section`
-/* height: 100%; */
-width: 100%;
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-
-h4 {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-    padding: 0 25px;
-}
-
-p {
-    font-size: 1.1rem;
-    padding: 0 10%;
-}
-`
-
-const OurImpactPhoto = styled.div`
-/* width: 500px;     */
-width: 100%;    
-display: inline-block;
-overflow: hidden;
-margin-left: 10%;
-/* border-radius: 5px; */
+const OurStory1 = styled.div `
 
 img {
-    display: block;        
-    width: 100%;
-    /* height:300px;   */
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;    
-    transition: transform 0.8s;    
-
-    &:hover {
-    cursor: pointer;
-    transform: scale(1.1);
-    transform-origin: 50% 50%;
-    }
+    width:90%;
 }
 
-@media (max-width: 1000px) {
-    width: 80%;
-    align-self: center;
-    margin: 50px 0;
+div {
+    margin:40px 50px;
 }
+
+
 `
 
-const OurValuesSection = styled.div`
-height: 50%;
-width: 100%;
-display: flex;
-flex-direction: row-reverse;
-justify-content: space-between;
-/* padding: 2rem; */
+const OurStorySection = styled.div`
+display:flex;
+flex-direction:row;
+justify-content:space-between;
+text-align:left;
+margin-top:100px;
+border-top: 1px lightgray solid;
 
-@media (max-width: 1000px) {
-    flex-direction: column;
-}
 `
 
-const OurValuesDescription = styled.section`
-/* height: 100%; */
-width: 100%;
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-
-h4 {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-    padding: 0 25px;
-}
-
-p {
-    font-size: 1.1rem;
-    padding: 0 10%;
-}
-`
-
-const OurValuesPhoto = styled.div`
-/* width: 500px;     */
-width: 100%;    
-display: inline-block;
-overflow: hidden;
-margin-right: 10%;
-/* border-radius: 5px; */
+const OurStory2 = styled.div `
+right:0;
+text-align:right;
 
 img {
-    display: block;
-    width: 100%;
-    /* height:300px;   */
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;    
-    transition: transform 0.8s;    
-
-    &:hover {
-    cursor: pointer;
-    transform: scale(1.1);
-    transform-origin: 50% 50%;
-    }
+    width:90%;
+    margin-top:-20px;
 }
 
-@media (max-width: 1000px) {
-    width: 80%;
-    align-self: center;
-    margin: 50px 0;
+div {
+    text-align:left;
+    margin:100px 100px;
+    width:50%;
+}
+p{
+    font-size:14px;
 }
 `
 
+const QuoteSection = styled.div`
+    background-color:lightgray;
+    text-align:center;
+    align-items:center;
+    display:flex;
+    justify-content:center;
+    height:400px;
+    margin: 80px 0;
 
+    h5 {
+        font-size:18px;
+        font-weight:100;
+        width:60%;
+        line-height:2.5rem;
+    }
+`
 
+const TextSection3 = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  margin: 0px 0 100px 0;
+`;
 
+const TextSection3Text = styled.div`
+  width: 50%;
 
+  height: auto;
+  margin-left: 0;
 
+  p {
+    font-size: 17px;
+    line-height: 1.8em;
+    font-weight:100;
+    margin-bottom:50px;
+  }
 
-
-
-
+  @media (max-width: 1100px) {
+    width: 70%;
+  }
+`;

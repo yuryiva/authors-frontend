@@ -203,6 +203,7 @@ export default TellStoryForm;
 
 const DivWrapper = styled.div`
   /* margin-top: 100px; */
+  background: hsl(210, 36%, 96%);
   margin: 0;
   padding: 5%;
   padding-top: 140px;
@@ -227,12 +228,15 @@ const DivWrapper = styled.div`
 `;
 
 const FormWrapper = styled.form`
-display: flex;
-flex-direction: column;  
+  background: #fff;
+  display: flex;
+  flex-direction: column;  
   /* width: 50%; */
   width: 400px;
   margin: 0 5%;
   margin-bottom: 50px;
+  padding: 15px;
+  border-radius: 10px;
   /* display: flex;
   flex-direction: column; */
   /* text-align: center; */
@@ -299,7 +303,7 @@ const TextSection = styled.div`
     font-size: 24px;
     /* font-weight: 600; */
     margin-bottom: 40px;    
-    text-decoration: underline;
+    /* text-decoration: underline; */
   }
   /* @media only screen and (max-width: 1230px) {
     width: 80%;
@@ -469,8 +473,9 @@ const FileWrapper = styled.div`
     /* cursor: pointer; */
 
     &:hover {
-      background-color: lightgray;
-      border: 0;
+      background-color: lightgray;  
+      transform: none;  
+      transition: none;  
       cursor: pointer;
     }
   }
@@ -531,7 +536,7 @@ const BoxButton = styled.div`
     border-radius: 5px;
     border: 1px solid black;
     /* padding: 0.75%; */
-    padding: 0 10px;
+    padding: 10px;
 
     overflow: scroll;
     ::-webkit-scrollbar {

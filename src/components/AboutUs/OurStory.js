@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import cris from '../../assets/Cris_authxrs.jpg';
-import crisandsara from '../../assets/cris&sara_authxrs.jpg'
+import crisandsara from '../../assets/cris&sara_authxrs.jpg';
+import crissara from '../../assets/cris&sara_authxrs.jpg'
 
 
 export default function OurStory() {
@@ -57,6 +58,7 @@ export default function OurStory() {
             old. Richard McClintock, a Latin professor at Hampden-Sydney College
             in Virginia, 
           </p>
+          <img src={crissara} alt="cris and sara portrait" />
         </TextSection3Text>
       </TextSection3>
         </OurStoryWrapper>
@@ -65,6 +67,8 @@ export default function OurStory() {
 
 const OurStoryWrapper = styled.div`
 display:flex;
+flex-wrap:wrap;
+width:100%;
 flex-direction:column;
 justify-content:space-between;
 text-align:left;
@@ -88,6 +92,8 @@ display:flex;
 flex-direction:row;
 justify-content:space-between;
 text-align:left;
+flex-wrap:wrap;
+width:100%;
 margin-top:100px;
 border-top: 1px lightgray solid;
 
@@ -110,6 +116,19 @@ div {
 p{
     font-size:14px;
 }
+
+  @media (max-width:400px) {
+    text-align:center;
+
+    img {
+    width:90%;
+    margin-top:50px;
+
+    
+
+}
+  }
+
 `
 
 const QuoteSection = styled.div`
@@ -126,6 +145,11 @@ const QuoteSection = styled.div`
         font-weight:100;
         width:60%;
         line-height:2.5rem;
+    }
+
+    @media (max-width:400px) {
+      margin:0 0 50px 0;
+      h5{font-size:12px;}
     }
 `
 
@@ -151,6 +175,20 @@ const TextSection3Text = styled.div`
     font-weight:100;
     margin-bottom:50px;
   }
+
+  img {
+    margin-top:50px;
+    width:90%;
+  }
+
+  @media (max-width:400px) {
+      margin:0 0 50px 0;
+      p{font-size:10px;}
+      img {
+    margin-top:50px;
+    width:100%;
+  }
+    }
 
   @media (max-width: 1100px) {
     width: 70%;

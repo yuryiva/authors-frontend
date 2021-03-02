@@ -241,6 +241,7 @@ const FormWrapper = styled.form`
   flex-direction: column; */
   /* text-align: center; */
   text-align: left;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.7), 0 5px 15px rgba(0,0,0,0.1);
   /* align-items: center; */
   /* justify-content: center; */
   /* overflow: hidden; */

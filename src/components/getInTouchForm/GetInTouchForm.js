@@ -129,6 +129,7 @@ const FormWrapper = styled.form`
   border-radius: 10px;
   /* background-color: hsl(212, 33%, 89%); */
   background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.7), 0 5px 15px rgba(0,0,0,0.1);
 
   /* button {
     width: 30%;

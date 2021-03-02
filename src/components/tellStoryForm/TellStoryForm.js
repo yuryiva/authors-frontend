@@ -110,6 +110,27 @@ const TellStoryForm = () => {
 
   return (
     <DivWrapper>
+      <TextWrapper>
+        <h4>Why Share?</h4>
+        <p>
+          It is a long established fact that a reader will be distracted by the
+          readable content of a page when looking at its layout. The point of
+          using Lorem Ipsum is that it has a more-or-less normal distribution of
+          letters, as opposed to using 'Content here, content here', making it
+          look like readable English. It is a long established fact that a
+          reader will be distracted by the readable content of a page when
+          looking at its layout. The point of using Lorem Ipsum is that it has a
+          more-or-less normal distribution of letters, as opposed to using
+          'Content here, content here', making it look like readable English.{" "}
+        </p>
+        <p>
+          It is a long established fact that a reader will be distracted by the
+          readable content of a page when looking at its layout. The point of
+          using Lorem Ipsum is that it has a more-or-less normal distribution of
+          letters, as opposed to using 'Content here, content here', making it
+          look like readable English.{" "}
+        </p>
+      </TextWrapper>
       {sentMessage ? (
         <ResultDiv>
           {sentMessage === "SENT" && (
@@ -171,27 +192,7 @@ const TellStoryForm = () => {
           </MessageSection>
         </FormWrapper>
       )}
-      <TextWrapper>
-        <h4>Why Share?</h4>
-        <p>
-          It is a long established fact that a reader will be distracted by the
-          readable content of a page when looking at its layout. The point of
-          using Lorem Ipsum is that it has a more-or-less normal distribution of
-          letters, as opposed to using 'Content here, content here', making it
-          look like readable English. It is a long established fact that a
-          reader will be distracted by the readable content of a page when
-          looking at its layout. The point of using Lorem Ipsum is that it has a
-          more-or-less normal distribution of letters, as opposed to using
-          'Content here, content here', making it look like readable English.{" "}
-        </p>
-        <p>
-          It is a long established fact that a reader will be distracted by the
-          readable content of a page when looking at its layout. The point of
-          using Lorem Ipsum is that it has a more-or-less normal distribution of
-          letters, as opposed to using 'Content here, content here', making it
-          look like readable English.{" "}
-        </p>
-      </TextWrapper>
+      
     </DivWrapper>
   );
 };
@@ -206,7 +207,9 @@ const DivWrapper = styled.div`
   width: 100%;
   height: 100%;
   display: flex;
+  flex-direction: row;
   justify-content: space-evenly;
+  justify-content: center;
   /* align-items: center; */
   flex-wrap: wrap;
 
@@ -262,6 +265,7 @@ const TextSection = styled.div`
     font-size: 24px;
     font-weight: 600;
     margin-bottom: 40px;    
+    text-decoration: underline;
   }
   /* @media only screen and (max-width: 1230px) {
     width: 80%;
@@ -291,7 +295,7 @@ const FNameSection = styled.div`
     /* width: 90%; */
     width: 100%;
     /* height: 30px; */
-    height: 48px;
+    height: 42px;
     margin-bottom: 30px;
     border-radius: 5px;
     border: 1px solid black;
@@ -327,7 +331,7 @@ const EmailSection = styled.div`
     /* width: 90%; */
     width: 100%;
     /* height: 30px; */
-    height: 48px;
+    height: 42px;
     margin-bottom: 30px;
     border-radius: 5px;
     border: 1px solid black;
@@ -362,7 +366,7 @@ const TopicSection = styled.div`
     /* width: 90%; */
     width: 100%;
     /* height: 30px; */
-    height: 48px;
+    height: 42px;
     margin-bottom: 30px;
     border-radius: 5px;
     border: 1px solid black;

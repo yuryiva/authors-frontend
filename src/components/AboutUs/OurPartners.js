@@ -1,11 +1,16 @@
-import React from 'react';
+import React , {useEffect}  from 'react';
 import styled from 'styled-components';
 import unicef from '../../assets/unicef.png';
 import wwf from '../../assets/WWF-logo.png';
 import treeplant from '../../assets/treeplanted.png';
-import oxfam from '../../assets/oxfam.png'
+import oxfam from '../../assets/oxfam.png';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 export default function OurPartners() {
+    useEffect (() => {
+        Aos.init({duration:3000});
+    }, []);
     return (
         <PartnersWrapper>
             <PartnersLogoSection>
@@ -20,9 +25,9 @@ export default function OurPartners() {
                 </h5>
             </QuoteSection>
 
-            <PartnerInfo>
-                <PartnerImg>
-                    <img src={unicef} alt="unicef" />
+            <PartnerInfo data-aos='fade-left' >
+                <PartnerImg >
+                    <img src={unicef}  alt="unicef" />
                 </PartnerImg>
                 <ParnterText>
                     <h2>
@@ -33,7 +38,7 @@ export default function OurPartners() {
                     </p>
                 </ParnterText>
             </PartnerInfo>
-            <PartnerInfo>
+            <PartnerInfo data-aos='fade-right' >
                 <PartnerImg>
                     <img src={wwf} alt="WWF" />
                 </PartnerImg>
@@ -46,7 +51,7 @@ export default function OurPartners() {
                     </p>
                 </ParnterText>
             </PartnerInfo>
-            <PartnerInfo>
+            <PartnerInfo data-aos='fade-left' >
                 <PartnerImg>
                     <img src={treeplant} alt="Tree Planted" />
                 </PartnerImg>
@@ -59,9 +64,9 @@ export default function OurPartners() {
                     </p>
                 </ParnterText>
             </PartnerInfo>
-            <PartnerInfo>
+            <PartnerInfo data-aos='fade-right'>
                 <PartnerImg>
-                    <img src={oxfam} alt="unicef" />
+                    <img src={oxfam} alt="oxfam" />
                 </PartnerImg>
                 <ParnterText>
                     <h2>
@@ -92,6 +97,16 @@ const PartnersLogoSection = styled.div`
         margin:0 30px;
     }
 
+    @media (max-width:400px){
+        margin:40px 0 10px 0;
+
+            img{
+                width:100px;
+                height:auto;
+                margin:10px 15px;
+            }
+            }
+
 `
 
 const QuoteSection = styled.div`
@@ -109,6 +124,11 @@ const QuoteSection = styled.div`
         width:60%;
         line-height:2.5rem;
     }
+    @media (max-width:400px){
+        margin-top:40px;
+        h5{font-size:12px;
+           
+        }}
 `
 
 const PartnerInfo = styled.div`
@@ -129,10 +149,19 @@ const PartnerImg = styled.div`
         margin:50px;
     }
 
+
 `
 
 
 const ParnterText = styled.div`
-        width:50%;      
+        width:50%;   
+
+         @media (max-width:400px){
+            width:70%;
+            text-align:center;
+        p{font-size:12px;
+            
+        }
+        }   
 
 `

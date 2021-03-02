@@ -1,17 +1,22 @@
-import React from "react";
+import React, {useEffect} from "react";
 import styled from "styled-components";
 import cris from '../../assets/Cris_authxrs.jpg';
 import sara from '../../assets/Sara_authxrs.jpg';
 import saraimg from '../../assets/saraimg.jpg';
-import crisimg from '../../assets/crisimg.jpg'
+import crisimg from '../../assets/crisimg.jpg';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 
 export default function OurTeam() {
+  useEffect (() => {
+    Aos.init({duration:3000});
+}, []);
   return (
     <OurTeamWrapper>
       <StorySection1>
         <StorySection1Img>
-          <img
+          <img  data-aos='fade-up' 
             src={cris}
             alt="portrait"
           />
@@ -23,7 +28,7 @@ export default function OurTeam() {
           </NameSection>
         </StorySection1Img>
         <StorySection1Img>
-          <img
+          <img  data-aos='fade-up' 
             src={sara}
             alt="portrait"
           />
@@ -70,7 +75,7 @@ export default function OurTeam() {
 
       <SaraSection>
         <SaraImg>
-          <img src={saraimg} alt="sara portrait" />
+          <img src={saraimg}  data-aos='fade-up'  alt="sara portrait" />
         </SaraImg>
        <SaraText>
          <h1>
@@ -107,7 +112,7 @@ export default function OurTeam() {
             </p>    
         </CrisText>
         <CrisImg>
-          <img src={crisimg} alt="Cris Portrait" />
+          <img src={crisimg}  data-aos='fade-up'  alt="Cris Portrait" />
         </CrisImg>
       </CrisSection>
     </OurTeamWrapper>
@@ -131,6 +136,7 @@ const StorySection1 = styled.div`
   flex-direction: row;
   justify-content: center;
   text-align: left;
+  flex-wrap:wrap;
 
 `;
 
@@ -155,6 +161,11 @@ const StorySection1Img = styled.div`
     font-size: 10px;
   }
 
+  @media(max-width:400px){
+  margin-top:50px;
+  margin-bottom:0px;
+}
+
   @media (max-width: 800px) {
     width: 90%;
 
@@ -175,6 +186,11 @@ const MiddleSection3 = styled.div`
   text-align: center;
   align-items: center;
   margin: 0px 0 100px 0;
+  
+  @media(max-width:400px){
+ 
+      margin-bottom:40px;
+  }
 `;
 
 const MiddleSection3Text = styled.div`
@@ -190,9 +206,16 @@ const MiddleSection3Text = styled.div`
     margin-bottom:50px;
   }
 
-  @media (max-width: 1100px) {
-    width: 70%;
-  }
+  @media(max-width:400px){
+    width:80%;
+    margin-top:40px;
+    
+    p {
+      font-size:10px;
+      width:100%;
+      margin-bottom:30px;
+      }
+}
 `;
 
 // SARA SECTION 
@@ -212,6 +235,9 @@ const SaraImg = styled.div`
 img {
   width:400px;
 }
+@media(max-width:400px){
+  img {width:300px;}
+}
 `
 
 const SaraText = styled.div`
@@ -219,18 +245,24 @@ text-align:left;
 width:25%;
 margin:20px 40px;
 font-size:12px;
+@media(max-width:400px){
+  width:80%;
+}
 `
 
 const CrisSection = styled.div`
 display:flex;
 flex-direction:row;
-flex-wrap:wrap;
+flex-wrap:wrap-reverse;
 justify-content:center;
 align-items:flex-start;
 text-align:center;
 width:100%;
 margin-top:100px;
 
+@media(max-width:400px){
+  margin-top:50px;
+}
 `
 
 const CrisImg = styled.div`
@@ -239,15 +271,30 @@ img {
   width:400px;
   margin-right:100px;
 }
+
+@media(max-width:400px){
+  img {width:300px;
+    margin-right:0;
+  }
+}
 `
 
 const CrisText = styled.div`
 text-align:left;
 width:25%;
 margin:20px 40px;
-font-size:12px;`
+font-size:12px;
+
+@media(max-width:400px){
+  width:80%;
+}
+`
 
 
 const NameSection = styled.div`
-margin:0;
+    margin:0;
+
+    @media(max-width:400px){
+    margin-left:10px;
+}
 `

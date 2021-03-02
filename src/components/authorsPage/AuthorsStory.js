@@ -23,7 +23,7 @@ const AuthorsStory = () => {
             <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word</p>
             </StorySection1Text>
             <StorySection1Img>
-            <img src='https://images.unsplash.com/photo-1590452366152-7c59da8b9524?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80' alt='image' />
+            <img src='https://images.unsplash.com/photo-1590452366152-7c59da8b9524?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80' alt='authors' />
             </StorySection1Img>
            </StorySection1> 
            <HR>
@@ -31,7 +31,7 @@ const AuthorsStory = () => {
            </HR>
            <StorySection2>
            <StorySection2Img>
-            <img data-aos='fade-up' data-aos-duration="2000" src='https://images.unsplash.com/photo-1583795059494-44bc7e53384c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80' alt='image' />
+            <img data-aos='fade-up' data-aos-duration="2000" src='https://images.unsplash.com/photo-1583795059494-44bc7e53384c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80' alt='authors' />
             </StorySection2Img>
             <h1>"Quote of the story inserted here"</h1>
            </StorySection2> 
@@ -47,7 +47,7 @@ const AuthorsStory = () => {
             <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word</p>
             </StorySection3Text>
             <StorySection3Img>
-            <img data-aos='fade-up' data-aos-duration="3000" src='https://images.unsplash.com/photo-1522874339442-b66b63414ab4?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80' alt='image' />
+            <img data-aos='fade-up' data-aos-duration="3000" src='https://images.unsplash.com/photo-1522874339442-b66b63414ab4?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80' alt='authors' />
             </StorySection3Img>
            </StorySection3> 
 

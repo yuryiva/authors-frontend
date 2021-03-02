@@ -4,7 +4,6 @@ import StripeCheckout from "react-stripe-checkout";
 import { Context } from "../../context/Context";
 import SuccessfulModal from "./SuccessfulModal";
 import ErrorModal from "./ErrorModal";
-import STRIPE_PUBLISHABLE from "./constants/stripe";
 import PAYMENT_SERVER_URL from "./constants/server";
 
 const Checkout = ({ name, description, amount, label, type, email }) => {

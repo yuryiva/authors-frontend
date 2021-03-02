@@ -10,7 +10,6 @@ import Podcasts from "./components/podcasts/Podcasts";
 import ShortStories from "./components/shortStories/ShortStories";
 import JoinTheMovement from "./components/joinTheMovement/JoinTheMovement";
 import BurgerMenu from "./components/header/BurgerMenu";
-import styled from "styled-components";
 import AboutUs from "./components/AboutUs/AboutUs";
 import OurTeam from "./components/AboutUs/OurTeam";
 import GetInTouchForm from "./components/getInTouchForm/GetInTouchForm";

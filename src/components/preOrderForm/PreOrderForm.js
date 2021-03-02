@@ -80,7 +80,7 @@ const PreOrderForm = () => {
       ) : (
         <SentMessageForm onChange={handleChange}>
           <ImageBook>
-            <img src={context.state.bookUrl} />
+            <img src={context.state.bookUrl} alt="authors" />
           </ImageBook>
           <h5>PRICE PER BOOK: {bookPrice} EUR</h5>
           <div>
@@ -249,8 +249,4 @@ const ResponseDiv = styled.div`
     height: 80%;
     width: 50%;
   }
-`;
-const SubmitDiv = styled.div`
-  display: flex;
-  justify-content: center;
 `;

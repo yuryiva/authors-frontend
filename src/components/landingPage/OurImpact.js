@@ -25,15 +25,15 @@ export default function OurImpact() {
             style={{ textDecoration: "none", color: "inherit" }}
           >
             <h4>How we work</h4>
-            <div className="underbar"></div>
-            <p>
-              Contrary to popular belief, Lorem Ipsum is not simply random text.
-              It has roots in a piece of classical Latin literature from 45 BC,
-              making it over 2000 years old. Richard McClintock, a Latin
-              professor at Hampden-Sydney College in Virginia, looked up one of
-              the more obscure Latin words.
-            </p>
           </Link>
+          {/* <div className="underbar"></div> */}
+          <p>
+            Contrary to popular belief, Lorem Ipsum is not simply random text.
+            It has roots in a piece of classical Latin literature from 45 BC,
+            making it over 2000 years old. Richard McClintock, a Latin professor
+            at Hampden-Sydney College in Virginia, looked up one of the more
+            obscure Latin words.
+          </p>
         </OurImpactDescription>
         <OurImpactPhoto>
           <img src={ourImpactPhoto} alt="pen" />
@@ -133,22 +133,22 @@ const OurImpactDescription = styled.section`
   justify-content: center;
   align-items: center;
 
-  underbar {
+  /* .underbar {
     width: 0;
     height: 5px;
-    ${"" /* background: rgba(0, 0, 0, 0); */}
+    background: rgba(0, 0, 0, 0);
     background: rgba(100, 100, 200, 0);
     top: 20px;
     position: absolute;
     -webkit-transition: 0.5s ease;
-  }
+  } */
 
   h4 {
     font-size: 1.5rem;
     margin-bottom: 20px;
     padding: 0 25px;
     text-align: center;
-    -webkit-transition: 0.5s ease;
+    /* -webkit-transition: 0.5s ease;
 
     &:hover {
       text-shadow: 0px -2px 0px rgba(0, 0, 0, 1),
@@ -161,9 +161,16 @@ const OurImpactDescription = styled.section`
       -webkit-transition: 2.5s ease;
 
       background: black;
-      ${"" /* background: rgba(150, 250, 250, 0.5); */}
-      ${"" /* box-shadow: grey; */}
+      background: rgba(150, 250, 250, 0.5);
+      box-shadow: grey;
       box-shadow: 0 0 10px rgba(70, 100, 150, 4);
+    } */
+
+    text-decoration: underline;
+    &:hover {
+      cursor: pointer;
+      transition: transform 0.5s;
+      transform: scale(1.05);
     }
   }
 
@@ -240,7 +247,7 @@ const OurValuesDescription = styled.section`
     text-decoration: underline;
     &:hover {
       cursor: pointer;
-      transition: transform 0.3s;
+      transition: transform 0.5s;
       transform: scale(1.05);
     }
   }

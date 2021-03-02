@@ -2,75 +2,70 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from 'styled-components';
 import photo from '../../assets/photo6.jpg';
-// import { motion, AnimatePresence } from 'framer-motion';
 
-// const backdrop = {
-//   visible: { opacity: 1 },
-//   hidden: { opacity: 0 }
-// }
 
-const Header = ({ dropdown, setDropdown }) => {  
+const DarkHeader = ({ darkDropdown, setDarkDropdown }) => {      
 
-  const handleDropdown = () => {
-    let closed = !dropdown;
-    setDropdown(closed);
+  const handleDarkDropdown = () => {
+    let closed = !darkDropdown;
+    setDarkDropdown(closed);
     window.scrollTo({
       top: 0,
       left: 0,
-      // behavior: 'smooth'
+    //   behavior: 'smooth'
     });
   }
 
   return (    
-      <NavigationMenu dropdown={ dropdown }> 
+      <DarkNavigationMenu darkDropdown={ darkDropdown }> 
 
-        <PhotoSection>
+        <DarkPhotoSection>
           <img src={photo} alt="authors" />
-        </PhotoSection>
+        </DarkPhotoSection>
 
-        <LinkSection>
-          <LinkContainer>
+        <DarkLinkSection>
+          <DarkLinkContainer>
 
             {/* <Link to="/" onClick={handleDropdown}>
               <LogoImage />
             </Link> */}
           
-              <Link to="/authors-page" onClick={handleDropdown}>
+              <Link to="/authors-page" onClick={handleDarkDropdown}>
                 The Authors
               </Link>
 
-              <Link to="/books" onClick={handleDropdown}>
+              <Link to="/books" onClick={handleDarkDropdown}>
                 Books
               </Link>
         
-              <Link to="/podcasts" onClick={handleDropdown}>
+              <Link to="/podcasts" onClick={handleDarkDropdown}>
                 Podcast
               </Link>
           
-              <Link to="/short-stories" onClick={handleDropdown}>
+              <Link to="/short-stories" onClick={handleDarkDropdown}>
                 Short stories
               </Link>  
           
-              <Link to="/join-the-movement" onClick={handleDropdown}>
+              <Link to="/join-the-movement" onClick={handleDarkDropdown}>
                 Join the movement
               </Link>                
 
-          </LinkContainer>
-        </LinkSection>               
+          </DarkLinkContainer>
+        </DarkLinkSection>               
 
-      </NavigationMenu>   
+      </DarkNavigationMenu>   
   );
 }
 
 // Styling navigation menu 
-const NavigationMenu = styled.nav`  
+const DarkNavigationMenu = styled.nav`  
   position: fixed;
   display: flex;  
   justify-content: space-evenly;
   align-items: center; 
   align-self: center; 
   background: #fff;
-  transform: ${({ dropdown }) => dropdown ? 'translateY(25px)' : 'translateY(-100%)'};    
+  transform: ${({ darkDropdown }) => darkDropdown ? 'translateY(25px)' : 'translateY(-100%)'};    
   height: 75%;     
   /* width: 100vw; */
   width: 94vw;  
@@ -79,14 +74,14 @@ const NavigationMenu = styled.nav`
   top: 0;
   /* left: 0;   */
   z-index: 100;
-  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out; 
    
 
   @media (max-width: 768px) {
     width: 100%;  
     min-height: 100vh;
     height: auto;  
-    transform: ${({ dropdown }) => dropdown ? 'translateY(0)' : 'translateY(-100%)'}; 
+    transform: ${({ darkDropdown }) => darkDropdown ? 'translateY(0)' : 'translateY(-100%)'}; 
   }
 
   a {
@@ -98,7 +93,6 @@ const NavigationMenu = styled.nav`
     color: #000;
     text-decoration: none;
     transform-origin: 0; 
-    transition: transform 0.8s;
     /* transition: color 0.3s linear; */
 
     /* @media (max-width: 1560px) {
@@ -126,15 +120,15 @@ const NavigationMenu = styled.nav`
     }
 
     &:hover {      
-      cursor: pointer;         
-      transition: 1s ease;
+                
+      transition: 0.5s ease-out all;
       transform: scale(1.1); 
-      /* transform-origin: 50% 50%; */
+      
     }
   }
 `
 
-const PhotoSection = styled.section`
+const DarkPhotoSection = styled.section`
   /* width: 30%;   */
   width: 500px;    
   display: inline-block;
@@ -172,10 +166,9 @@ const PhotoSection = styled.section`
   @media (max-width: 900px) {
     display: none;
   }
-
 `
 
-const LinkSection = styled.section`  
+const DarkLinkSection = styled.section`  
   /* overflow: hidden; */
   display: flex;
   flex-direction: column;
@@ -197,7 +190,7 @@ const LinkSection = styled.section`
   } */
 `
 
-const LinkContainer = styled.div`  
+const DarkLinkContainer = styled.div`  
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -231,4 +224,4 @@ const LinkContainer = styled.div`
 //     z-index: 10;
 // `
 
-export default Header;
+export default DarkHeader;

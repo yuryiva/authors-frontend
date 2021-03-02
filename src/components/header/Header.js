@@ -98,6 +98,7 @@ const NavigationMenu = styled.nav`
     color: #000;
     text-decoration: none;
     transform-origin: 0; 
+    transition: transform 0.8s;
     /* transition: color 0.3s linear; */
 
     /* @media (max-width: 1560px) {
@@ -125,10 +126,10 @@ const NavigationMenu = styled.nav`
     }
 
     &:hover {      
-                
-      transition: 0.5s ease-out all;
+      cursor: pointer;         
+      transition: 1s ease;
       transform: scale(1.1); 
-      
+      /* transform-origin: 50% 50%; */
     }
   }
 `

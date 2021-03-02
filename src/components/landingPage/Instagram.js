@@ -164,7 +164,7 @@ const InstaContact = styled.div`
 const Follow = styled.div`
   button {
     width: 130px;
-    height: 40px;
+    height: 42px;
     border-radius: 2px;
     margin-right: 20px;
     border: 1px solid black;

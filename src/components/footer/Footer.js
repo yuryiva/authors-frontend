@@ -151,21 +151,19 @@ const AboutUs = styled.div`
   flex-direction: column;
   text-align: left;
 
-  p  {
-
+  p {
     -webkit-transition: 0.5s ease;
 
     &:hover {
       text-decoration: underline;
       text-shadow: 0px -2px 0px rgba(0, 0, 0, 0.5),
         0 0 5px rgba(255, 255, 255, 0.8), 0 -4px 15px rgba(255, 255, 255, 0.5);
+    }
 
-  }
-
-
-  @media (max-width: 850px) {
-    margin: 0 10px;
-    margin-bottom: 20px;
+    @media (max-width: 850px) {
+      margin: 0 10px;
+      margin-bottom: 20px;
+    }
   }
 `;
 
@@ -173,20 +171,19 @@ const OurWork = styled.div`
   display: flex;
   flex-direction: column;
   text-align: left;
-  p  {
+  p {
+    -webkit-transition: 0.5s ease;
 
--webkit-transition: 0.5s ease;
+    &:hover {
+      text-decoration: underline;
+      text-shadow: 0px -2px 0px rgba(0, 0, 0, 0.5),
+        0 0 5px rgba(255, 255, 255, 0.8), 0 -4px 15px rgba(255, 255, 255, 0.5);
+    }
 
-&:hover {
-  text-decoration: underline;
-  text-shadow: 0px -2px 0px rgba(0, 0, 0, 0.5),
-    0 0 5px rgba(255, 255, 255, 0.8), 0 -4px 15px rgba(255, 255, 255, 0.5);
-
-}
-
-  @media (max-width: 850px) {
-    margin: 0 10px;
-    margin-bottom: 20px;
+    @media (max-width: 850px) {
+      margin: 0 10px;
+      margin-bottom: 20px;
+    }
   }
 `;
 
@@ -195,24 +192,19 @@ const ContactUs = styled.div`
   flex-direction: column;
   text-align: left;
 
-  p , a {
+  p,
+  a {
+    -webkit-transition: 0.5s ease;
 
--webkit-transition: 0.5s ease;
+    &:hover {
+      text-decoration: underline;
+      text-shadow: 0px -2px 0px rgba(0, 0, 0, 0.5),
+        0 0 5px rgba(255, 255, 255, 0.8), 0 -4px 15px rgba(255, 255, 255, 0.5);
+    }
 
-&:hover {
-  text-decoration: underline;
-  text-shadow: 0px -2px 0px rgba(0, 0, 0, 0.5),
-    0 0 5px rgba(255, 255, 255, 0.8), 0 -4px 15px rgba(255, 255, 255, 0.5);
-
-}
-
-
-
-
-
-
-  @media (max-width: 850px) {
-    margin: 0 10px;
+    @media (max-width: 850px) {
+      margin: 0 10px;
+    }
   }
 `;
 

@@ -76,13 +76,15 @@ const Footer = () => {
         </FooterLinks>
         <Subscribe>
           <h4>Join Us</h4>
-          <p>Subscribe for latest updates, new stories and promotions</p>
+          <p style={{ fontSize: 12 }}>
+            Subscribe for latest updates, new stories and promotions
+          </p>
 
           <SubscribeForm />
         </Subscribe>
       </FooterWrapper>
       <Copyright>
-        <p>Copyright Authors© 2021</p>
+        <p>Copyright Authxrs© 2021</p>
       </Copyright>
     </FooterDiv>
   );
@@ -105,7 +107,11 @@ const FooterWrapper = styled.div`
   padding: 20px 80px 0 80px;
 
   p {
-    font-size: 12px;
+    font-size: 15px;
+  }
+
+  h4 {
+    font-weight: 510;
   }
 
   @media (max-width: 1300px) {
@@ -152,12 +158,8 @@ const AboutUs = styled.div`
   text-align: left;
 
   p {
-    -webkit-transition: 0.5s ease;
-
-    &:hover {
+    :hover {
       text-decoration: underline;
-      text-shadow: 0px -2px 0px rgba(0, 0, 0, 0.5),
-        0 0 5px rgba(255, 255, 255, 0.8), 0 -4px 15px rgba(255, 255, 255, 0.5);
     }
 
     @media (max-width: 850px) {
@@ -172,17 +174,19 @@ const OurWork = styled.div`
   flex-direction: column;
   text-align: left;
   p {
-    -webkit-transition: 0.5s ease;
-
-    &:hover {
+    :hover {
       text-decoration: underline;
-      text-shadow: 0px -2px 0px rgba(0, 0, 0, 0.5),
-        0 0 5px rgba(255, 255, 255, 0.8), 0 -4px 15px rgba(255, 255, 255, 0.5);
-    }
 
-    @media (max-width: 850px) {
-      margin: 0 10px;
-      margin-bottom: 20px;
+      &:hover {
+        text-decoration: underline;
+        text-shadow: 0px -2px 0px rgba(0, 0, 0, 0.5),
+          0 0 5px rgba(255, 255, 255, 0.8), 0 -4px 15px rgba(255, 255, 255, 0.5);
+      }
+
+      @media (max-width: 850px) {
+        margin: 0 10px;
+        margin-bottom: 20px;
+      }
     }
   }
 `;
@@ -194,7 +198,9 @@ const ContactUs = styled.div`
 
   p,
   a {
-    -webkit-transition: 0.5s ease;
+    :hover {
+      text-decoration: underline;
+    }
 
     &:hover {
       text-decoration: underline;

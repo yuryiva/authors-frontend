@@ -107,7 +107,7 @@ const InstaWrapper = styled.div`
 
 const ImgWrapper = styled.div`
   margin: 0 20px;
-  width: 500px;
+  width: 400px;
   /* height: 500px; */
   /* display: inline-block; */
   display: flex;
@@ -122,7 +122,7 @@ const ImgWrapper = styled.div`
     background-size: cover; */
     transition: transform 0.8s;
     width: 100%;
-    height: 500px;
+    height: 400px;
     vertical-align: middle;
     object-fit: cover;
 
@@ -164,7 +164,7 @@ const InstaContact = styled.div`
 const Follow = styled.div`
   button {
     width: 130px;
-    height: 40px;
+    height: 42px;
     border-radius: 2px;
     margin-right: 20px;
     border: 1px solid black;

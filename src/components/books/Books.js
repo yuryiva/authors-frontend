@@ -6,10 +6,9 @@ import DarkBurger from "../header/DarkBurger";
 // import DarkHeader from "../header/DarkHeader";
 // import PreOrderForm from "../preOrderForm/PreOrderForm";
 
-export default function Books({dropdown, setDropdown}) {
+export default function Books({ dropdown, setDropdown }) {
   const context = useContext(Context);
   const bookPrice = context.state.bookPrice;
-  
 
   const [books, setBooks] = useState([
     {
@@ -34,22 +33,21 @@ export default function Books({dropdown, setDropdown}) {
     },
   ]);
 
-
   return (
     <div>
       <DarkBurger />
-      
+
       {books.map((book) => (
         <PageWrapper key={book.id}>
           {/* <BookWrapper key={book.id}> */}
 
-            <BookImage>
-              <img src={book.bookUrl} alt="book" />
-            </BookImage>
-            <BookDescription>
-              <h3>{book.bookTitle}</h3>
-              <p>{book.bookDescription}</p>
-            </BookDescription>
+          <BookImage>
+            <img src={book.bookUrl} alt="book" />
+          </BookImage>
+          <BookDescription>
+            <h3>{book.bookTitle}</h3>
+            <p>{book.bookDescription}</p>
+          </BookDescription>
 
           <BookCheckout>
             <h3>
@@ -112,7 +110,8 @@ const PageWrapper = styled.div`
   /* justify-content: center; */
   align-items: top;
 
-  background-color: ${({ darkDropdown }) => (darkDropdown ? "rgba(0, 0, 0, 0.7)" : "")};  
+  background-color: ${({ darkDropdown }) =>
+    darkDropdown ? "rgba(0, 0, 0, 0.7)" : ""};
   transition: 1s ease;
 `;
 

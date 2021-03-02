@@ -167,6 +167,14 @@ const TellStoryForm = () => {
             {/* <label htmlFor="topic">Topic </label> */}
             <input type="text" id="topic" placeholder="Topic" required />
           </TopicSection>
+
+          <MessageSection>
+            {/* <label htmlFor="message">Your Story: </label> */}
+            <BoxButton>
+              <textarea id="message" placeholder="Your Story" required />              
+            </BoxButton>
+          </MessageSection>
+
           <FileWrapper>
             <label htmlFor="file-upload">Add File</label>
             <input
@@ -183,13 +191,7 @@ const TellStoryForm = () => {
             {stateOfLoading > 0 && Math.round(stateOfLoading, 2) + "%"}
           </FileWrapper>
 
-          <MessageSection>
-            {/* <label htmlFor="message">Your Story: </label> */}
-            <BoxButton>
-              <textarea id="message" placeholder="Your Story" required />
-              <button type="submit">{status}</button>
-            </BoxButton>
-          </MessageSection>
+          <button type="submit">{status}</button>
         </FormWrapper>
       )}
       
@@ -211,7 +213,7 @@ const DivWrapper = styled.div`
   justify-content: space-evenly;
   justify-content: center;
   /* align-items: center; */
-  flex-wrap: wrap;
+  flex-wrap: wrap;  
 
   /* @media only screen and (max-width: 1249px) {
     flex-direction: column-reverse;
@@ -224,7 +226,9 @@ const DivWrapper = styled.div`
   } */
 `;
 
-const FormWrapper = styled.form`  
+const FormWrapper = styled.form`
+display: flex;
+flex-direction: column;  
   /* width: 50%; */
   width: 400px;
   margin: 0 5%;
@@ -237,6 +241,36 @@ const FormWrapper = styled.form`
   /* justify-content: center; */
   /* overflow: hidden; */
 
+  button {
+    /* width: 30%;
+    height: 35px;
+    border-radius: 5px;
+    background-color: white;
+    border: 1px solid black;
+    font-size: 1rem; */
+
+    /* width: 30%; */
+    font-size: 1.2rem;
+    align-self: center;
+    width: 130px;    
+    height: 42px;
+    /* border-radius: 5px; */
+    /* background-color: white; */
+    background-color: transparent;
+    /* border: 1px solid black; */
+    border: none;
+    text-decoration: underline;
+    letter-spacing: 1px; 
+    transition: transform 0.8s;   
+
+    &:hover {
+      /* background-color: lightgray; */      
+      cursor: pointer;
+      transition: 1s ease;
+      transform: scale(1.1);
+      /* transform-origin: 50% 50%; */
+    }
+  }
   /* @media only screen and (max-width: 1230px) {
     width: 80%;
   }
@@ -263,7 +297,7 @@ const TextSection = styled.div`
 
   h4 {
     font-size: 24px;
-    font-weight: 600;
+    /* font-weight: 600; */
     margin-bottom: 40px;    
     text-decoration: underline;
   }
@@ -458,10 +492,12 @@ const FileWrapper = styled.div`
     background-color: white;
     border: 1px solid black;
     font-size: 15px;
+    text-decoration: none;
 
     &:hover {
-      background-color: lightgray;
-      border: 0;
+      background-color: lightgray;  
+      transform: none;  
+      transition: none;  
       cursor: pointer;
     }
     
@@ -470,7 +506,7 @@ const FileWrapper = styled.div`
     } */
   }
 
-  @media only screen and (max-width: 1230px) {
+  /* @media only screen and (max-width: 1230px) {
     width: 80%;
   }
   @media only screen and (max-width: 900px) {
@@ -479,7 +515,7 @@ const FileWrapper = styled.div`
   @media only screen and (max-width: 576px) {
     width: 100%;
     font-size: 0.9rem;
-  }
+  } */
 `;
 
 const BoxButton = styled.div`
@@ -504,32 +540,12 @@ const BoxButton = styled.div`
     -ms-overflow-style: none;
     scrollbar-width: none;
   }
-  button {
-    /* width: 30%;
-    height: 35px;
-    border-radius: 5px;
-    background-color: white;
-    border: 1px solid black;
-    font-size: 1rem; */
-
-    /* width: 30%; */
-    width: 130px;    
-    height: 42px;
-    border-radius: 5px;
-    background-color: white;
-    border: 1px solid black;
-    font-size: 15px;
-
-    &:hover {
-      background-color: lightgray;
-      border: 0;
-      cursor: pointer;
-    }
+  
 
     /* @media only screen and (max-width: 576px) {
       font-size: 0.9rem;
     } */
-  }
+  
 `;
 
 const TextWrapper = styled.div`  
@@ -555,7 +571,7 @@ const TextWrapper = styled.div`
     text-align: center;
     margin-bottom: 40px;
     font-size: 24px;
-    font-weight: 600;
+    /* font-weight: 600; */
   }
   /* @media only screen and (max-width: 1230px) {
     width: 70%;

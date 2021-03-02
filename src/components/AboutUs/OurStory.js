@@ -14,10 +14,10 @@ export default function OurStory() {
                     <h5>Authxrs |</h5>
                     <p>Our Story</p>
                     </div>
-                    <img src={cris} alt=""/>
+                    <img src={cris} alt="cris"/>
                 </OurStory1>
                 <OurStory2>
-                    <img src={crisandsara} alt=""/>
+                    <img src={crisandsara} alt="sara and cris"/>
                     <div>
                     <h5>Sara & Cristina |</h5>
                     <p> Authxrs have worked with some amazing organizations to make this dream a reality. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
@@ -67,8 +67,6 @@ export default function OurStory() {
 
 const OurStoryWrapper = styled.div`
 display:flex;
-flex-wrap:wrap;
-width:100%;
 flex-direction:column;
 justify-content:space-between;
 text-align:left;
@@ -85,6 +83,14 @@ div {
 }
 
 
+@media (max-width: 800px) {
+   display:none;
+   img {
+     width:100%;
+     margin-right:100px;
+   }
+  }
+
 `
 
 const OurStorySection = styled.div`
@@ -92,8 +98,6 @@ display:flex;
 flex-direction:row;
 justify-content:space-between;
 text-align:left;
-flex-wrap:wrap;
-width:100%;
 margin-top:100px;
 border-top: 1px lightgray solid;
 
@@ -116,19 +120,6 @@ div {
 p{
     font-size:14px;
 }
-
-  @media (max-width:400px) {
-    text-align:center;
-
-    img {
-    width:90%;
-    margin-top:50px;
-
-    
-
-}
-  }
-
 `
 
 const QuoteSection = styled.div`
@@ -147,10 +138,10 @@ const QuoteSection = styled.div`
         line-height:2.5rem;
     }
 
-    @media (max-width:400px) {
-      margin:0 0 50px 0;
-      h5{font-size:12px;}
-    }
+    @media (max-width: 600px) {
+    h5{font-size:12px;}
+    margin: 0px 0px 50px 0;
+  }
 `
 
 const TextSection3 = styled.div`
@@ -161,6 +152,7 @@ const TextSection3 = styled.div`
   text-align: center;
   align-items: center;
   margin: 0px 0 100px 0;
+
 `;
 
 const TextSection3Text = styled.div`
@@ -177,18 +169,11 @@ const TextSection3Text = styled.div`
   }
 
   img {
-    margin-top:50px;
-    width:90%;
-  }
-
-  @media (max-width:400px) {
-      margin:0 0 50px 0;
-      p{font-size:10px;}
-      img {
-    margin-top:50px;
     width:100%;
   }
-    }
+
+  @media (max-width: 600px) {
+    p{font-size:10px;}
 
   @media (max-width: 1100px) {
     width: 70%;

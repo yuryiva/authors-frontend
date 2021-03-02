@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import SubscribeForm from "../subscribeForm/Subscribe";
+
 <style>
   @import
   url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');

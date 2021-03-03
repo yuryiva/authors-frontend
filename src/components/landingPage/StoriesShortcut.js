@@ -2,6 +2,9 @@ import React, {useEffect} from 'react';
 import styled from 'styled-components';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
+import farmer from '../../assets/farmer.jpeg';
+import waterfall from '../../assets/waterfall.jpeg';
+import podcastimg from '../../assets/podcast.jpg'
 import Carousel from "react-elastic-carousel";
 import podcast from '../../assets/short-stories.jpg';
 <style>@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');</style>;
@@ -35,7 +38,7 @@ const StoriesShortcut = () => {
                             data-aos='fade-up' 
                             // src='https://images.unsplash.com/photo-1509305717900-84f40e786d82?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjJ8fHBvcnRyYWl0fGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60' 
                             alt='portrait'
-                            src='https://images.unsplash.com/photo-1610824771380-390c72f79f11?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxNXx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60' 
+                            src={waterfall} 
                         />   
                     </ImageWrapper>                      
                         
@@ -52,7 +55,7 @@ const StoriesShortcut = () => {
                             // src='https://images.unsplash.com/photo-1610916975200-6d28742d4dd6?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw3M3x8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60' 
                             // src={podcast} 
                             alt='portrait' 
-                            src='https://images.unsplash.com/photo-1610948237307-bbebf8da8a8d?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyNXx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'
+                            src={podcastimg}
                         />  
                     </ImageWrapper>
                         
@@ -68,7 +71,7 @@ const StoriesShortcut = () => {
                             data-aos='fade-up' 
                             // src='https://images.unsplash.com/photo-1610801264293-588a3b6c3446?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxMjV8fHxlbnwwfHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60' 
                             alt='portrait' 
-                            src='https://images.unsplash.com/photo-1610935591850-9a3bf14810c0?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzM3x8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'
+                            src={farmer}
                         />
                     </ImageWrapper>
                            

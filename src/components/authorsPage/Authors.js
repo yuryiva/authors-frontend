@@ -1,6 +1,12 @@
 
 // import React, {Route, Switch, useEffect} from 'react';
 import styled from 'styled-components';
+import authors1a from '../../assets/authors1a.jpg';
+import authors1 from '../../assets/authors1.jpg';
+import authors2 from '../../assets/authors2.jpg';
+import authors3 from '../../assets/authors4.jpg';
+import authors4 from '../../assets/authors5.jpg';
+import authors5 from '../../assets/authors6.jpg';
 // import Footer from './components/Footer/Footer';
 <style>
   @import
@@ -11,45 +17,46 @@ import styled from 'styled-components';
   url('https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap');
 </style>;
 
+
 const authors = [
     {
         authorId: Math.random(),
-        authorUrl: 'https://images.unsplash.com/photo-1447069387593-a5de0862481e?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1050&q=80',
+        authorUrl: `${authors1a}`,
         authorProfile: 'Author One Profile',
         description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s',
         authorLocation: 'Location, Location'
     },
     {
         authorId: Math.random(),
-        authorUrl: 'https://images.unsplash.com/photo-1473040767970-c16f84cc4c05?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80',
+        authorUrl: `${authors1}`,
         authorProfile: 'Author Two Profile',
         description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s',
         authorLocation: 'Location, Location'
     },
     {
         authorId: Math.random(),
-        authorUrl: 'https://images.unsplash.com/photo-1585771742132-7d18efffe607?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80',
+        authorUrl: `${authors2}`,
         authorProfile: 'Author Three Profile',
         description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s',
         authorLocation: 'Location, Location'
     },
     {
         authorId: Math.random(),
-        authorUrl: 'https://images.unsplash.com/photo-1587262538177-842ad13e290c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80',
+        authorUrl: `${authors3}`,
         authorProfile: 'Author Four Profile',
         description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s',
         authorLocation: 'Location, Location'
     },
     {
         authorId: Math.random(),
-        authorUrl: 'https://images.unsplash.com/photo-1457369804613-52c61a468e7d?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1050&q=80',
+        authorUrl: `${authors4}`,
         authorProfile: 'Author Five Profile',
         description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s',
         authorLocation: 'Location, Location'
     },
     {
         authorId: Math.random(),
-        authorUrl: 'https://images.unsplash.com/photo-1447069387593-a5de0862481e?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1050&q=80',
+        authorUrl: `${authors5}`,
         authorProfile: 'Author Six Profile',
         description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s',
         authorLocation: 'Location, Location'

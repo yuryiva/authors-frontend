@@ -203,7 +203,7 @@ export default TellStoryForm;
 
 const DivWrapper = styled.div`
   /* margin-top: 100px; */
-  background: hsl(210, 36%, 96%);
+  /* background: hsl(210, 36%, 96%); */
   margin: 0;
   padding: 5%;
   padding-top: 140px;

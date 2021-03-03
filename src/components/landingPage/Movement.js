@@ -65,12 +65,12 @@ const QuoteSection = styled.div`
     margin-top: 30px;
   }
 
-  @media (max-width: 600px) {
-    h5 {
-      width: 80%;
-      font-size: 13px;
-    }
-  }
-`;
+    @media (max-width: 600px) {
+   
+   h5 {
+     width:80%;
+     font-size:13px;
+   }}
+`
 
 export default JoinTheMovement;

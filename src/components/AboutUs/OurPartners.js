@@ -6,6 +6,8 @@ import treeplant from '../../assets/treeplanted.png';
 import oxfam from '../../assets/oxfam.png';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
+import wild from '../../assets/wild.png';
+import ulogo from '../../assets/ulogo.png'
 
 export default function OurPartners() {
     useEffect (() => {
@@ -14,9 +16,9 @@ export default function OurPartners() {
     return (
         <PartnersWrapper>
             <PartnersLogoSection>
-                <img src={unicef} alt="Unicef Logo"/>
-                <img src={oxfam} alt="Oxfam Logo"/>
-                <img src={treeplant} alt="Tree Planted Logo"/>
+                <img src={ulogo}  alt="Unicef Logo"/>
+                <img src={treeplant} alt="Oxfam Logo"/>
+                <img src={wild} alt="Tree Planted Logo"/>
                 <img src={wwf} alt="WWF Logo"/>
             </PartnersLogoSection>
             <QuoteSection>
@@ -27,27 +29,27 @@ export default function OurPartners() {
 
             <PartnerInfo data-aos='fade-left' >
                 <PartnerImg >
-                    <img src={unicef}  alt="unicef" />
+                    <img src={ulogo}  alt="unicef" />
                 </PartnerImg>
                 <ParnterText>
                     <h2>
-                        Unicef
+                    Aalborg University → AAU Startup
                     </h2>
                     <p>
-                    Authxrs have worked with some amazing organizations to make this dream a reality. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+                    Program supported us in our quest to turn our idea into a viable business. The program provided us with the guidance and advice of different experts from the business and entrepreneurial area during the initial stage of our enterprise. 
                     </p>
                 </ParnterText>
             </PartnerInfo>
             <PartnerInfo data-aos='fade-right' >
                 <PartnerImg>
-                    <img src={wwf} alt="WWF" />
+                    <img src={wild} alt="WWF" />
                 </PartnerImg>
                 <ParnterText>
                     <h2>
-                        World Wildlife Foundation
+                    Wild Code School
                     </h2>
                     <p>
-                    Authxrs have worked with some amazing organizations to make this dream a reality. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+                    Provided us with a team of people who trusted our project when it was just an idea. They developed our website and guided us to get our IT system up and running.
                     </p>
                 </ParnterText>
             </PartnerInfo>

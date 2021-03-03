@@ -4,6 +4,8 @@ import styled from "styled-components";
 // import { motion } from 'framer-motion';
 import ourImpactPhoto from "../../assets/photo1.jpg";
 import ourValuesPhoto from "../../assets/photo7.jpg";
+import author1 from '../../assets/author8.jpeg';
+import author2 from '../../assets/authors4.jpg'
 
 export default function OurImpact() {
   return (
@@ -36,7 +38,7 @@ export default function OurImpact() {
           </p>
         </OurImpactDescription>
         <OurImpactPhoto>
-          <img src={ourImpactPhoto} alt="pen" />
+          <img src={author2} alt="pen" />
         </OurImpactPhoto>
       </OurImpactSection>
 
@@ -54,7 +56,7 @@ export default function OurImpact() {
           </p>
         </OurValuesDescription>
         <OurValuesPhoto>
-          <img src={ourValuesPhoto} alt="pen" />
+          <img src={author1} alt="pen" />
         </OurValuesPhoto>
       </OurValuesSection>
     </AboutUsSection>
@@ -72,11 +74,11 @@ const AboutUsSection = styled.section`
 
 const MainHeading = styled.div`
   margin: 100px 0;
-  width: 50%;
+  width: 60%;
 
   h3 {
     font-size: 1.8rem;
-    width: 177px;
+    width: 165px;
     border-bottom: 4px solid black;
     margin: 10px auto;
     /* margin-bottom: 0; */
@@ -101,7 +103,7 @@ const MainHeading = styled.div`
     }
 
   p {
-    font-size: 1.1rem;
+    font-size: 1rem;
     margin: 50px auto;
   }
 
@@ -175,7 +177,7 @@ const OurImpactDescription = styled.section`
   }
 
   p {
-    font-size: 1.1rem;
+    font-size: 1rem;
     padding: 0 10%;
   }
 `;
@@ -253,7 +255,7 @@ const OurValuesDescription = styled.section`
   }
 
   p {
-    font-size: 1.1rem;
+    font-size: 1rem;
     padding: 0 10%;
   }
 `;

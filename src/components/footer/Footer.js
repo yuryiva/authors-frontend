@@ -26,17 +26,26 @@ const Footer = () => {
             >
               <p>Who We Are</p>
             </Link>
+
+            <Link
+              style={{ textDecoration: "none", color: "black" }}
+              to="about-us"
+            >
+              <p>Our Story</p>
+            </Link>
+
             <Link
               style={{ textDecoration: "none", color: "black" }}
               to="about-us"
             >
               <p>Our Vision</p>
             </Link>
+
             <Link
               style={{ textDecoration: "none", color: "black" }}
               to="about-us"
             >
-              <p>Sustainability</p>
+              <p>Our Values</p>
             </Link>
           </AboutUs>
 
@@ -49,6 +58,14 @@ const Footer = () => {
               {" "}
               <p>How We Work</p>
             </Link>
+
+            <Link
+              style={{ textDecoration: "none", color: "black" }}
+              to="about-us"
+            >
+              <p>Sustainability</p>
+            </Link>
+
             <Link
               style={{ textDecoration: "none", color: "black" }}
               to="/our-partners"

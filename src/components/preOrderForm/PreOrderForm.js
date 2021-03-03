@@ -164,6 +164,10 @@ const SendMessageWrapper = styled.div`
   margin-top: 180px;
   margin-bottom: 3%;
 
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.7), 0 5px 15px rgba(0, 0, 0, 0.1);
+
   padding: 10px;
 
   border: 1px lightgray solid;

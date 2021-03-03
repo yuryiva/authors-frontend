@@ -76,6 +76,10 @@ const Banner = styled.div`
         vertical-align: middle;
         object-fit: cover;
     }
+
+    @media (max-width:500px) {
+        margin-bottom:80px;
+    }
 `
 
 const StoryWrapper = styled.div`
@@ -85,7 +89,7 @@ const StoryWrapper = styled.div`
     text-align:center;
     margin:0;
     padding:0;
-    margin-top:-100px;
+  
 `
 
 const StorySection1 = styled.div`
@@ -117,6 +121,10 @@ const StorySection1Text = styled.div`
         width:50%
         
     }
+
+    @media (max-width:500px) {
+        width:70%;
+    }
 `
 
 const StorySection1Img = styled.div`
@@ -132,10 +140,19 @@ const StorySection2 = styled.div`
     display:flex;
     flex-direction:column;
     text-align:center;
+    align-items:center;
     margin-bottom:100px;
 
     h1 {
         margin-top:100px;
+    }
+
+    @media (max-width:500px) {
+       h1 {
+           
+           width:80%;
+           font-size:30px;
+       }
     }
 `
 
@@ -168,6 +185,14 @@ p{
             margin:10px;
         }
     }
+
+    @media (max-width:500px) {
+        margin-bottom:20px;
+       p {
+           
+           width:80%;
+           font-size:13px;
+       }
 `
 
 // SECTION 3
@@ -185,7 +210,8 @@ const StorySection3 = styled.div`
 
 const StorySection3Text = styled.div`
     width:40%;
-    
+    text-align:center;
+    align-items:center;
     height:auto;
     margin-left:0;
 
@@ -203,6 +229,13 @@ const StorySection3Text = styled.div`
     @media(max-width:1100px){
         width:70%
     }
+
+    @media (max-width:500px) {
+       p {
+           margin-top:50px;
+           width:100%;
+           font-size:13px;
+       }}
 `
 
 const StorySection3Img = styled.div`
@@ -210,6 +243,14 @@ margin-bottom:0px;
     img{
         width:60%;
     }
+
+    @media (max-width:500px) {
+        
+        img { width:90%;}
+    
+    }
+    
+
 `
 
 const HR = styled.div`

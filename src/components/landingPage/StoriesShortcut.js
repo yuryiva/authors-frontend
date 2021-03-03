@@ -4,9 +4,10 @@ import Aos from 'aos';
 import 'aos/dist/aos.css';
 import farmer from '../../assets/farmer.jpeg';
 import waterfall from '../../assets/waterfall.jpeg';
-import podcastimg from '../../assets/podcast1.jpg'
+import podcastimg from '../../assets/podcast1.jpg';
 import Carousel from "react-elastic-carousel";
-import podcast from '../../assets/short-stories.jpg';
+import { Link } from 'react-router-dom';
+// import podcast from '../../assets/short-stories.jpg';
 <style>@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');</style>;
 <style>@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap');</style>
 
@@ -43,24 +44,27 @@ const StoriesShortcut = () => {
                     </ImageWrapper>                      
                         
                     <TextWrapper>
-                        <h4>New York in 2021</h4>
+                        <h4>Bare necessities</h4>
                         <p>Contrary to popular belief, Lorem Ipsum is not simply random text.</p>
                     </TextWrapper>                     
                 </Stories>                    
                 
                 <Stories>
-                    <ImageWrapper>
-                        <img 
-                            data-aos='fade-up' 
-                            // src='https://images.unsplash.com/photo-1610916975200-6d28742d4dd6?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw3M3x8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60' 
-                            // src={podcast} 
-                            alt='portrait' 
-                            src={podcastimg}
-                        />  
-                    </ImageWrapper>
+                    <Link to="/podcasts">
+                        <ImageWrapper>
+                            <img 
+                                data-aos='fade-up' 
+                                // src='https://images.unsplash.com/photo-1610916975200-6d28742d4dd6?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw3M3x8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60' 
+                                // src={podcast} 
+                                alt='portrait' 
+                                src={podcastimg}
+                            />  
+                        </ImageWrapper>
+                    </Link>
+                    
                         
                     <TextWrapper>
-                        <h4>Living in London</h4>
+                        <h4>Authxrs Podcast</h4>
                         <p>Contrary to popular belief, Lorem Ipsum is not simply random text.</p>
                     </TextWrapper>                      
                 </Stories>                    
@@ -76,7 +80,7 @@ const StoriesShortcut = () => {
                     </ImageWrapper>
                            
                     <TextWrapper>
-                        <h4>Urban walks</h4>
+                        <h4>The last members</h4>
                         <p>Contrary to popular belief, Lorem Ipsum is not simply random text.</p>
                     </TextWrapper>                     
                 </Stories>               
@@ -115,7 +119,7 @@ const StoryText = styled.div`
     }
 
     p {
-        font-size: 1.1rem;
+        font-size: 1rem;
         margin: 50px auto;
     }
 
@@ -153,7 +157,8 @@ const ImageWrapper = styled.div`
 const Stories = styled.div` 
     width: 500px;       
     margin: 0 20px;      
-    display: inline-block;   
+    display: inline-block; 
+    outline: none;  
 `
 
 const TextWrapper = styled.section`

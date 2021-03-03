@@ -103,7 +103,7 @@ const MainHeading = styled.div`
     }
 
   p {
-    font-size: 1.1rem;
+    font-size: 1rem;
     margin: 50px auto;
   }
 
@@ -177,7 +177,7 @@ const OurImpactDescription = styled.section`
   }
 
   p {
-    font-size: 1.1rem;
+    font-size: 1rem;
     padding: 0 10%;
   }
 `;
@@ -255,7 +255,7 @@ const OurValuesDescription = styled.section`
   }
 
   p {
-    font-size: 1.1rem;
+    font-size: 1rem;
     padding: 0 10%;
   }
 `;

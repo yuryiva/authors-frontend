@@ -103,7 +103,7 @@ const GetInTouchForm = () => {
 export default GetInTouchForm;
 
 const SendMessageWrapper = styled.div`
-  background: hsl(210, 36%, 96%);
+  /* background: hsl(210, 36%, 96%); */
   width: 100%;
   margin: 0;
   padding: 5%;

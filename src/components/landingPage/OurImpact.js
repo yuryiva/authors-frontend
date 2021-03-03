@@ -72,11 +72,11 @@ const AboutUsSection = styled.section`
 
 const MainHeading = styled.div`
   margin: 100px 0;
-  width: 50%;
+  width: 60%;
 
   h3 {
     font-size: 1.8rem;
-    width: 177px;
+    width: 165px;
     border-bottom: 4px solid black;
     margin: 10px auto;
     /* margin-bottom: 0; */

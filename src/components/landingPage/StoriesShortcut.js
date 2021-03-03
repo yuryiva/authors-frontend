@@ -40,7 +40,7 @@ const StoriesShortcut = () => {
                     </ImageWrapper>                      
                         
                     <TextWrapper>
-                        <h3>Authors</h3>
+                        <h4>New York in 2021</h4>
                         <p>Contrary to popular belief, Lorem Ipsum is not simply random text.</p>
                     </TextWrapper>                     
                 </Stories>                    
@@ -57,7 +57,7 @@ const StoriesShortcut = () => {
                     </ImageWrapper>
                         
                     <TextWrapper>
-                        <h3>Authors</h3>
+                        <h4>Living in London</h4>
                         <p>Contrary to popular belief, Lorem Ipsum is not simply random text.</p>
                     </TextWrapper>                      
                 </Stories>                    
@@ -73,7 +73,7 @@ const StoriesShortcut = () => {
                     </ImageWrapper>
                            
                     <TextWrapper>
-                        <h3>Short Stories</h3>
+                        <h4>Urban walks</h4>
                         <p>Contrary to popular belief, Lorem Ipsum is not simply random text.</p>
                     </TextWrapper>                     
                 </Stories>               
@@ -102,12 +102,13 @@ const StoryWrapper = styled.div`
 
 const StoryText = styled.div`
     margin: 50px 0;    
-    width: 50%;
+    width: 60%;
     /* align-self: flex-start; */
 
     h3 {
         font-size: 1.8rem;       
-        margin: 50px auto;        
+        margin: 50px auto;
+        text-align: center;        
     }
 
     p {
@@ -159,7 +160,7 @@ const TextWrapper = styled.section`
     text-align: left;
 
     h4 {
-        font-size: 1.5rem;       
+        font-size: 1.4rem;       
         /* margin: 50px auto;         */
     }
 

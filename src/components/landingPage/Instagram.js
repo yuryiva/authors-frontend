@@ -53,7 +53,7 @@ const Instagram = () => {
         {dataFromApi.map((post, i) => (
           <ImgWrapper key={i}>
             <img
-              src={post["node"].display_resources[2].src}
+              src={post["node"].display_resources[0].src}
               alt="instagram post"
             />
           </ImgWrapper>
@@ -109,7 +109,7 @@ const InstaWrapper = styled.div`
 const ImgWrapper = styled.div`
   margin: 0 20px;
   width: 400px;
-  /* height: 500px; */
+  height: 500px;
   /* display: inline-block; */
   display: flex;
   overflow: hidden;
@@ -122,7 +122,7 @@ const ImgWrapper = styled.div`
     background-size: cover;
     transition: transform 0.8s;
     width: 100%;
-    height: 400px;
+    height: 100%;
     /* vertical-align: middle; */
     object-fit: cover;
 

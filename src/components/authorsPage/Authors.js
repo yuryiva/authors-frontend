@@ -67,8 +67,9 @@ const Authors = () => {
                     <Link 
                         style={{ textDecoration: "none", color: "#fff" }}
                         to="/authors-story"
+                        key={ author.authorId }
                     >
-                        <StoryText key={ author.authorId }>                        
+                        <StoryText>                        
                             <h4>{ author.authorProfile }</h4>
                             <p>{ author.description }</p>
                             <h5>{ author.authorLocation }</h5>

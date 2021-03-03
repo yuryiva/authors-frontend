@@ -66,7 +66,7 @@ const QuoteSection = styled.div`
    h5 {
      width:80%;
      font-size:13px;
-   }
+   }}
 `
 
 export default JoinTheMovement;

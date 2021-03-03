@@ -1,7 +1,12 @@
 import React, {useEffect} from 'react';
 import styled from 'styled-components';
 import Aos from 'aos';
-import 'aos/dist/aos.css'
+import 'aos/dist/aos.css';
+import authorimg1 from '../../assets/authors1a.jpg';
+import authorimg2 from '../../assets/farmer.jpeg';
+import authorimg3 from '../../assets/authors5.jpg';
+import authorimg4 from '../../assets/authors7.jpeg';
+
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
 </style>
@@ -14,7 +19,7 @@ const AuthorsStory = () => {
 
         <StoryWrapper>
             <Banner>
-                <img src='https://images.unsplash.com/photo-1446475157725-e6dada23994e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80' alt='banner' />
+                <img src={authorimg1} alt='banner' />
             </Banner>
             <StorySection1>
                 <StorySection1Text>
@@ -23,7 +28,7 @@ const AuthorsStory = () => {
                     <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word</p>
                 </StorySection1Text>
                 <StorySection1Img>
-                    <img src='https://images.unsplash.com/photo-1590452366152-7c59da8b9524?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80' alt='nature' />
+                    <img src={authorimg2} alt='nature' />
                 </StorySection1Img>
            </StorySection1> 
            <HR>
@@ -31,7 +36,7 @@ const AuthorsStory = () => {
            </HR>
            <StorySection2>
                 <StorySection2Img>
-                    <img data-aos='fade-up' data-aos-duration="2000" src='https://images.unsplash.com/photo-1583795059494-44bc7e53384c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80' alt='records-room' />
+                    <img data-aos='fade-up' data-aos-duration="2000" src={authorimg4} alt='records-room' />
                 </StorySection2Img>
                 <h1>"Quote of the story inserted here"</h1>
            </StorySection2> 
@@ -47,7 +52,7 @@ const AuthorsStory = () => {
                     <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word</p>
                 </StorySection3Text>
                 <StorySection3Img>
-                    <img data-aos='fade-up' data-aos-duration="3000" src='https://images.unsplash.com/photo-1522874339442-b66b63414ab4?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80' alt='author' />
+                    <img data-aos='fade-up' data-aos-duration="3000" src={authorimg3} alt='author' />
                 </StorySection3Img>
            </StorySection3> 
 
@@ -63,10 +68,17 @@ const Banner = styled.div`
     width:100vw;
     height:100vh;
     margin-bottom:200px;
+    overflow:hidden;
 
     img{    
         width:100vw;
-        height:100vh
+        height:100vh;
+        vertical-align: middle;
+        object-fit: cover;
+    }
+
+    @media (max-width:500px) {
+        margin-bottom:80px;
     }
 `
 
@@ -77,7 +89,7 @@ const StoryWrapper = styled.div`
     text-align:center;
     margin:0;
     padding:0;
-    margin-top:-100px;
+  
 `
 
 const StorySection1 = styled.div`
@@ -109,6 +121,10 @@ const StorySection1Text = styled.div`
         width:50%
         
     }
+
+    @media (max-width:500px) {
+        width:70%;
+    }
 `
 
 const StorySection1Img = styled.div`
@@ -124,10 +140,19 @@ const StorySection2 = styled.div`
     display:flex;
     flex-direction:column;
     text-align:center;
+    align-items:center;
     margin-bottom:100px;
 
     h1 {
         margin-top:100px;
+    }
+
+    @media (max-width:500px) {
+       h1 {
+           
+           width:80%;
+           font-size:30px;
+       }
     }
 `
 
@@ -160,6 +185,14 @@ p{
             margin:10px;
         }
     }
+
+    @media (max-width:500px) {
+        margin-bottom:20px;
+       p {
+           
+           width:80%;
+           font-size:13px;
+       }}
 `
 
 // SECTION 3
@@ -177,7 +210,8 @@ const StorySection3 = styled.div`
 
 const StorySection3Text = styled.div`
     width:40%;
-    
+    text-align:center;
+    align-items:center;
     height:auto;
     margin-left:0;
 
@@ -195,12 +229,28 @@ const StorySection3Text = styled.div`
     @media(max-width:1100px){
         width:70%
     }
+
+    @media (max-width:500px) {
+       p {
+           margin-top:50px;
+           width:100%;
+           font-size:13px;
+       }}
 `
 
 const StorySection3Img = styled.div`
+margin-bottom:0px;
     img{
         width:60%;
     }
+
+    @media (max-width:500px) {
+        
+        img { width:90%;}
+    
+    }
+    
+
 `
 
 const HR = styled.div`

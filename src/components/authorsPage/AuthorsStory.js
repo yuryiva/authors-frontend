@@ -192,7 +192,7 @@ p{
            
            width:80%;
            font-size:13px;
-       }
+       }}
 `
 
 // SECTION 3

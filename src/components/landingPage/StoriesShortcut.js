@@ -102,12 +102,13 @@ const StoryWrapper = styled.div`
 
 const StoryText = styled.div`
     margin: 50px 0;    
-    width: 50%;
+    width: 60%;
     /* align-self: flex-start; */
 
     h3 {
         font-size: 1.8rem;       
-        margin: 50px auto;        
+        margin: 50px auto;
+        text-align: center;        
     }
 
     p {

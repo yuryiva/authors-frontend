@@ -4,7 +4,7 @@ import Aos from 'aos';
 import 'aos/dist/aos.css';
 import farmer from '../../assets/farmer.jpeg';
 import waterfall from '../../assets/waterfall.jpeg';
-import podcastimg from '../../assets/podcast.jpg'
+import podcastimg from '../../assets/podcast1.jpg'
 import Carousel from "react-elastic-carousel";
 import podcast from '../../assets/short-stories.jpg';
 <style>@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');</style>;

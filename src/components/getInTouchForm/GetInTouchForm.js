@@ -64,7 +64,7 @@ const GetInTouchForm = () => {
         </ResultDiv>
       ) : (
         <FormWrapper onSubmit={handleSubmit}>
-          <h2>Get In Touch</h2>
+          <h4>Get In Touch</h4>
           <NameSection>
             {/* <label htmlFor="name"></label> */}
             <input type="text" id="name" placeholder="Full name" required />
@@ -103,13 +103,18 @@ const GetInTouchForm = () => {
 export default GetInTouchForm;
 
 const SendMessageWrapper = styled.div`
+  /* background: hsl(210, 36%, 96%); */
   width: 100%;
-  height: auto;
+  margin: 0;
+  padding: 5%;
+  /* height: auto; */
+  height: 100vh;
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   text-align: center;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap; 
 `;
 
 const FormWrapper = styled.form`
@@ -117,29 +122,69 @@ const FormWrapper = styled.form`
   flex-direction: column;
   justify-content: center;
   text-align: right;
-  width: 70%;
+  margin: 0 5%;
+  margin-bottom: 50px;
+  /* width: 70%; */
+  width: 400px;
   border-radius: 10px;
-  background-color: white;
+  /* background-color: hsl(212, 33%, 89%); */
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.7), 0 5px 15px rgba(0,0,0,0.1);
 
-  button {
+  /* button {
     width: 30%;
     background-color: white;
     border: 1px solid black;
     border-radius: 5px;
     margin: 10px;
-  }
-  h2 {
-    text-align: left;
-    margin: 15px;
-    @media only screen and (max-width: 576px) {
-      font-size: 1.6rem;
+  } */
+
+  button {
+    /* width: 30%;
+    height: 35px;
+    border-radius: 5px;
+    background-color: white;
+    border: 1px solid black;
+    font-size: 1rem; */
+
+    /* width: 30%; */
+    font-size: 1.2rem;
+    align-self: center;
+    width: 130px;    
+    height: 42px;
+    /* border-radius: 5px; */
+    /* background-color: white; */
+    background-color: transparent;
+    /* border: 1px solid black; */
+    border: none;
+    text-decoration: underline;
+    letter-spacing: 1px; 
+    transition: transform 0.8s;   
+
+    &:hover {
+      /* background-color: lightgray; */      
+      cursor: pointer;
+      transition: 1s ease;
+      transform: scale(1.1);
+      /* transform-origin: 50% 50%; */
     }
   }
 
-  @media only screen and (max-width: 576px) {
+  h4 {
+    /* text-align: left; */
+    text-align: center;
+    margin: 15px;
+    font-size: 24px;
+    /* text-decoration: underline; */
+    /* @media only screen and (max-width: 576px) {
+      font-size: 1.6rem;
+    } */
+  }
+
+  /* @media only screen and (max-width: 576px) {
     width: 100%;
     font-size: 0.9rem;
-  }
+  } */
 `;
 
 const NameSection = styled.div`
@@ -152,12 +197,15 @@ const NameSection = styled.div`
     margin-right: 15px;
   } */
   input {
-    width: 70%;
-    border: 0;
+    /* width: 70%; */
+    height: 42px;
+    margin-bottom: 30px;
+    width: 100%;    
     margin: 15px;
     border: 1px solid black;
     border-radius: 5px;
-    padding: 0.75%;
+    /* padding: 0.75%; */
+    padding: 0 10px;
   }
 `;
 
@@ -171,12 +219,15 @@ const Email = styled.div`
     margin-right: 15px;
   } */
   input {
-    width: 70%;
-    border: 0;
+    /* width: 70%; */
+    width: 100%;
+    height: 42px;
+    margin-bottom: 30px;    
     margin: 15px;
     border: 1px solid black;
     border-radius: 5px;
-    padding: 0.75%;
+    /* padding: 0.75%; */
+    padding: 0 10px;
   }
 `;
 
@@ -190,12 +241,15 @@ const Topic = styled.div`
     margin-right: 15px;
   } */
   select {
-    width: 70%;
-    border: 0;
+    /* width: 70%; */
+    width: 100%;
+    height: 42px;
+    margin-bottom: 30px;
     margin: 15px;
     border: 1px solid black;
     border-radius: 5px;
-    padding: 0.75%;
+    /* padding: 0.75%; */
+    padding: 0 10px;
   }
 `;
 
@@ -209,13 +263,15 @@ const Message = styled.div`
     margin-right: 15px;
   } */
   textarea {
-    width: 70%;
+    /* width: 70%; */
+    /* width: 100%; */
     height: 150px;
     margin: 15px;
     border-radius: 5px;
     border: 1px solid black;
     overflow: scroll;
-    padding: 0.75%;
+    /* padding: 0.75%; */
+    padding: 10px;
     ::-webkit-scrollbar {
       display: none;
     }
@@ -226,10 +282,10 @@ const Message = styled.div`
     margin: 15px;
   }
 
-  @media only screen and (max-width: 576px) {
+  /* @media only screen and (max-width: 576px) {
     width: 100%;
     font-size: 0.9rem;
-  }
+  } */
 `;
 
 const ResultDiv = styled.div`

@@ -1,5 +1,6 @@
 
 // import React, {Route, Switch, useEffect} from 'react';
+import { Link } from "react-router-dom";
 import styled from 'styled-components';
 import authors1a from '../../assets/authors1a.jpg';
 import authors1 from '../../assets/authors1.jpg';
@@ -70,13 +71,19 @@ const Authors = () => {
         <ScrollWrapper>
             {
                 authors.map(author => (
-                    <StoryText key={ author.authorId }>
-                        {console.log(author.authorId)}
-                        <h4>{ author.authorProfile }</h4>
-                        <p>{ author.description }</p>
-                        <h5>{ author.authorLocation }</h5>
-                        <img src={ author.authorUrl } alt='author-profile' />
-                    </StoryText>
+                    <Link 
+                        style={{ textDecoration: "none", color: "#fff" }}
+                        to="/authors-story"
+                        key={ author.authorId }
+                    >
+                        <StoryText>                        
+                            <h4>{ author.authorProfile }</h4>
+                            <p>{ author.description }</p>
+                            <h5>{ author.authorLocation }</h5>
+                            <img src={ author.authorUrl } alt='author-profile' />
+                        </StoryText>
+                    </Link>
+                    
                 ))
             }              
         </ScrollWrapper>

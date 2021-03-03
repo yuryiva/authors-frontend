@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import SubscribeForm from "../subscribeForm/Subscribe";
+
 <style>
   @import
   url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
@@ -21,7 +22,7 @@ const Footer = () => {
             </Link>
             <Link
               style={{ textDecoration: "none", color: "black" }}
-              to="our-team"
+              to="about-us"
             >
               <p>Who We Are</p>
             </Link>
@@ -43,7 +44,7 @@ const Footer = () => {
             <h4>Our Work</h4>
             <Link
               style={{ textDecoration: "none", color: "black" }}
-              to="our-story"
+              to="about-us"
             >
               {" "}
               <p>How We Work</p>
@@ -110,9 +111,9 @@ const FooterWrapper = styled.div`
     font-size: 15px;
   }
 
-  h4 {
+  ${"" /* h4 {
     font-weight: 510;
-  }
+  } */}
 
   @media (max-width: 1300px) {
     height: auto;
@@ -157,16 +158,15 @@ const AboutUs = styled.div`
   flex-direction: column;
   text-align: left;
 
-  p  {
+  p {
     :hover {
       text-decoration: underline;
-  
-  }
+    }
 
-
-  @media (max-width: 850px) {
-    margin: 0 10px;
-    margin-bottom: 20px;
+    @media (max-width: 850px) {
+      margin: 0 10px;
+      margin-bottom: 20px;
+    }
   }
 `;
 
@@ -174,17 +174,15 @@ const OurWork = styled.div`
   display: flex;
   flex-direction: column;
   text-align: left;
-  p  {
+  p {
+    :hover {
+      text-decoration: underline;
+    }
 
-:hover {
-  text-decoration: underline;
-
-
-}
-
-  @media (max-width: 850px) {
-    margin: 0 10px;
-    margin-bottom: 20px;
+    @media (max-width: 850px) {
+      margin: 0 10px;
+      margin-bottom: 20px;
+    }
   }
 `;
 
@@ -193,19 +191,15 @@ const ContactUs = styled.div`
   flex-direction: column;
   text-align: left;
 
-  p , a {
+  p,
+  a {
+    :hover {
+      text-decoration: underline;
+    }
 
-:hover {
-  text-decoration: underline;
-}
-
-
-
-
-
-
-  @media (max-width: 850px) {
-    margin: 0 10px;
+    @media (max-width: 850px) {
+      margin: 0 10px;
+    }
   }
 `;
 

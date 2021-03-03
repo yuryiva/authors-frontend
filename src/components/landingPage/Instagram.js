@@ -30,7 +30,8 @@ const Instagram = () => {
       .then((data) => {
         console.log(data);
         setDataFromApi(data.data.user.edge_owner_to_timeline_media.edges);
-      });
+      })
+      .catch(err => console.log('promise rejected:', err));
   }, []);
 
   return (
@@ -49,10 +50,10 @@ const Instagram = () => {
         breakPoints={breakPoints}
         // itemPadding={[10, 10]}
       >
-        {dataFromApi.map((post) => (
-          <ImgWrapper>
+        {dataFromApi.map((post, i) => (
+          <ImgWrapper key={i}>
             <img
-              src={post["node"].display_resources[0].src}
+              src={post["node"].display_resources[2].src}
               alt="instagram post"
             />
           </ImgWrapper>
@@ -164,7 +165,7 @@ const InstaContact = styled.div`
 const Follow = styled.div`
   button {
     width: 130px;
-    height: 40px;
+    height: 42px;
     border-radius: 2px;
     margin-right: 20px;
     border: 1px solid black;

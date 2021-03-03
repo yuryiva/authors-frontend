@@ -10,7 +10,7 @@ import Podcasts from "./components/podcasts/Podcasts";
 import ShortStories from "./components/shortStories/ShortStories";
 import JoinTheMovement from "./components/joinTheMovement/JoinTheMovement";
 import BurgerMenu from "./components/header/BurgerMenu";
-import styled from "styled-components";
+// import styled from "styled-components";
 import AboutUs from "./components/AboutUs/AboutUs";
 import OurTeam from "./components/AboutUs/OurTeam";
 import GetInTouchForm from "./components/getInTouchForm/GetInTouchForm";
@@ -22,29 +22,44 @@ import OurStory from "./components/AboutUs/OurStory";
 import PreOrderForm from "./components/preOrderForm/PreOrderForm";
 import AuthorsStory from "./components/authorsPage/AuthorsStory";
 import TellStoryForm from "./components/tellStoryForm/TellStoryForm";
+import ScrollToTop from "./ScrollToTop";
 
 const App = () => {
   const [dropdown, setDropdown] = useState(false);
 
   return (
     <>
-    {/* <MainWrapper dropdown={dropdown} setDropdown={setDropdown}> */}
+      <ScrollToTop />
+      {/* <MainWrapper dropdown={dropdown} setDropdown={setDropdown}> */}
       <BurgerMenu dropdown={dropdown} setDropdown={setDropdown} />
       {/* <Header dropdown={dropdown} setDropdown={setDropdown} /> */}
       {/* <Banner /> */}
 
       <Switch>
-        <Route exact path="/" render={(props) => <LandingPage {...props} />} />
+        <Route 
+          exact path="/" 
+          render={(props) => <LandingPage {...props} />} 
+        />
         <Route
           path="/authors-page"
           render={(props) => <Authors {...props} />}
         />
-        <Route path="/books" render={(props) => <Books {...props} />} />
+        <Route
+          path="/authors-story"
+          render={(props) => <AuthorsStory {...props} />}
+        />
+        <Route 
+          path="/books" 
+          render={(props) => <Books {...props} />} 
+        />
         <Route
           path="/preOrderForm"
           render={(props) => <PreOrderForm {...props} />}
         />
-        <Route path="/podcasts" render={(props) => <Podcasts {...props} />} />
+        <Route 
+          path="/podcasts" 
+          render={(props) => <Podcasts {...props} />} 
+        />
         <Route
           path="/short-stories"
           render={(props) => <ShortStories {...props} />}
@@ -94,9 +109,8 @@ const App = () => {
       <hr />
 
       <Footer />
-    {/* </MainWrapper> */}
+      {/* </MainWrapper> */}
     </>
-    
   );
 };
 
@@ -109,7 +123,7 @@ const App = () => {
 //   flex-direction: column;
 //   width: 100%;
 //   height: 100%;
-//   background-color: ${({ dropdown }) => (dropdown ? "rgba(0, 0, 0, 0.7)" : "")};  
+//   background-color: ${({ dropdown }) => (dropdown ? "rgba(0, 0, 0, 0.7)" : "")};
 //   transition: 1s ease;
 // `;
 

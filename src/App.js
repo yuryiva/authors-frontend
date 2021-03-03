@@ -39,6 +39,10 @@ const App = () => {
           path="/authors-page"
           render={(props) => <Authors {...props} />}
         />
+        <Route
+          path="/authors-story"
+          render={(props) => <AuthorsStory {...props} />}
+        />
         <Route path="/books" render={(props) => <Books {...props} />} />
         <Route
           path="/preOrderForm"

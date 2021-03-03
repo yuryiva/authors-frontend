@@ -1,5 +1,6 @@
 
 // import React, {Route, Switch, useEffect} from 'react';
+import { Link } from "react-router-dom";
 import styled from 'styled-components';
 // import Footer from './components/Footer/Footer';
 <style>
@@ -63,13 +64,18 @@ const Authors = () => {
         <ScrollWrapper>
             {
                 authors.map(author => (
-                    <StoryText key={ author.authorId }>
-                        {console.log(author.authorId)}
-                        <h4>{ author.authorProfile }</h4>
-                        <p>{ author.description }</p>
-                        <h5>{ author.authorLocation }</h5>
-                        <img src={ author.authorUrl } alt='author-profile' />
-                    </StoryText>
+                    <Link 
+                        style={{ textDecoration: "none", color: "#fff" }}
+                        to="/authors-story"
+                    >
+                        <StoryText key={ author.authorId }>                        
+                            <h4>{ author.authorProfile }</h4>
+                            <p>{ author.description }</p>
+                            <h5>{ author.authorLocation }</h5>
+                            <img src={ author.authorUrl } alt='author-profile' />
+                        </StoryText>
+                    </Link>
+                    
                 ))
             }              
         </ScrollWrapper>

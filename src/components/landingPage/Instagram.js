@@ -30,7 +30,8 @@ const Instagram = () => {
       .then((data) => {
         console.log(data);
         setDataFromApi(data.data.user.edge_owner_to_timeline_media.edges);
-      });
+      })
+      .catch(err => console.log('promise rejected:', err));
   }, []);
 
   return (
@@ -49,8 +50,8 @@ const Instagram = () => {
         breakPoints={breakPoints}
         // itemPadding={[10, 10]}
       >
-        {dataFromApi.map((post) => (
-          <ImgWrapper>
+        {dataFromApi.map((post, i) => (
+          <ImgWrapper key={i}>
             <img
               src={post["node"].display_resources[0].src}
               alt="instagram post"

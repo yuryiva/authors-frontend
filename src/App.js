@@ -10,7 +10,7 @@ import Podcasts from "./components/podcasts/Podcasts";
 import ShortStories from "./components/shortStories/ShortStories";
 import JoinTheMovement from "./components/joinTheMovement/JoinTheMovement";
 import BurgerMenu from "./components/header/BurgerMenu";
-import styled from "styled-components";
+// import styled from "styled-components";
 import AboutUs from "./components/AboutUs/AboutUs";
 import OurTeam from "./components/AboutUs/OurTeam";
 import GetInTouchForm from "./components/getInTouchForm/GetInTouchForm";
@@ -34,7 +34,10 @@ const App = () => {
       {/* <Banner /> */}
 
       <Switch>
-        <Route exact path="/" render={(props) => <LandingPage {...props} />} />
+        <Route 
+          exact path="/" 
+          render={(props) => <LandingPage {...props} />} 
+        />
         <Route
           path="/authors-page"
           render={(props) => <Authors {...props} />}
@@ -43,12 +46,18 @@ const App = () => {
           path="/authors-story"
           render={(props) => <AuthorsStory {...props} />}
         />
-        <Route path="/books" render={(props) => <Books {...props} />} />
+        <Route 
+          path="/books" 
+          render={(props) => <Books {...props} />} 
+        />
         <Route
           path="/preOrderForm"
           render={(props) => <PreOrderForm {...props} />}
         />
-        <Route path="/podcasts" render={(props) => <Podcasts {...props} />} />
+        <Route 
+          path="/podcasts" 
+          render={(props) => <Podcasts {...props} />} 
+        />
         <Route
           path="/short-stories"
           render={(props) => <ShortStories {...props} />}

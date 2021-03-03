@@ -8,6 +8,7 @@ import team from '../../assets/group.png';
 import partner from '../../assets/partner.png';
 import vision from '../../assets/eye.png';
 import story from '../../assets/book.png';
+import DarkBurger from '../header/DarkBurger';
 
 export default function AboutUs() {
 
@@ -45,6 +46,7 @@ export default function AboutUs() {
 
     return (
         <div>
+            <DarkBurger />
             <Navbar>
             <ButtonContainer>
             <img src={team} onClick={openTeam} alt="team" />
@@ -83,7 +85,7 @@ const Navbar = styled.div`
     align-items:center;
     background-color:lightgray;
     height: 120px auto;
-    margin-top:130px;
+    margin-top:140px;
 
     button {
         border:0;
@@ -97,7 +99,7 @@ const Navbar = styled.div`
             font-size:17px;
             }
  }
-    }
+    
 
     button:active {
         border-bottom: 1px solid black;

@@ -4,6 +4,7 @@ import React, { useState, useContext } from "react";
 // import { ProgressBar } from "react-bootstrap";
 import axios from "axios";
 import { Context } from "../../context/Context";
+import DarkBurger from '../header/DarkBurger';
 
 const TellStoryForm = () => {
   const [status, setStatus] = useState("Submit");
@@ -109,93 +110,97 @@ const TellStoryForm = () => {
   };
 
   return (
-    <DivWrapper>
-      <TextWrapper>
-        <h4>Why Share?</h4>
-        <p>
-          It is a long established fact that a reader will be distracted by the
-          readable content of a page when looking at its layout. The point of
-          using Lorem Ipsum is that it has a more-or-less normal distribution of
-          letters, as opposed to using 'Content here, content here', making it
-          look like readable English. It is a long established fact that a
-          reader will be distracted by the readable content of a page when
-          looking at its layout. The point of using Lorem Ipsum is that it has a
-          more-or-less normal distribution of letters, as opposed to using
-          'Content here, content here', making it look like readable English.{" "}
-        </p>
-        <p>
-          It is a long established fact that a reader will be distracted by the
-          readable content of a page when looking at its layout. The point of
-          using Lorem Ipsum is that it has a more-or-less normal distribution of
-          letters, as opposed to using 'Content here, content here', making it
-          look like readable English.{" "}
-        </p>
-      </TextWrapper>
-      {sentMessage ? (
-        <ResultDiv>
-          {sentMessage === "SENT" && (
-            <p>THANK YOU! WE'LL GET BACK TO YOU ASAP</p>
-          )}
-          {sentMessage === "ERROR" && (
-            <p>SOMETHING WENT WRONG. TRY AGAIN PLEASE</p>
-          )}
-          <button onClick={() => setSentMessage(false)}>
-            Send another message
-          </button>
-        </ResultDiv>
-      ) : (
-        <FormWrapper onSubmit={handleSubmit}>
-          <TextSection>
-            <h4>Tell Your Story</h4>
-          </TextSection>
-          <FNameSection>
-            {/* <label htmlFor="name">First Name</label> */}
-            <input type="text" id="name" placeholder="First Name" required />
-          </FNameSection>
-
-          {/* <LNameSection>
-                <label>Last Name</label>
-                <input/>
-                </LNameSection> */}
-
-          <EmailSection>
-            {/* <label htmlFor="email">Email </label> */}
-            <input type="email" id="email" placeholder="Email" required />
-          </EmailSection>
-
-          <TopicSection>
-            {/* <label htmlFor="topic">Topic </label> */}
-            <input type="text" id="topic" placeholder="Topic" required />
-          </TopicSection>
-
-          <MessageSection>
-            {/* <label htmlFor="message">Your Story: </label> */}
-            <BoxButton>
-              <textarea id="message" placeholder="Your Story" required />              
-            </BoxButton>
-          </MessageSection>
-
-          <FileWrapper>
-            <label htmlFor="file-upload">Add File</label>
-            <input
-              id="file-upload"
-              type="file"
-              // multiple- for multiple files upload
-              onChange={onChangeHandler}
-            />
-
-            <button type="button" onClick={onClickHandler}>
-              {uploadButton}
+    <>
+      <DarkBurger />
+      <DivWrapper>
+        <TextWrapper>
+          <h4>Why Share?</h4>
+          <p>
+            It is a long established fact that a reader will be distracted by the
+            readable content of a page when looking at its layout. The point of
+            using Lorem Ipsum is that it has a more-or-less normal distribution of
+            letters, as opposed to using 'Content here, content here', making it
+            look like readable English. It is a long established fact that a
+            reader will be distracted by the readable content of a page when
+            looking at its layout. The point of using Lorem Ipsum is that it has a
+            more-or-less normal distribution of letters, as opposed to using
+            'Content here, content here', making it look like readable English.{" "}
+          </p>
+          <p>
+            It is a long established fact that a reader will be distracted by the
+            readable content of a page when looking at its layout. The point of
+            using Lorem Ipsum is that it has a more-or-less normal distribution of
+            letters, as opposed to using 'Content here, content here', making it
+            look like readable English.{" "}
+          </p>
+        </TextWrapper>
+        {sentMessage ? (
+          <ResultDiv>
+            {sentMessage === "SENT" && (
+              <p>THANK YOU! WE'LL GET BACK TO YOU ASAP</p>
+            )}
+            {sentMessage === "ERROR" && (
+              <p>SOMETHING WENT WRONG. TRY AGAIN PLEASE</p>
+            )}
+            <button onClick={() => setSentMessage(false)}>
+              Send another message
             </button>
+          </ResultDiv>
+        ) : (
+          <FormWrapper onSubmit={handleSubmit}>
+            <TextSection>
+              <h4>Tell Your Story</h4>
+            </TextSection>
+            <FNameSection>
+              {/* <label htmlFor="name">First Name</label> */}
+              <input type="text" id="name" placeholder="First Name" required />
+            </FNameSection>
 
-            {stateOfLoading > 0 && Math.round(stateOfLoading, 2) + "%"}
-          </FileWrapper>
+            {/* <LNameSection>
+                  <label>Last Name</label>
+                  <input/>
+                  </LNameSection> */}
 
-          <button type="submit">{status}</button>
-        </FormWrapper>
-      )}
-      
-    </DivWrapper>
+            <EmailSection>
+              {/* <label htmlFor="email">Email </label> */}
+              <input type="email" id="email" placeholder="Email" required />
+            </EmailSection>
+
+            <TopicSection>
+              {/* <label htmlFor="topic">Topic </label> */}
+              <input type="text" id="topic" placeholder="Topic" required />
+            </TopicSection>
+
+            <MessageSection>
+              {/* <label htmlFor="message">Your Story: </label> */}
+              <BoxButton>
+                <textarea id="message" placeholder="Your Story" required />              
+              </BoxButton>
+            </MessageSection>
+
+            <FileWrapper>
+              <label htmlFor="file-upload">Add File</label>
+              <input
+                id="file-upload"
+                type="file"
+                // multiple- for multiple files upload
+                onChange={onChangeHandler}
+              />
+
+              <button type="button" onClick={onClickHandler}>
+                {uploadButton}
+              </button>
+
+              {stateOfLoading > 0 && Math.round(stateOfLoading, 2) + "%"}
+            </FileWrapper>
+
+            <button type="submit">{status}</button>
+          </FormWrapper>
+        )}
+        
+      </DivWrapper>
+    </>
+    
   );
 };
 

@@ -27,8 +27,7 @@ const Instagram = () => {
       `https://www.instagram.com/graphql/query/?query_hash=e769aa130647d2354c40ea6a439bfc08&variables={"id":"${profileId}","first":${numberOfPosts}}`
     )
       .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
+      .then((data) => {        
         setDataFromApi(data.data.user.edge_owner_to_timeline_media.edges);
       })
       .catch(err => console.log('promise rejected:', err));

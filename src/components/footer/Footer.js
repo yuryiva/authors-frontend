@@ -86,6 +86,8 @@ const Footer = () => {
             <a
               style={{ textDecoration: "none", color: "black" }}
               href="https://www.linkedin.com/company/authors-i-s/"
+              target="_blank"
+              rel="noreferrer"
             >
               {" "}
               <p>LinkedIn</p>

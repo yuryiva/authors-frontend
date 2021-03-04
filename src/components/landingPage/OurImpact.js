@@ -2,8 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 // import { motion } from 'framer-motion';
-import ourImpactPhoto from "../../assets/photo1.jpg";
-import ourValuesPhoto from "../../assets/photo7.jpg";
+// import ourImpactPhoto from "../../assets/photo1.jpg";
+// import ourValuesPhoto from "../../assets/photo7.jpg";
 import author1 from '../../assets/author8.jpeg';
 import author2 from '../../assets/authors4.jpg'
 

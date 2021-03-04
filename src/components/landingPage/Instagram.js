@@ -40,8 +40,16 @@ const Instagram = () => {
           <h4>#Authxrs #writethechange</h4>
           <p>@Authxrs</p>
         </InstaContact>
-        <Follow>
-          <button>Follow</button>
+        <Follow>          
+          <a 
+            style={{ textDecoration: "none", color: "#000" }}
+            href="https://www.instagram.com/p/CLo4iBZFrIF/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Follow
+          </a>     
+          
         </Follow>
       </InstaText>
 
@@ -130,9 +138,11 @@ const InstaContact = styled.div`
 `;
 
 const Follow = styled.div`
-  button {
-    width: 130px;
-    height: 42px;
+  width: 130px;
+  height: 42px;
+
+  a {
+    padding: 5px 25px;     
     border-radius: 2px;
     margin-right: 20px;
     border: 1px solid black;
@@ -141,14 +151,12 @@ const Follow = styled.div`
     outline: none;    
   }
 
-  button:hover {
-    background-color: lightgray;
-    border: 0;
+  a:hover {
+    background-color: lightgray;   
     cursor: pointer;
   }
 
-  button:active {
-    background-color: black;
+  a:active {    
     color: white;
   }
 `;

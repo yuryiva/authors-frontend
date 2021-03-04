@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import styled from 'styled-components';
-import photo from '../../assets/photo2.jpg';
+import bannerImage from '../../assets/photo2.jpg';
 
 export default function Banner() {
     return (
@@ -36,12 +36,11 @@ export default function Banner() {
     )
 }
 
-const BannerContainer = styled.div`
-    /* width: 100vw; */
+const BannerContainer = styled.div`    
     width: 100%;
     height: 100vh;
     position: relative;    
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url(${photo});
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url(${bannerImage});
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -49,9 +48,6 @@ const BannerContainer = styled.div`
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    text-align: center;   
-
-    /* scroll-snap-align: center; */
+    text-align: center;     
 `
 
-// const BannerImage = img

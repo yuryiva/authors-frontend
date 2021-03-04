@@ -206,12 +206,12 @@ const MiddleSection3Text = styled.div`
     margin-bottom:50px;
   }
 
-  @media(max-width:400px){
-    width:80%;
-    margin-top:40px;
+  @media(max-width:600px){
+    width:70%;
+    margin-top:20px;
     
     p {
-      font-size:10px;
+      font-size:12px;
       width:100%;
       margin-bottom:30px;
       }
@@ -245,8 +245,8 @@ text-align:left;
 width:25%;
 margin:20px 40px;
 font-size:12px;
-@media(max-width:400px){
-  width:80%;
+@media(max-width:800px){
+  width:70%;
 }
 `
 
@@ -272,8 +272,8 @@ img {
   margin-right:100px;
 }
 
-@media(max-width:400px){
-  img {width:300px;
+@media(max-width:800px){
+  img {width:400px;
     margin-right:0;
   }
 }
@@ -281,12 +281,14 @@ img {
 
 const CrisText = styled.div`
 text-align:left;
+justify-content:center;
+align-items:center;
 width:25%;
 margin:20px 40px;
 font-size:12px;
 
-@media(max-width:400px){
-  width:80%;
+@media(max-width:800px){
+  width:70%;
 }
 `
 

@@ -47,8 +47,7 @@ const Instagram = () => {
       </InstaText>
 
       <Carousel
-        breakPoints={breakPoints}
-        // itemPadding={[10, 10]}
+        breakPoints={breakPoints}        
       >
         {dataFromApi.map((post, i) => (
           <ImgWrapper key={i}>
@@ -57,21 +56,7 @@ const Instagram = () => {
               alt="instagram post"
             />
           </ImgWrapper>
-        ))}
-
-        {/* <ImgWrapper>
-                    <img src='https://images.unsplash.com/photo-1610824771380-390c72f79f11?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxNXx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60' alt='portrait' />
-                </ImgWrapper>
-                <ImgWrapper>
-                    <img src='https://images.unsplash.com/photo-1610948237307-bbebf8da8a8d?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyNXx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60' alt='portrait' />
-                </ImgWrapper>
-                <ImgWrapper>
-                    <img src='https://images.unsplash.com/photo-1610935591850-9a3bf14810c0?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzM3x8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60' alt='portrait' />
-                </ImgWrapper>
-                    
-                <ImgWrapper>
-                    <img src='https://images.unsplash.com/photo-1610824771380-390c72f79f11?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxNXx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60' alt='portrait' />
-                </ImgWrapper> */}
+        ))}       
       </Carousel>
     </InstaWrapper>
   );
@@ -96,31 +81,14 @@ const InstaWrapper = styled.div`
   }
 `;
 
-// const InstaImgLinks1 = styled.div`
-//     display: flex;
-//     flex-wrap: wrap;
-//     justify-content: space-between;
-//     margin: 0;
-//     padding: 0;
-//     width: 100%;
-//     overflow: hidden;
-// `
-
 const ImgWrapper = styled.div`
   margin: 0 20px;
-  width: 400px;
-  /* height: 500px; */
-  /* display: inline-block; */
+  width: 400px;  
   display: flex;
   overflow: hidden;
   position: relative;
 
-  img {
-    /* display: block;
-    width: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover; */
+  img {   
     transition: transform 0.8s;
     width: 100%;
     height: 400px;
@@ -171,11 +139,7 @@ const Follow = styled.div`
     border: 1px solid black;
     background-color: white;
     cursor: pointer;
-    outline: none;
-
-    /* @media(max-width:450px){
-        margin-left:30px;
-    } */
+    outline: none;    
   }
 
   button:hover {

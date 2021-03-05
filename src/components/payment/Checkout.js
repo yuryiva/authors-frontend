@@ -17,13 +17,6 @@ const Checkout = ({ name, description, amount, label, type, email }) => {
   const fromDollarToCent = (amount) => parseInt(amount * 100);
 
   const SuccessPayment = async (data) => {
-    console.log(
-      "productionOrDevelopment in Checkout.js = ",
-      context.state.productionOrDevelopment
-    );
-
-    // alert("Payment Successful");
-
     fetch(
       context.state.productionOrDevelopment === "production"
         ? `https://the-authors2.herokuapp.com/preorder`
@@ -54,7 +47,6 @@ const Checkout = ({ name, description, amount, label, type, email }) => {
   };
 
   const ErrorPayment = (data) => {
-    // alert("Payment Error");
     setShowErrorModal(true);
   };
 

@@ -2,12 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from 'styled-components';
 import photo from '../../assets/photo6.jpg';
-// import { motion, AnimatePresence } from 'framer-motion';
-
-// const backdrop = {
-//   visible: { opacity: 1 },
-//   hidden: { opacity: 0 }
-// }
 
 const Header = ({ dropdown, setDropdown }) => {  
 
@@ -16,8 +10,7 @@ const Header = ({ dropdown, setDropdown }) => {
     setDropdown(closed);
     window.scrollTo({
       top: 0,
-      left: 0,
-      // behavior: 'smooth'
+      left: 0,      
     });
   }
 
@@ -29,12 +22,7 @@ const Header = ({ dropdown, setDropdown }) => {
         </PhotoSection>
 
         <LinkSection>
-          <LinkContainer>
-
-            {/* <Link to="/" onClick={handleDropdown}>
-              <LogoImage />
-            </Link> */}
-          
+          <LinkContainer>          
               <Link to="/authors-page" onClick={handleDropdown}>
                 The Authors
               </Link>
@@ -56,7 +44,7 @@ const Header = ({ dropdown, setDropdown }) => {
               </Link>                
 
           </LinkContainer>
-        </LinkSection>               
+        </LinkSection>         
 
       </NavigationMenu>   
   );
@@ -71,13 +59,11 @@ const NavigationMenu = styled.nav`
   align-self: center; 
   background: #fff;
   transform: ${({ dropdown }) => dropdown ? 'translateY(25px)' : 'translateY(-100%)'};    
-  height: 75%;     
-  /* width: 100vw; */
+  height: 75%;    
   width: 94vw;  
   text-align: left;
   padding: 2rem;    
-  top: 0;
-  /* left: 0;   */
+  top: 0;  
   z-index: 100;
   transition: transform 0.5s ease-in-out;
    
@@ -93,18 +79,12 @@ const NavigationMenu = styled.nav`
     font-size: 1.4rem;        
     padding: 1.5rem 0;
     font-weight: bold;
-    letter-spacing: 0.5rem;
-    /* color: #0D0C1D; */
+    letter-spacing: 0.5rem;    
     color: #000;
     text-decoration: none;
     transform-origin: 0; 
     transition: transform 0.8s;
-    /* transition: color 0.3s linear; */
-
-    /* @media (max-width: 1560px) {
-      font-size: 1.4rem;
-    } */
-
+    
     @media (max-width: 1400px) {
       font-size: 1.3rem;
       padding: 1.3rem 0;
@@ -120,22 +100,18 @@ const NavigationMenu = styled.nav`
     }
 
     @media (max-width: 576px) {
-      font-size: 1.1rem;
-      /* text-align: center; */
-      
+      font-size: 1.1rem;      
     }
 
     &:hover {      
       cursor: pointer;         
       transition: 1s ease;
-      transform: scale(1.1); 
-      /* transform-origin: 50% 50%; */
+      transform: scale(1.1);      
     }
   }
 `
 
-const PhotoSection = styled.section`
-  /* width: 30%;   */
+const PhotoSection = styled.section` 
   width: 500px;    
   display: inline-block;
   overflow: hidden;
@@ -143,8 +119,7 @@ const PhotoSection = styled.section`
 
   img {
     display: block;
-    width: 100%;
-    /* height:300px;   */
+    width: 100%;    
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;    
@@ -161,10 +136,6 @@ const PhotoSection = styled.section`
     width: 400px;;
   }
 
-  /* @media (max-width: 1230px) {
-    width: 300px;
-  } */
-
   @media (max-width: 1100px) {
     width: 40%;
   }
@@ -175,26 +146,16 @@ const PhotoSection = styled.section`
 
 `
 
-const LinkSection = styled.section`  
-  /* overflow: hidden; */
+const LinkSection = styled.section`   
   display: flex;
   flex-direction: column;
   justify-content: space-around;    
-
-  /* @media (max-width: 1230px) {
-    width: 90%;
-  } */
 
   @media (max-width: 900px) {
     width: 100%;
     display: flex;  
     flex-direction: column;     
-  }
-
-  /* @media (max-width: 576px) {
-    width: 100%;  
-    margin-top: 50px;    
-  } */
+  } 
 `
 
 const LinkContainer = styled.div`  
@@ -221,14 +182,5 @@ const LinkContainer = styled.div`
     padding: 0 25px;  
   }
 `
-
-// const LogoImage = styled.img`
-//     width: 30px;
-//     height: 50px;
-//     position: absolute;
-//     top: 25px; 
-//     left: 25px;
-//     z-index: 10;
-// `
 
 export default Header;

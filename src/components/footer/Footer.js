@@ -86,6 +86,8 @@ const Footer = () => {
             <a
               style={{ textDecoration: "none", color: "black" }}
               href="https://www.linkedin.com/company/authors-i-s/"
+              target="_blank"
+              rel="noreferrer"
             >
               {" "}
               <p>LinkedIn</p>
@@ -113,18 +115,14 @@ const FooterDiv = styled.div`
   flex-direction: column;
   flex-wrap: wrap;
   padding: 0 5%;
-  background-color: lightgray;
-  /* font-family: "Space Mono", monospace; */
+  background-color: lightgray;  
 `;
 
 const FooterWrapper = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;  
-  /* height: 200px; */
-  /* font-family: "Space Mono", monospace; */
-  /* padding: 20px 80px 0 80px; */
+  justify-content: space-between;   
 
   p {
     font-size: 14px;
@@ -133,19 +131,14 @@ const FooterWrapper = styled.div`
   ${"" /* h4 {
     font-weight: 510;
   } */}
-
-  /* @media (max-width: 1300px) {
-    height: auto;
-    padding-left: 30px;
-  } */
+  
 `;
 
 const FooterLinks = styled.div`
   display: flex;
   justify-content: space-between;
   flex-direction: row;
-  flex-wrap: wrap;
-  /* width: 40%; */
+  flex-wrap: wrap;  
 
   h4 {
     margin-bottom: 10px;
@@ -156,20 +149,6 @@ const FooterLinks = styled.div`
     font-weight: 350;
     margin-bottom: 10px;
   }
-
-  /* @media (max-width: 1300px) {
-    width: auto;
-    padding-left: 0;
-  }
-
-  @media (max-width: 850px) {
-    margin-bottom: 40px;
-
-    p {
-      font-weight: 100;
-      color: rgb (92, 92, 92);
-    }
-  } */
 `;
 
 const AboutUs = styled.div`
@@ -182,11 +161,6 @@ const AboutUs = styled.div`
     :hover {
       text-decoration: underline;
     }
-
-    /* @media (max-width: 850px) {
-      margin: 0 10px;
-      margin-bottom: 20px;
-    } */
   }
 `;
 
@@ -201,10 +175,6 @@ const OurWork = styled.div`
       text-decoration: underline;
     }
 
-    /* @media (max-width: 850px) {
-      margin: 0 10px;
-      margin-bottom: 20px;
-    } */
   }
 `;
 
@@ -219,10 +189,7 @@ const ContactUs = styled.div`
     :hover {
       text-decoration: underline;
     }
-
-    /* @media (max-width: 850px) {
-      margin: 0 10px;
-    } */
+   
   }
 `;
 
@@ -280,8 +247,7 @@ const Subscribe = styled.div`
   }
 `;
 
-const Copyright = styled.div`
-  /* background-color: lightgray; */
+const Copyright = styled.div`  
   height: 100px;
   width: 100%;
   display: flex;
@@ -292,9 +258,7 @@ const Copyright = styled.div`
 
   p {
     font-size: 14px;
-    font-weight: 300;
-    /* margin-top: 50px; */
-    /* padding-bottom: 10px; */
+    font-weight: 300;    
   }
 `;
 

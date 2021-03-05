@@ -2,6 +2,7 @@
 import React, { useState, useContext } from "react";
 import styled from "styled-components";
 import { Context } from "../../context/Context";
+import DarkBurger from "../header/DarkBurger";
 import Checkout from "../payment/Checkout";
 
 const PreOrderForm = () => {
@@ -64,91 +65,94 @@ const PreOrderForm = () => {
     context.getDataFromForm(details);
   };
   return (
-    <SendMessageWrapper>
-      {sentMessage ? (
-        <ResponseDiv>
-          {sentMessage === "SENT" && (
-            <p>THANK YOU FOR THE PREORDER! WE'LL GET BACK TO YOU ASAP</p>
-          )}
-          {sentMessage === "ERROR" && (
-            <p>SOMETHING WENT WRONG. TRY AGAIN PLEASE</p>
-          )}
-          <button onClick={() => handleAnotherOrder()}>
-            Make another order
-          </button>
-        </ResponseDiv>
-      ) : (
-        <SentMessageForm onChange={handleChange}>
-          <ImageBook>
-            <img src={context.state.bookUrl} />
-          </ImageBook>
-          <h5>PRICE PER BOOK: {bookPrice} EUR</h5>
-          <div>
-            <label htmlFor="amount"> </label>
-            {/* need to fix burgermenu component */}
-            <input
-              // style={{ zIndex: 999 }}
-              type="number"
-              id="amount"
-              min="0"
-              required
-              placeholder="Amount of books"
-            />
-          </div>
+    <>
+      <DarkBurger />
+      <SendMessageWrapper>      
+        {sentMessage ? (
+          <ResponseDiv>
+            {sentMessage === "SENT" && (
+              <p>THANK YOU FOR THE PREORDER! WE'LL GET BACK TO YOU ASAP</p>
+            )}
+            {sentMessage === "ERROR" && (
+              <p>SOMETHING WENT WRONG. TRY AGAIN PLEASE</p>
+            )}
+            <button onClick={() => handleAnotherOrder()}>
+              Make another order
+            </button>
+          </ResponseDiv>
+        ) : (
+          <SentMessageForm onChange={handleChange}>
+            <ImageBook>
+              <img src={context.state.bookUrl} />
+            </ImageBook>
+            <h5>PRICE PER BOOK: {bookPrice} EUR</h5>
+            <div>
+              <label htmlFor="amount"> </label>
+              {/* need to fix burgermenu component */}
+              <input
+                // style={{ zIndex: 999 }}
+                type="number"
+                id="amount"
+                min="0"
+                required
+                placeholder="Amount of books"
+              />
+            </div>
 
-          <h5>TOTAL EUR: {totalOrder}</h5>
+            <h5>TOTAL EUR: {totalOrder}</h5>
 
-          <div>
-            <label htmlFor="name"></label>
-            <input type="text" id="name" placeholder="Full name" required />
-          </div>
-          <div>
-            <label htmlFor="email"></label>
-            <input type="email" id="email" required placeholder="Email" />
-          </div>
-          <div>
-            <label htmlFor="phone"></label>
-            <input type="tel" id="phone" required placeholder="Phone number" />
-          </div>
-          <div>
-            <label htmlFor="address"></label>
-            <input type="text" id="address" required placeholder="Address" />
-          </div>
-          <div>
-            <label htmlFor="city"></label>
-            <input type="text" id="city" required placeholder="City/Town" />
-          </div>
-          <div>
-            <label htmlFor="state"></label>
-            <input type="text" id="state" placeholder="State" />
-          </div>
-          <div>
-            <label htmlFor="country"></label>
-            <input type="text" id="country" required placeholder="Country" />
-          </div>
-          <div>
-            <label htmlFor="postcode"></label>
-            <input
-              type="text"
-              id="postcode"
-              required
-              placeholder="Postal Code/ZIP"
-            />
-          </div>
-          <div>
-            <label htmlFor="message"></label>
-            <textarea id="message" placeholder="Additional Info" />
-          </div>
-        </SentMessageForm>
-      )}
-      <Checkout
-        name={"Authors LLC."}
-        description={"Book(s) you bought"}
-        amount={context.state.totalOrder}
-        email={context.state.email}
-        label={status}
-      />
-    </SendMessageWrapper>
+            <div>
+              <label htmlFor="name"></label>
+              <input type="text" id="name" placeholder="Full name" required />
+            </div>
+            <div>
+              <label htmlFor="email"></label>
+              <input type="email" id="email" required placeholder="Email" />
+            </div>
+            <div>
+              <label htmlFor="phone"></label>
+              <input type="tel" id="phone" required placeholder="Phone number" />
+            </div>
+            <div>
+              <label htmlFor="address"></label>
+              <input type="text" id="address" required placeholder="Address" />
+            </div>
+            <div>
+              <label htmlFor="city"></label>
+              <input type="text" id="city" required placeholder="City/Town" />
+            </div>
+            <div>
+              <label htmlFor="state"></label>
+              <input type="text" id="state" placeholder="State" />
+            </div>
+            <div>
+              <label htmlFor="country"></label>
+              <input type="text" id="country" required placeholder="Country" />
+            </div>
+            <div>
+              <label htmlFor="postcode"></label>
+              <input
+                type="text"
+                id="postcode"
+                required
+                placeholder="Postal Code/ZIP"
+              />
+            </div>
+            <div>
+              <label htmlFor="message"></label>
+              <textarea id="message" placeholder="Additional Info" />
+            </div>
+          </SentMessageForm>
+        )}
+        <Checkout
+          name={"Authors LLC."}
+          description={"Book(s) you bought"}
+          amount={context.state.totalOrder}
+          email={context.state.email}
+          label={status}
+        />
+      </SendMessageWrapper>
+    </>    
   );
 };
 

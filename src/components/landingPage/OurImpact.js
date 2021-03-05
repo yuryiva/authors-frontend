@@ -1,17 +1,19 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-// import { motion } from 'framer-motion';
-import ourImpactPhoto from "../../assets/photo1.jpg";
-import ourValuesPhoto from "../../assets/photo7.jpg";
 import author1 from '../../assets/author8.jpeg';
-import author2 from '../../assets/authors4.jpg'
+import author2 from '../../assets/authors4.jpg';
 
 export default function OurImpact() {
   return (
     <AboutUsSection>
       <MainHeading>
-      <Link to="/about-us" style={{ textDecoration: "none", color: "inherit" }} ><h3>Who We Are</h3></Link>
+        <Link 
+          to="/about-us" 
+          style={{ textDecoration: "none", color: "inherit" }} 
+        >
+          <h3>Who We Are</h3>
+        </Link>
         <p>
           Contrary to popular belief, Lorem Ipsum is not simply random text. It
           has roots in a piece of classical Latin literature from 45 BC, making
@@ -20,15 +22,15 @@ export default function OurImpact() {
           Latin words.
         </p>
       </MainHeading>
+
       <OurImpactSection>
-        <OurImpactDescription>
+        <HowWeWork>
           <Link
             to="/about-us"
             style={{ textDecoration: "none", color: "inherit" }}
           >
             <h4>How we work</h4>
-          </Link>
-          {/* <div className="underbar"></div> */}
+          </Link>          
           <p>
             Contrary to popular belief, Lorem Ipsum is not simply random text.
             It has roots in a piece of classical Latin literature from 45 BC,
@@ -36,14 +38,14 @@ export default function OurImpact() {
             at Hampden-Sydney College in Virginia, looked up one of the more
             obscure Latin words.
           </p>
-        </OurImpactDescription>
-        <OurImpactPhoto>
+        </HowWeWork>
+        <HowWeWorkPhoto>
           <img src={author2} alt="pen" />
-        </OurImpactPhoto>
+        </HowWeWorkPhoto>
       </OurImpactSection>
 
       <OurValuesSection>
-        <OurValuesDescription>
+        <TellYourStory>
           <Link to="/tell-your-story" style={{ color: "inherit" }}>
             <h4>Tell your story here</h4>
           </Link>
@@ -54,10 +56,10 @@ export default function OurImpact() {
             at Hampden-Sydney College in Virginia, looked up one of the more
             obscure Latin words.
           </p>
-        </OurValuesDescription>
-        <OurValuesPhoto>
+        </TellYourStory>
+        <TellYourStoryPhoto>
           <img src={author1} alt="pen" />
-        </OurValuesPhoto>
+        </TellYourStoryPhoto>
       </OurValuesSection>
     </AboutUsSection>
   );
@@ -80,8 +82,7 @@ const MainHeading = styled.div`
     font-size: 1.8rem;
     width: 165px;
     border-bottom: 4px solid black;
-    margin: 10px auto;
-    /* margin-bottom: 0; */
+    margin: 10px auto;    
     text-decoration:none;
     color:black;
     outline:0;
@@ -119,54 +120,25 @@ const OurImpactSection = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 50px;
-  /* padding: 2rem; */
+  margin-bottom: 50px;  
 
   @media (max-width: 1000px) {
     flex-direction: column;
   }
 `;
 
-const OurImpactDescription = styled.section`
-  /* height: 100%; */
+const HowWeWork = styled.section`  
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
-  /* .underbar {
-    width: 0;
-    height: 5px;
-    background: rgba(0, 0, 0, 0);
-    background: rgba(100, 100, 200, 0);
-    top: 20px;
-    position: absolute;
-    -webkit-transition: 0.5s ease;
-  } */
-
   h4 {
     font-size: 1.5rem;
     margin-bottom: 20px;
     padding: 0 25px;
-    text-align: center;
-    /* -webkit-transition: 0.5s ease;
-
-    &:hover {
-      text-shadow: 0px -2px 0px rgba(0, 0, 0, 1),
-        0 0 5px rgba(255, 255, 255, 0.8), 0 -4px 15px rgba(255, 255, 255, 0.5);
-    }
-    &:hover ~ .underbar {
-      left: 150px;
-      width: 550px;
-      height: 1px;
-      -webkit-transition: 2.5s ease;
-
-      background: black;
-      background: rgba(150, 250, 250, 0.5);
-      box-shadow: grey;
-      box-shadow: 0 0 10px rgba(70, 100, 150, 4);
-    } */
+    text-align: center;    
 
     text-decoration: underline;
     &:hover {
@@ -182,18 +154,14 @@ const OurImpactDescription = styled.section`
   }
 `;
 
-const OurImpactPhoto = styled.div`
-  /* width: 500px;     */
+const HowWeWorkPhoto = styled.div`  
   width: 100%;
   display: inline-block;
   overflow: hidden;
-  margin-left: 10%;
-  /* border-radius: 5px; */
+  margin-left: 10%;  
 
-  img {
-    /* display: block;         */
-    width: 100%;
-    /* height:300px;   */
+  img {    
+    width: 100%;    
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -218,28 +186,19 @@ const OurValuesSection = styled.div`
   width: 100%;
   display: flex;
   flex-direction: row-reverse;
-  justify-content: space-between;
-
-  /* padding: 2rem; */
+  justify-content: space-between;  
 
   @media (max-width: 1000px) {
     flex-direction: column;
   }
 `;
 
-const OurValuesDescription = styled.section`
-  /* height: 100%; */
+const TellYourStory = styled.section`  
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  /* transition: transform 0.3s; */
-
-  /* &:hover {
-    transform: scale(1.05);
-    transform-origin: 50% 50%;
-  } */
+  align-items: center;  
 
   h4 {
     font-size: 1.5rem;
@@ -260,18 +219,15 @@ const OurValuesDescription = styled.section`
   }
 `;
 
-const OurValuesPhoto = styled.div`
-  /* width: 500px;     */
+const TellYourStoryPhoto = styled.div`  
   width: 100%;
   display: inline-block;
   overflow: hidden;
-  margin-right: 10%;
-  /* border-radius: 5px; */
+  margin-right: 10%;  
 
   img {
     display: block;
-    width: 100%;
-    /* height:300px;   */
+    width: 100%;   
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;

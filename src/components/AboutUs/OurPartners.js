@@ -1,6 +1,5 @@
 import React , {useEffect}  from 'react';
 import styled from 'styled-components';
-import unicef from '../../assets/unicef.png';
 import wwf from '../../assets/WWF-logo.png';
 import treeplant from '../../assets/treeplanted.png';
 import oxfam from '../../assets/oxfam.png';

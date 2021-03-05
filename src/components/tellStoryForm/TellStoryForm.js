@@ -2,6 +2,7 @@ import styled from "styled-components";
 import React, { useState, useContext } from "react";
 import axios from "axios";
 import { Context } from "../../context/Context";
+import DarkBurger from '../header/DarkBurger';
 
 const TellStoryForm = () => {
   const [status, setStatus] = useState("Submit");

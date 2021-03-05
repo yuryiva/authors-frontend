@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import Header from "./Header";
@@ -23,7 +23,7 @@ const BurgerMenu = ({ dropdown, setDropdown }) => {
   }
    
   // This method will change the colour of the burger on scroll
-  const changeBackground = () => window.scrollY >= 727 ? setNavbar(true) : setNavbar(false) 
+  const changeBackground = () => window.scrollY >= 727 ? setNavbar(true) : setNavbar(false) || navbar;
      
     
   window.addEventListener('scroll', changeBackground);
@@ -63,10 +63,8 @@ const Background = styled.div`
 `
 
 // Burger container
-const BurgerContainer = styled.div`   
-  /* background: ${() => window.scrollY >= 727 ? '#fff' : 'transparent'};   */
-  position: fixed;
-  /* width: 100vw; */
+const BurgerContainer = styled.div`
+  position: fixed;  
   width: 100%;
   height: 140px;
   display: flex; 
@@ -86,16 +84,11 @@ const StyledBurger = styled.button`
   border: none;
   cursor: pointer;
   padding: 0;
-  z-index: 101;
-  /* color: #000; */
+  z-index: 101;  
 
   &:focus {
     outline: none;
   }
-
-  /* @media (max-width: 768px) {
-      width: 100%;      
-  } */
 
   div {    
     width: 2rem;

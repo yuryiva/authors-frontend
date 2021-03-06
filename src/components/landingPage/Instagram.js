@@ -30,7 +30,7 @@ const Instagram = () => {
       .then((data) => {        
         setDataFromApi(data.data.user.edge_owner_to_timeline_media.edges);
       })
-      .catch(err => console.log('promise rejected:', err));
+      .catch((err) => console.log("promise rejected:", err));
   }, []);
 
   return (
@@ -68,7 +68,6 @@ const Instagram = () => {
     </InstaWrapper>
   );
 };
-
 
 const InstaWrapper = styled.div`
   display: flex;

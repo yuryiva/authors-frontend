@@ -19,7 +19,7 @@ const Checkout = ({ name, description, amount, label, type, email }) => {
   const SuccessPayment = async (data) => {
     fetch(
       context.state.productionOrDevelopment === "production"
-        ? `https://the-authors2.herokuapp.com/preorder`
+        ? `https://authxrs.herokuapp.com/preorder`
         : `http://localhost:8080/preorder`,
 
       {

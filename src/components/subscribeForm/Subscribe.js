@@ -23,7 +23,7 @@ const SubscribeForm = () => {
 
     let response = await fetch(
       context.state.productionOrDevelopment === "production"
-        ? `https://the-authors2.herokuapp.com/subscribe`
+        ? `https://authxrs.herokuapp.com/subscribe`
         : `http://localhost:8080/subscribe`,
 
       {

@@ -25,7 +25,7 @@ const GetInTouchForm = () => {
 
     let response = await fetch(
       context.state.productionOrDevelopment === "production"
-        ? `https://the-authors2.herokuapp.com/get-in-touch`
+        ? `https://authxrs.herokuapp.com/get-in-touch`
         : `http://localhost:8080/get-in-touch`,
 
       {

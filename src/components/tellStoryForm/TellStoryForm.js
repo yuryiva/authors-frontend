@@ -28,7 +28,7 @@ const TellStoryForm = () => {
 
         .post(
           context.state.productionOrDevelopment === "production"
-            ? `https://the-authors2.herokuapp.com/upload`
+            ? `https://authxrs.herokuapp.com/upload`
             : `http://localhost:8080/upload`,
 
           data,
@@ -80,7 +80,7 @@ const TellStoryForm = () => {
 
     let response = await fetch(
       context.state.productionOrDevelopment === "production"
-        ? `https://the-authors2.herokuapp.com/tell-story`
+        ? `https://authxrs.herokuapp.com/tell-story`
         : `http://localhost:8080/tell-story`,
 
       {

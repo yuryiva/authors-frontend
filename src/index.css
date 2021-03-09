@@ -8,8 +8,7 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    /* font-family: 'Roboto Mono', monospace; */
+    box-sizing: border-box;    
     font-family: 'Space Mono', monospace;    
 }
 
@@ -20,22 +19,12 @@ h1, h2, h3, h4, h5, h6 {
 #root { 
     position: relative;
     display: flex;
-    flex-direction: column;   
-    /* background: rgba(0, 0, 0, 0.5);    */
+    flex-direction: column;    
 }
-
-/* .main-active {
-    display: flex;
-    flex-direction: column;
-}
-.main-background {
-    background: rgba(0, 0, 0, 0.5);
-} */
 
 /* Carousel arrows in the Instagram section */
 .rec.rec-arrow,
-.rec.rec-arrow:disabled {
-    /* visibility: hidden; */
+.rec.rec-arrow:disabled {    
     display: none;
 }
 
@@ -53,5 +42,10 @@ h1, h2, h3, h4, h5, h6 {
     .rec.rec-dot_active {
         display: none;
     }    
+}
+
+/* Removing the border from the stories carousel photo divs */
+.sc-fFubgz.bsJaKT {
+    outline: none;
 }
 

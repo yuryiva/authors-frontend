@@ -4,9 +4,9 @@ import Aos from 'aos';
 import 'aos/dist/aos.css';
 import farmer from '../../assets/farmer.jpeg';
 import waterfall from '../../assets/waterfall.jpeg';
-import podcastimg from '../../assets/podcast1.jpg'
+import podcastimg from '../../assets/podcast1.jpg';
 import Carousel from "react-elastic-carousel";
-import podcast from '../../assets/short-stories.jpg';
+import { Link } from 'react-router-dom';
 <style>@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');</style>;
 <style>@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap');</style>
 
@@ -35,32 +35,31 @@ const StoriesShortcut = () => {
                 <Stories>  
                     <ImageWrapper>
                         <img 
-                            data-aos='fade-up' 
-                            // src='https://images.unsplash.com/photo-1509305717900-84f40e786d82?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjJ8fHBvcnRyYWl0fGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60' 
+                            data-aos='fade-up'                              
                             alt='portrait'
                             src={waterfall} 
                         />   
                     </ImageWrapper>                      
                         
                     <TextWrapper>
-                        <h4>New York in 2021</h4>
+                        <h4>Bare necessities</h4>
                         <p>Contrary to popular belief, Lorem Ipsum is not simply random text.</p>
                     </TextWrapper>                     
                 </Stories>                    
                 
                 <Stories>
-                    <ImageWrapper>
-                        <img 
-                            data-aos='fade-up' 
-                            // src='https://images.unsplash.com/photo-1610916975200-6d28742d4dd6?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw3M3x8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60' 
-                            // src={podcast} 
-                            alt='portrait' 
-                            src={podcastimg}
-                        />  
-                    </ImageWrapper>
+                    <Link to="/podcasts">
+                        <ImageWrapper>
+                            <img 
+                                data-aos='fade-up' 
+                                alt='portrait' 
+                                src={podcastimg}
+                            />  
+                        </ImageWrapper>
+                    </Link>                    
                         
                     <TextWrapper>
-                        <h4>Living in London</h4>
+                        <h4>Authxrs Podcast</h4>
                         <p>Contrary to popular belief, Lorem Ipsum is not simply random text.</p>
                     </TextWrapper>                      
                 </Stories>                    
@@ -69,14 +68,13 @@ const StoriesShortcut = () => {
                     <ImageWrapper>
                         <img 
                             data-aos='fade-up' 
-                            // src='https://images.unsplash.com/photo-1610801264293-588a3b6c3446?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxMjV8fHxlbnwwfHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60' 
                             alt='portrait' 
                             src={farmer}
                         />
                     </ImageWrapper>
                            
                     <TextWrapper>
-                        <h4>Urban walks</h4>
+                        <h4>The last members</h4>
                         <p>Contrary to popular belief, Lorem Ipsum is not simply random text.</p>
                     </TextWrapper>                     
                 </Stories>               
@@ -92,8 +90,7 @@ const StoryWrapper = styled.div`
     text-align: left;
     justify-content:center;
     align-items: center;    
-    font-family: 'Space Mono', monospace;
-    /* width:100%;     */
+    font-family: 'Space Mono', monospace;   
     padding: 0 5%;   
     margin: 0;     
     margin-bottom:100px; 
@@ -105,8 +102,7 @@ const StoryWrapper = styled.div`
 
 const StoryText = styled.div`
     margin: 50px 0;    
-    width: 60%;
-    /* align-self: flex-start; */
+    width: 60%;    
 
     h3 {
         font-size: 1.8rem;       
@@ -115,7 +111,7 @@ const StoryText = styled.div`
     }
 
     p {
-        font-size: 1.1rem;
+        font-size: 1rem;
         margin: 50px auto;
     }
 
@@ -153,23 +149,21 @@ const ImageWrapper = styled.div`
 const Stories = styled.div` 
     width: 500px;       
     margin: 0 20px;      
-    display: inline-block;   
+    display: inline-block; 
+    outline: none;  
 `
 
 const TextWrapper = styled.section`
     display: flex;
-    flex-direction: column;
-    /* width: 450px; */
+    flex-direction: column;    
     text-align: left;
 
     h4 {
         font-size: 1.4rem;       
-        /* margin: 50px auto;         */
     }
 
     p {
-        font-size: 14px;
-        /* margin: 50px auto; */
+        font-size: 14px;       
     }
 `
 

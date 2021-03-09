@@ -26,17 +26,26 @@ const Footer = () => {
             >
               <p>Who We Are</p>
             </Link>
+
+            <Link
+              style={{ textDecoration: "none", color: "black" }}
+              to="about-us"
+            >
+              <p>Our Story</p>
+            </Link>
+
             <Link
               style={{ textDecoration: "none", color: "black" }}
               to="about-us"
             >
               <p>Our Vision</p>
             </Link>
+
             <Link
               style={{ textDecoration: "none", color: "black" }}
               to="about-us"
             >
-              <p>Sustainability</p>
+              <p>Our Values</p>
             </Link>
           </AboutUs>
 
@@ -49,6 +58,14 @@ const Footer = () => {
               {" "}
               <p>How We Work</p>
             </Link>
+
+            <Link
+              style={{ textDecoration: "none", color: "black" }}
+              to="about-us"
+            >
+              <p>Sustainability</p>
+            </Link>
+
             <Link
               style={{ textDecoration: "none", color: "black" }}
               to="/our-partners"
@@ -69,6 +86,8 @@ const Footer = () => {
             <a
               style={{ textDecoration: "none", color: "black" }}
               href="https://www.linkedin.com/company/authors-i-s/"
+              target="_blank"
+              rel="noreferrer"
             >
               {" "}
               <p>LinkedIn</p>
@@ -77,7 +96,7 @@ const Footer = () => {
         </FooterLinks>
         <Subscribe>
           <h4>Join Us</h4>
-          <p style={{ fontSize: 12 }}>
+          <p style={{ fontSize: 14 }}>
             Subscribe for latest updates, new stories and promotions
           </p>
 
@@ -94,39 +113,32 @@ const Footer = () => {
 const FooterDiv = styled.div`
   display: flex;
   flex-direction: column;
-  font-family: "Space Mono", monospace;
+  flex-wrap: wrap;
+  padding: 0 5%;
+  background-color: lightgray;  
 `;
 
 const FooterWrapper = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
-  background-color: lightgray;
-  height: 200px;
-  font-family: "Space Mono", monospace;
-  padding: 20px 80px 0 80px;
+  justify-content: space-between;   
 
   p {
-    font-size: 15px;
+    font-size: 14px;
   }
 
   ${"" /* h4 {
     font-weight: 510;
   } */}
-
-  @media (max-width: 1300px) {
-    height: auto;
-    padding-left: 30px;
-  }
+  
 `;
 
 const FooterLinks = styled.div`
   display: flex;
   justify-content: space-between;
   flex-direction: row;
-  flex-wrap: wrap;
-  width: 40%;
+  flex-wrap: wrap;  
 
   h4 {
     margin-bottom: 10px;
@@ -137,35 +149,17 @@ const FooterLinks = styled.div`
     font-weight: 350;
     margin-bottom: 10px;
   }
-
-  @media (max-width: 1300px) {
-    width: auto;
-    padding-left: 0;
-  }
-
-  @media (max-width: 850px) {
-    margin-bottom: 40px;
-
-    p {
-      font-weight: 100;
-      color: rgb (92, 92, 92);
-    }
-  }
 `;
 
 const AboutUs = styled.div`
   display: flex;
   flex-direction: column;
   text-align: left;
+  margin: 20px;
 
   p {
     :hover {
       text-decoration: underline;
-    }
-
-    @media (max-width: 850px) {
-      margin: 0 10px;
-      margin-bottom: 20px;
     }
   }
 `;
@@ -174,15 +168,13 @@ const OurWork = styled.div`
   display: flex;
   flex-direction: column;
   text-align: left;
+  margin: 20px;
+
   p {
     :hover {
       text-decoration: underline;
     }
 
-    @media (max-width: 850px) {
-      margin: 0 10px;
-      margin-bottom: 20px;
-    }
   }
 `;
 
@@ -190,16 +182,14 @@ const ContactUs = styled.div`
   display: flex;
   flex-direction: column;
   text-align: left;
+  margin: 20px;
 
   p,
   a {
     :hover {
       text-decoration: underline;
     }
-
-    @media (max-width: 850px) {
-      margin: 0 10px;
-    }
+   
   }
 `;
 
@@ -207,7 +197,7 @@ const Subscribe = styled.div`
   display: flex;
   flex-direction: column;
   text-align: left;
-  margin: 0;
+  margin: 20px;
 
   input {
     width: 100%;
@@ -252,23 +242,23 @@ const Subscribe = styled.div`
     font-weight: 350;
     margin: 0;
     padding: 0;
-    width: 300px;
+    max-width: 250px;
     margin-bottom: 10px;
   }
 `;
 
-const Copyright = styled.p`
-  background-color: lightgray;
+const Copyright = styled.div`  
+  height: 100px;
+  width: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
   margin: 0;
   padding: 0;
 
   p {
-    font-size: 12px;
-    font-weight: 300;
-    margin-top: 50px;
-    padding-bottom: 10px;
+    font-size: 14px;
+    font-weight: 300;    
   }
 `;
 

@@ -77,16 +77,11 @@ const DarkBurgerStyle = styled.button`
   border: none;
   cursor: pointer;
   padding: 0;
-  z-index: 105;
-  /* color: #000; */
+  z-index: 105;  
 
   &:focus {
     outline: none;
   }
-
-  /* @media (max-width: 768px) {
-      width: 100%;      
-  } */
 
   div {    
     width: 2rem;
@@ -100,18 +95,15 @@ const DarkBurgerStyle = styled.button`
 
     :first-child {
       transform: ${({ dropdown }) => dropdown ? 'rotate(45deg)' : 'rotate(0)'};      
-      /* background: ${({ dropdown }) => window.scrollY >= 727 || dropdown ? '#000' : '#fff'};       */
     }
 
     :nth-child(2) {
       opacity: ${({ dropdown }) => dropdown ? '0' : '1'};
       transform: ${({ dropdown }) => dropdown ? 'translateX(20px)' : 'translateX(0)'};      
-      /* background: ${({ dropdown }) => window.scrollY >= 727 || dropdown ? '#000' : '#fff'};       */
     }
 
     :nth-child(3) {
-      transform: ${({ dropdown }) => dropdown ? 'rotate(-45deg)' : 'rotate(0)'};      
-      /* background: ${({ dropdown }) => window.scrollY >= 727 || dropdown ? '#000' : '#fff'};      */
+      transform: ${({ dropdown }) => dropdown ? 'rotate(-45deg)' : 'rotate(0)'};        
     }
   }
 `

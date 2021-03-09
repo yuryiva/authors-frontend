@@ -7,7 +7,6 @@ import waterfall from '../../assets/waterfall.jpeg';
 import podcastimg from '../../assets/podcast1.jpg';
 import Carousel from "react-elastic-carousel";
 import { Link } from 'react-router-dom';
-// import podcast from '../../assets/short-stories.jpg';
 <style>@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');</style>;
 <style>@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap');</style>
 
@@ -36,8 +35,7 @@ const StoriesShortcut = () => {
                 <Stories>  
                     <ImageWrapper>
                         <img 
-                            data-aos='fade-up' 
-                            // src='https://images.unsplash.com/photo-1509305717900-84f40e786d82?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjJ8fHBvcnRyYWl0fGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60' 
+                            data-aos='fade-up'                              
                             alt='portrait'
                             src={waterfall} 
                         />   
@@ -54,14 +52,11 @@ const StoriesShortcut = () => {
                         <ImageWrapper>
                             <img 
                                 data-aos='fade-up' 
-                                // src='https://images.unsplash.com/photo-1610916975200-6d28742d4dd6?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw3M3x8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60' 
-                                // src={podcast} 
                                 alt='portrait' 
                                 src={podcastimg}
                             />  
                         </ImageWrapper>
-                    </Link>
-                    
+                    </Link>                    
                         
                     <TextWrapper>
                         <h4>Authxrs Podcast</h4>
@@ -73,7 +68,6 @@ const StoriesShortcut = () => {
                     <ImageWrapper>
                         <img 
                             data-aos='fade-up' 
-                            // src='https://images.unsplash.com/photo-1610801264293-588a3b6c3446?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxMjV8fHxlbnwwfHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60' 
                             alt='portrait' 
                             src={farmer}
                         />
@@ -96,8 +90,7 @@ const StoryWrapper = styled.div`
     text-align: left;
     justify-content:center;
     align-items: center;    
-    font-family: 'Space Mono', monospace;
-    /* width:100%;     */
+    font-family: 'Space Mono', monospace;   
     padding: 0 5%;   
     margin: 0;     
     margin-bottom:100px; 
@@ -109,8 +102,7 @@ const StoryWrapper = styled.div`
 
 const StoryText = styled.div`
     margin: 50px 0;    
-    width: 60%;
-    /* align-self: flex-start; */
+    width: 60%;    
 
     h3 {
         font-size: 1.8rem;       
@@ -163,18 +155,15 @@ const Stories = styled.div`
 
 const TextWrapper = styled.section`
     display: flex;
-    flex-direction: column;
-    /* width: 450px; */
+    flex-direction: column;    
     text-align: left;
 
     h4 {
         font-size: 1.4rem;       
-        /* margin: 50px auto;         */
     }
 
     p {
-        font-size: 14px;
-        /* margin: 50px auto; */
+        font-size: 14px;       
     }
 `
 

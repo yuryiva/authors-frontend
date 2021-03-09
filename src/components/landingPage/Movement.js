@@ -17,7 +17,6 @@ const JoinTheMovement = () => {
           ipsum dolor sit amet..", comes from a line in section 1.10.32.
         </h5>
         <Link style={{ textDecoration: "none", color: "black" }} to="/about-us">
-          {" "}
           <button>ABOUT US</button>
         </Link>
       </QuoteSection>
@@ -65,12 +64,12 @@ const QuoteSection = styled.div`
     margin-top: 30px;
   }
 
-    @media (max-width: 600px) {
-   
-   h5 {
-     width:80%;
-     font-size:13px;
-   }}
-`
+  @media (max-width: 600px) {
+    h5 {
+      width: 80%;
+      font-size: 13px;
+    }
+  }
+`;
 
 export default JoinTheMovement;

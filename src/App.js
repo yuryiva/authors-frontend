@@ -106,7 +106,6 @@ const App = () => {
 
         {/* <Route path="/home" render={(props) => <MainSection {...props} />} /> */}
       </Switch>
-      <hr />
 
       <Footer />
       {/* </MainWrapper> */}

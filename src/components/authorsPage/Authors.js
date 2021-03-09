@@ -1,4 +1,3 @@
-// import React, {Route, Switch, useEffect} from 'react';
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import authors1a from "../../assets/authors1a.jpg";
@@ -7,7 +6,7 @@ import authors2 from "../../assets/authors2.jpg";
 import authors3 from "../../assets/authors4.jpg";
 import authors4 from "../../assets/authors5.jpg";
 import authors5 from "../../assets/authors6.jpg";
-// import Footer from './components/Footer/Footer';
+
 <style>
   @import
   url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');

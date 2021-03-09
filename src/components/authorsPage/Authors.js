@@ -37,10 +37,10 @@ const authors = [
   {
     authorId: Math.random(),
     authorUrl: `${authors2}`,
-    authorProfile: "Author Three Profile",
+    authorProfile: "Maria Kolesnikova",
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
-    authorLocation: "Location, Belarus",
+      "Fighting against oppression, civil liberties, human rights and a totalitarian form of government. ",
+    authorLocation: "Minsk, Belarus",
   },
   {
     authorId: Math.random(),

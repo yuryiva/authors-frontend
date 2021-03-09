@@ -119,8 +119,7 @@ const StyledBurger = styled.button`
 `
 
 const LogoImage = styled.img`
-  width: 70px;
-  /* height: 50px; */
+  width: 70px;  
   position: absolute;  
   top: 35px;      
   left: 5%;

@@ -1,4 +1,3 @@
-//import hook for useContext
 import React, { useState, useContext } from "react";
 import styled from "styled-components";
 import { Context } from "../../context/Context";
@@ -20,8 +19,7 @@ const PreOrderForm = () => {
   const [message, setMessage] = useState();
 
   //storing context in variable that I named context, to have access to everything
-  const context = useContext(Context);
-  // console.log(context);
+  const context = useContext(Context);  
 
   const bookPrice = context.state.bookPrice;
 
@@ -83,14 +81,12 @@ const PreOrderForm = () => {
         ) : (
           <SentMessageForm onChange={handleChange}>
             <ImageBook>
-              <img src={context.state.bookUrl} />
+              <img src={context.state.bookUrl} alt="book" />
             </ImageBook>
             <h5>PRICE PER BOOK: {bookPrice} EUR</h5>
             <div>
-              <label htmlFor="amount"> </label>
-              {/* need to fix burgermenu component */}
-              <input
-                // style={{ zIndex: 999 }}
+              <label htmlFor="amount"> </label>              
+              <input               
                 type="number"
                 id="amount"
                 min="0"
@@ -213,8 +209,7 @@ const SentMessageForm = styled.form`
     margin-bottom: 5px;
     color: red;
   }
-  div {
-    ${"" /* width: 100%; */}
+  div {    
     display: flex;
     flex-direction: row;
     flex-wrap: no wrap;
@@ -245,12 +240,7 @@ const ImageBook = styled.div`
     height: 300px;
   }
 `;
-// const PriceTotal = styled.div`
-//   width: 100%;
-//   display: flex;
-//   justify-content: center;
-//   text-align: center;
-// `;
+
 const ResponseDiv = styled.div`
   height: 80%;
   button {
@@ -258,7 +248,4 @@ const ResponseDiv = styled.div`
     width: 50%;
   }
 `;
-const SubmitDiv = styled.div`
-  display: flex;
-  justify-content: center;
-`;
+

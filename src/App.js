@@ -95,7 +95,6 @@ const App = () => {
           render={(props) => <OurStory {...props} />}
         />        
       </Switch>
-      <hr />
 
       <Footer />      
     </>

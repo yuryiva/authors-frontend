@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import Header from "./Header";
+import logo from '../../assets/Authxrs-logo.png';
 
 const BurgerMenu = ({ dropdown, setDropdown }) => {
   const [navbar, setNavbar] = useState(false);   
@@ -31,7 +32,7 @@ const BurgerMenu = ({ dropdown, setDropdown }) => {
     return (
       <BurgerContainer>      
           <Link to="/" onClick={handleLogo}>
-            <LogoImage />
+            <LogoImage src={logo} />
           </Link>
 
           <StyledBurger 
@@ -118,12 +119,11 @@ const StyledBurger = styled.button`
 `
 
 const LogoImage = styled.img`
-  width: 30px;
-  height: 50px;
+  width: 70px;  
   position: absolute;  
-  top: 45px;   
+  top: 35px;      
   left: 5%;
-  z-index: 101;  
+  z-index: 101;    
 `
 
 export default BurgerMenu;

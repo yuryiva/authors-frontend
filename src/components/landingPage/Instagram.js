@@ -123,6 +123,7 @@ const InstaContact = styled.div`
   justify-content: left;
   text-align: left;
   margin-left: 20px;
+  margin-right: 20px;
 
   h4 {
     font-size: 1rem;
@@ -140,8 +141,11 @@ const InstaContact = styled.div`
 const Follow = styled.div`
   width: 130px;
   height: 42px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-  a {
+  a {    
     padding: 5px 25px;     
     border-radius: 2px;
     margin-right: 20px;

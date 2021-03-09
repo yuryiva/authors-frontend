@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import DarkHeader from "./DarkHeader";
+import logo from '../../assets/Authxrs-logo.png';
 
 const DarkBurger = () => {
     const [darkDropdown, setDarkDropdown] = useState(false);
@@ -25,7 +26,7 @@ const DarkBurger = () => {
     return (
         <DarkBurgerWrapper>      
           <Link to="/" onClick={handleDarkLogo}>
-            <DarkLogo />
+            <DarkLogo src={logo} />
           </Link>
 
           <DarkBurgerStyle 
@@ -109,10 +110,9 @@ const DarkBurgerStyle = styled.button`
 `
 
 const DarkLogo = styled.img`
-  width: 30px;
-  height: 50px;
+  width: 70px;  
   position: absolute;  
-  top: 45px;   
+  top: 35px;      
   left: 5%;
   z-index: 105;  
 `

@@ -22,16 +22,12 @@ class Provider extends Component {
 
     productionOrDevelopment: "development",
   };
-
-  //   Component did mount section
-  componentDidMount() {}
-
+  
   //   Methods section
 
   //preOrderForm function in charge of updating state..
 
-  getDataFromForm = (data) => {
-    // console.log("Hello from context", data);
+  getDataFromForm = (data) => {  
 
     this.setState({
       amount: data.amount,
@@ -48,21 +44,11 @@ class Provider extends Component {
     });
   };
 
-  //   //get book price from books.js and pass it to pre-order form.
-  // getBookPrice = (data) => {
-  //   // console.log("Hello from CONTEXT");
-  //   this.setState({
-  //     bookPrice: data.bookPrice,
-  //   });
-  // };
-
   render() {
     return (
       <Context.Provider
-        value={{
-          //same function as above getDataFromForm : this.getDataFromForm
-          getDataFromForm: this.getDataFromForm,
-          // getBookPrice: this.getBookPrice,
+        value={{          
+          getDataFromForm: this.getDataFromForm,          
           state: this.state,
         }}
       >

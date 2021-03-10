@@ -252,10 +252,12 @@ const Copyright = styled.div`
   align-items: center;
   margin: 0;
   padding: 0;
+  bottom:0;
 
   p {
     font-size: 14px;
     font-weight: 300;
+    margin:0;
   }
 `;
 

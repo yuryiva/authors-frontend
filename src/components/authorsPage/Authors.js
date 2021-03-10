@@ -96,6 +96,7 @@ const ScrollWrapper = styled.div`
   overflow-x: hidden;
   scroll-snap-type: y mandatory;
   color: white;
+
   :-webkit-scrollbar {
     display: none;
   }
@@ -114,7 +115,6 @@ const StoryText = styled.div`
   align-items: flex-start;
   flex-direction: column;
   padding: 0 5%;
-
   scroll-snap-align: center;
 
   img {
@@ -130,10 +130,11 @@ const StoryText = styled.div`
     font-size: 2.2rem;
     margin-bottom: 20px;
     cursor: pointer;
+
     @media (max-width: 500px) {
       font-size: 2rem;
     }
-
+  }
     h5 {
       font-size: 0.9rem;
       cursor: pointer;
@@ -166,7 +167,7 @@ const StoryText = styled.div`
         font-size: 1rem;
       }
     }
-  }
+  
 `;
 
 export default Authors;

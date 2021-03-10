@@ -24,14 +24,11 @@ const App = () => {
 
   return (
     <>
-      <ScrollToTop />      
-      <BurgerMenu dropdown={dropdown} setDropdown={setDropdown} />     
+      <ScrollToTop />
+      <BurgerMenu dropdown={dropdown} setDropdown={setDropdown} />
 
       <Switch>
-        <Route 
-          exact path="/" 
-          render={(props) => <LandingPage {...props} />} 
-        />
+        <Route exact path="/" render={(props) => <LandingPage {...props} />} />
         <Route
           path="/authors-page"
           render={(props) => <Authors {...props} />}
@@ -40,18 +37,12 @@ const App = () => {
           path="/authors-story"
           render={(props) => <AuthorsStory {...props} />}
         />
-        <Route 
-          path="/books" 
-          render={(props) => <Books {...props} />} 
-        />
+        <Route path="/books" render={(props) => <Books {...props} />} />
         <Route
           path="/preOrderForm"
           render={(props) => <PreOrderForm {...props} />}
         />
-        <Route 
-          path="/podcasts" 
-          render={(props) => <Podcasts {...props} />} 
-        />
+        <Route path="/podcasts" render={(props) => <Podcasts {...props} />} />
         <Route
           path="/short-stories"
           render={(props) => <ShortStories {...props} />}
@@ -93,10 +84,10 @@ const App = () => {
           exact
           path="/our-story"
           render={(props) => <OurStory {...props} />}
-        />        
+        />
       </Switch>
 
-      <Footer />      
+      <Footer />
     </>
   );
 };

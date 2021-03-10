@@ -45,9 +45,7 @@ const AuthorsStory = () => {
           <img src={authorimg2} alt="nature" />
         </StorySection1Img>
       </StorySection1>
-      <HR>
-        <hr />
-      </HR>
+   
       <StorySection2>
         <StorySection2Img>
           <img
@@ -317,19 +315,6 @@ const StorySection3Img = styled.div`
     img {
       width: 90%;
     }
-  }
-`;
-
-const HR = styled.div`
-  hr {
-    border: 0;
-    background-color: lightgray;
-    display: flex;
-    justify-content: left;
-    width: 85%;
-    height: 4px;
-    margin: 0;
-    padding: 0;
   }
 `;
 

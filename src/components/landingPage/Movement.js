@@ -12,9 +12,8 @@ const JoinTheMovement = () => {
       <QuoteSection>
         <h5>
           Authxrs have worked with some amazing organizations to make this dream
-          a reality. This book is a treatise on the theory of ethics, very
-          popular during the Renaissance. The first line of Lorem Ipsum, "Lorem
-          ipsum dolor sit amet..", comes from a line in section 1.10.32.
+          a reality. See this section to learn more about our vision, team,
+          partners, and our story.
         </h5>
         <Link style={{ textDecoration: "none", color: "black" }} to="/about-us">
           <button>ABOUT US</button>

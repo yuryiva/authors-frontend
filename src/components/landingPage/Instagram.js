@@ -27,7 +27,7 @@ const Instagram = () => {
       `https://www.instagram.com/graphql/query/?query_hash=e769aa130647d2354c40ea6a439bfc08&variables={"id":"${profileId}","first":${numberOfPosts}}`
     )
       .then((res) => res.json())
-      .then((data) => {        
+      .then((data) => {
         setDataFromApi(data.data.user.edge_owner_to_timeline_media.edges);
       })
       .catch((err) => console.log("promise rejected:", err));
@@ -40,22 +40,19 @@ const Instagram = () => {
           <h4>#Authxrs #writethechange</h4>
           <p>@Authxrs</p>
         </InstaContact>
-        <Follow>          
-          <a 
+        <Follow>
+          <a
             style={{ textDecoration: "none", color: "#000" }}
             href="https://www.instagram.com/p/CLo4iBZFrIF/"
             target="_blank"
             rel="noreferrer"
           >
             Follow
-          </a>     
-          
+          </a>
         </Follow>
       </InstaText>
 
-      <Carousel
-        breakPoints={breakPoints}        
-      >
+      <Carousel breakPoints={breakPoints}>
         {dataFromApi.map((post, i) => (
           <ImgWrapper key={i}>
             <img
@@ -63,7 +60,7 @@ const Instagram = () => {
               alt="instagram post"
             />
           </ImgWrapper>
-        ))}       
+        ))}
       </Carousel>
     </InstaWrapper>
   );
@@ -89,12 +86,12 @@ const InstaWrapper = styled.div`
 
 const ImgWrapper = styled.div`
   margin: 0 20px;
-  width: 400px;  
+  width: 400px;
   display: flex;
   overflow: hidden;
   position: relative;
 
-  img {   
+  img {
     transition: transform 0.8s;
     width: 100%;
     height: 400px;
@@ -144,22 +141,22 @@ const Follow = styled.div`
   justify-content: center;
   align-items: center;
 
-  a {    
-    padding: 5px 25px;     
+  a {
+    padding: 5px 25px;
     border-radius: 2px;
     margin-right: 20px;
     border: 1px solid black;
     background-color: white;
     cursor: pointer;
-    outline: none;    
+    outline: none;
   }
 
   a:hover {
-    background-color: lightgray;   
+    background-color: lightgray;
     cursor: pointer;
   }
 
-  a:active {    
+  a:active {
     color: white;
   }
 `;

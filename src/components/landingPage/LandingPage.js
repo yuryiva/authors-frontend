@@ -1,9 +1,9 @@
 import React from "react";
-import StoriesShortcut from './StoriesShortcut';
-import Instagram from './Instagram';
-import JoinTheMovement from './Movement';
+import StoriesShortcut from "./StoriesShortcut";
+import Instagram from "./Instagram";
+import JoinTheMovement from "./Movement";
 import OurImpact from "./OurImpact";
-import styled from 'styled-components';
+import styled from "styled-components";
 import Banner from "../banner/Banner";
 // import Journey from './Journey';
 
@@ -13,9 +13,9 @@ export default function LandingPage() {
       <Banner />
       <OurImpact />
       {/* <Journey /> */}
-      <StoriesShortcut/>
-      <JoinTheMovement/>
-      <Instagram/>
+      <StoriesShortcut />
+      <JoinTheMovement />
+      <Instagram />
     </MainWrapper>
   );
 }
@@ -23,4 +23,4 @@ export default function LandingPage() {
 const MainWrapper = styled.div`
   width: 100%;
   height: 100%;
-`
+`;

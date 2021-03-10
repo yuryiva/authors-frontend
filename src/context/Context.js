@@ -21,13 +21,12 @@ class Provider extends Component {
     bookUrl:
       "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQYFM7A8Fn0G23_-MxQ4kzKkxsR3qUh7Gv-wYYjgSB8oYugldi_",
   };
-  
+
   //   Methods section
 
   //preOrderForm function in charge of updating state..
 
-  getDataFromForm = (data) => {  
-
+  getDataFromForm = (data) => {
     this.setState({
       amount: data.amount,
       name: data.name,
@@ -46,8 +45,8 @@ class Provider extends Component {
   render() {
     return (
       <Context.Provider
-        value={{          
-          getDataFromForm: this.getDataFromForm,          
+        value={{
+          getDataFromForm: this.getDataFromForm,
           state: this.state,
         }}
       >

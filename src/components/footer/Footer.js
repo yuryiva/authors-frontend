@@ -250,12 +250,15 @@ const Copyright = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  align-items: flex-end;
   margin: 0;
   padding: 0;
+  bottom:0;
 
   p {
     font-size: 14px;
     font-weight: 300;
+    margin:0;
   }
 `;
 

@@ -37,8 +37,8 @@ const Header = ({ dropdown, setDropdown }) => {
             Short stories
           </Link>
 
-          <Link to="/join-the-movement" onClick={handleDropdown}>
-            Join the movement
+          <Link to="/about-us" onClick={handleDropdown}>
+            About Us
           </Link>
         </LinkContainer>
       </LinkSection>

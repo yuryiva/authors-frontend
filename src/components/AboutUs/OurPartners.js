@@ -88,7 +88,8 @@ export default function OurPartners() {
   );
 }
 
-const PartnersWrapper = styled.div``;
+const PartnersWrapper = styled.div`
+ overflow:hidden;`;
 
 const PartnersLogoSection = styled.div`
   display: flex;

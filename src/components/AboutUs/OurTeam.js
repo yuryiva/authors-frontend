@@ -228,9 +228,11 @@ const CrisSection = styled.div`
   text-align: center;
   width: 100%;
   margin-top: 100px;
+  margin-bottom: 100px;
 
   @media (max-width: 400px) {
     margin-top: 50px;
+    margin-bottom: 50px;
   }
 `;
 

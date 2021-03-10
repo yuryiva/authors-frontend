@@ -22,13 +22,12 @@ class Provider extends Component {
 
     productionOrDevelopment: "development",
   };
-  
+
   //   Methods section
 
   //preOrderForm function in charge of updating state..
 
-  getDataFromForm = (data) => {  
-
+  getDataFromForm = (data) => {
     this.setState({
       amount: data.amount,
       name: data.name,
@@ -47,8 +46,8 @@ class Provider extends Component {
   render() {
     return (
       <Context.Provider
-        value={{          
-          getDataFromForm: this.getDataFromForm,          
+        value={{
+          getDataFromForm: this.getDataFromForm,
           state: this.state,
         }}
       >

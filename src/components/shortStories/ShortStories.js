@@ -9,7 +9,7 @@ export default function ShortStories() {
   return (
     <>
       <DarkBurger />
-      <ShortStoriesWrapper>        
+      <ShortStoriesWrapper>
         {/* <hr /> */}
         <TellStoryForm />
         {/* <hr />

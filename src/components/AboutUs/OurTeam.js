@@ -1,42 +1,37 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
-import cris from '../../assets/Cris_authxrs.jpg';
-import sara from '../../assets/Sara_authxrs.jpg';
-import saraimg from '../../assets/saraimg.jpg';
-import crisimg from '../../assets/crisimg.jpg';
-import Aos from 'aos';
-import 'aos/dist/aos.css';
-
+import cris from "../../assets/Cris_authxrs.jpg";
+import sara from "../../assets/Sara_authxrs.jpg";
+import saraimg from "../../assets/saraimg.jpg";
+import crisimg from "../../assets/crisimg.jpg";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 export default function OurTeam() {
-  useEffect (() => {
-    Aos.init({duration:3000});
-}, []);
+  useEffect(() => {
+    Aos.init({ duration: 3000 });
+  }, []);
   return (
     <OurTeamWrapper>
       <StorySection1>
         <StorySection1Img>
-          <img  data-aos='fade-up' 
-            src={cris}
-            alt="portrait"
-          />
+          <img data-aos="fade-up" src={cris} alt="portrait" />
           <NameSection>
-          <h3>Cristina Gonzalez Torello</h3>
-          <p>
-            Contrary to popular belief, Lorem Ipsum is not simply random text.
-          </p>
+            <h3>Cristina Gonzalez Torello</h3>
+            <p>
+              MSc in Development and International Relations / Global Refugee
+              Studies
+            </p>
           </NameSection>
         </StorySection1Img>
         <StorySection1Img>
-          <img  data-aos='fade-up' 
-            src={sara}
-            alt="portrait"
-          />
-           <NameSection>
-          <h3> Sara Brun Nielsen</h3>
-          <p>
-            Contrary to popular belief, Lorem Ipsum is not simply random text.
-          </p>
+          <img data-aos="fade-up" src={sara} alt="portrait" />
+          <NameSection>
+            <h3> Sara Brun Nielsen</h3>
+            <p>
+              Journalist /Development and International Relations / Global
+              Refugee Studies
+            </p>
           </NameSection>
         </StorySection1Img>
       </StorySection1>
@@ -44,75 +39,50 @@ export default function OurTeam() {
       <MiddleSection3>
         <MiddleSection3Text>
           <p>
-            Contrary to popular belief, Lorem Ipsum is not simply random text.
-            It has roots in a piece of classical Latin literature from 45 BC,
-            making it over 2000 years old. Richard McClintock, a Latin professor
-            at Hampden-Sydney College in Virginia, looked up one of the more
-            obscure Latin words, consectetur, from a Lorem Ipsum passage, and
-            going through the cites of the word Contrary to popular belief,
-            Lorem Ipsum is not simply random text. It has roots in a piece of
-            classical Latin literature from 45 BC, making it over 2000 years
-            old. Richard McClintock, a Latin professor at Hampden-Sydney College
-            in Virginia, looked up one of the more obscure Latin words,
-            consectetur, from a Lorem Ipsum passage, and going through the cites
-            of the wordContrary to popular belief, Lorem Ipsum is not simply
-            random text.
+            Authxrs exists because we want our readers to experience literature
+            from the major regions of the non-Western world--the Caribbean,
+            Latin America, sub-Saharan Africa, the Middle East, and South Asia.
+            We offer a bridge between our culture and theirs. The editors
+            believe that expanding the range of literature studied beyond the
+            traditional American, Canadian, and European canonical writers will
+            help readers better understand an increasingly interdependent world
+            and at the same time create social awareness.
           </p>
           <p>
-            Contrary to popular belief, Lorem Ipsum is not simply random text.
-            It has roots in a piece of classical Latin literature from 45 BC,
-            making it over 2000 years old. Richard McClintock, a Latin professor
-            at Hampden-Sydney College in Virginia, looked up one of the more
-            obscure Latin words, consectetur, from a Lorem Ipsum passage, and
-            going through the cites of the wordContrary to popular belief, Lorem
-            Ipsum is not simply random text. It has roots in a piece of
-            classical Latin literature from 45 BC, making it over 2000 years
-            old. Richard McClintock, a Latin professor at Hampden-Sydney College
-            in Virginia, 
+            The founders of Authxrs see an opportunity to try to minimize the
+            gap in equal opportunities and reach. They aim to facilitate and
+            produce knowledge to readers interested in social, political and
+            economic situations of these people inside and outside the
+            geographical social cultural scope.
           </p>
         </MiddleSection3Text>
       </MiddleSection3>
 
       <SaraSection>
         <SaraImg>
-          <img src={saraimg}  data-aos='fade-up'  alt="sara portrait" />
+          <img src={saraimg} data-aos="fade-up" alt="sara portrait" />
         </SaraImg>
-       <SaraText>
-         <h1>
-           Sara Brun Nielsen
-         </h1>
-            <p>
-            Contrary to popular belief, Lorem Ipsum is not simply random text.
-            It has roots in a piece of classical Latin literature from 45 BC,
-            making it over 2000 years old. Richard McClintock, a Latin professor
-            at Hampden-Sydney College in Virginia, looked up one of the more
-            obscure Latin words, consectetur, from a Lorem Ipsum passage, and
-            going through the cites of the word Contrary to popular belief,
-            Lorem Ipsum is not simply random text. It has roots in a piece of
-            classical Latin literature from 45 BC, making it over 2000 years
-            old. Richard McClintock, a Latin profes
-            </p>    
+        <SaraText>
+          <h1>Sara Brun Nielsen</h1>
+          <p>
+            As a qualified Journalist Sara has the knowledge to guide the
+            Authxrs throughout the writing process via her journalism,
+            communication, research and product management background.
+          </p>
         </SaraText>
       </SaraSection>
       <CrisSection>
         <CrisText>
-        <h1>
-        Cristina Gonzalez Torello
-         </h1>
-            <p>
-            Contrary to popular belief, Lorem Ipsum is not simply random text.
-            It has roots in a piece of classical Latin literature from 45 BC,
-            making it over 2000 years old. Richard McClintock, a Latin professor
-            at Hampden-Sydney College in Virginia, looked up one of the more
-            obscure Latin words, consectetur, from a Lorem Ipsum passage, and
-            going through the cites of the word Contrary to popular belief,
-            Lorem Ipsum is not simply random text. It has roots in a piece of
-            classical Latin literature from 45 BC, making it over 2000 years
-            old. Richard McClintock, a Latin profes
-            </p>    
+          <h1>Cristina Gonzalez Torello</h1>
+          <p>
+            With a background of over 4 years of a tutoring in professional
+            writing Cristina has the abilty to assist the Authxrs throughout the
+            process of writing, from approaching and listening to them and to
+            supporting their writing in a technical way.
+          </p>
         </CrisText>
         <CrisImg>
-          <img src={crisimg}  data-aos='fade-up'  alt="Cris Portrait" />
+          <img src={crisimg} data-aos="fade-up" alt="Cris Portrait" />
         </CrisImg>
       </CrisSection>
     </OurTeamWrapper>
@@ -126,7 +96,7 @@ const OurTeamWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  align-items:center;
+  align-items: center;
   margin: 0;
   padding: 0;
 `;
@@ -136,20 +106,19 @@ const StorySection1 = styled.div`
   flex-direction: row;
   justify-content: center;
   text-align: left;
-  flex-wrap:wrap;
-
+  flex-wrap: wrap;
 `;
 
 const StorySection1Img = styled.div`
-  display:flex;
-  flex-wrap:wrap;
+  display: flex;
+  flex-wrap: wrap;
   width: 430px;
   height: auto;
   margin: 90px 40px 100px 40px;
 
   img {
     width: 100%;
-    margin-bottom:0
+    margin-bottom: 0;
   }
 
   h3 {
@@ -161,10 +130,10 @@ const StorySection1Img = styled.div`
     font-size: 10px;
   }
 
-  @media(max-width:400px){
-  margin-top:50px;
-  margin-bottom:0px;
-}
+  @media (max-width: 400px) {
+    margin-top: 50px;
+    margin-bottom: 0px;
+  }
 
   @media (max-width: 800px) {
     width: 90%;
@@ -186,10 +155,9 @@ const MiddleSection3 = styled.div`
   text-align: center;
   align-items: center;
   margin: 0px 0 100px 0;
-  
-  @media(max-width:400px){
- 
-      margin-bottom:40px;
+
+  @media (max-width: 400px) {
+    margin-bottom: 40px;
   }
 `;
 
@@ -202,101 +170,101 @@ const MiddleSection3Text = styled.div`
   p {
     font-size: 17px;
     line-height: 1.8em;
-    font-weight:100;
-    margin-bottom:50px;
+    font-weight: 100;
+    margin-bottom: 50px;
   }
 
-  @media(max-width:600px){
-    width:70%;
-    margin-top:20px;
-    
+  @media (max-width: 600px) {
+    width: 70%;
+    margin-top: 20px;
+
     p {
-      font-size:12px;
-      width:100%;
-      margin-bottom:30px;
-      }
-}
+      font-size: 12px;
+      width: 100%;
+      margin-bottom: 30px;
+    }
+  }
 `;
 
-// SARA SECTION 
+// SARA SECTION
 
 const SaraSection = styled.div`
-display:flex;
-flex-direction:row;
-flex-wrap:wrap;
-justify-content:center;
-align-items:flex-start;
-text-align:center;
-width:100%;
-`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: center;
+  width: 100%;
+`;
 
 const SaraImg = styled.div`
-
-img {
-  width:400px;
-}
-@media(max-width:400px){
-  img {width:300px;}
-}
-`
+  img {
+    width: 400px;
+  }
+  @media (max-width: 400px) {
+    img {
+      width: 300px;
+    }
+  }
+`;
 
 const SaraText = styled.div`
-text-align:left;
-width:25%;
-margin:20px 40px;
-font-size:12px;
-@media(max-width:800px){
-  width:70%;
-}
-`
+  text-align: left;
+  width: 25%;
+  margin: 20px 40px;
+  font-size: 12px;
+  @media (max-width: 800px) {
+    width: 70%;
+  }
+`;
 
 const CrisSection = styled.div`
-display:flex;
-flex-direction:row;
-flex-wrap:wrap-reverse;
-justify-content:center;
-align-items:flex-start;
-text-align:center;
-width:100%;
-margin-top:100px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap-reverse;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: center;
+  width: 100%;
+  margin-top: 100px;
 
-@media(max-width:400px){
-  margin-top:50px;
-}
-`
+  @media (max-width: 400px) {
+    margin-top: 50px;
+  }
+`;
 
 const CrisImg = styled.div`
-
-img {
-  width:400px;
-  margin-right:100px;
-}
-
-@media(max-width:800px){
-  img {width:400px;
-    margin-right:0;
+  img {
+    width: 400px;
+    margin-right: 100px;
   }
-}
-`
+
+  @media (max-width: 800px) {
+    img {
+      width: 400px;
+      margin-right: 0;
+    }
+  }
+`;
 
 const CrisText = styled.div`
-text-align:left;
-justify-content:center;
-align-items:center;
-width:25%;
-margin:20px 40px;
-font-size:12px;
+  text-align: left;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+  margin: 20px 40px;
+  font-size: 12px;
 
-@media(max-width:800px){
-  width:70%;
-}
-`
-
+  @media (max-width: 800px) {
+    width: 70%;
+  }
+`;
 
 const NameSection = styled.div`
-    margin:0;
+  margin: 0;
 
-    @media(max-width:400px){
-    margin-left:10px;
-}
-`
+  @media (max-width: 400px) {
+    margin-left: 10px;
+  }
+`;

@@ -19,7 +19,7 @@ const PreOrderForm = () => {
   const [message, setMessage] = useState();
 
   //storing context in variable that I named context, to have access to everything
-  const context = useContext(Context);  
+  const context = useContext(Context);
 
   const bookPrice = context.state.bookPrice;
 
@@ -65,7 +65,7 @@ const PreOrderForm = () => {
   return (
     <>
       <DarkBurger />
-      <SendMessageWrapper>      
+      <SendMessageWrapper>
         {sentMessage ? (
           <ResponseDiv>
             {sentMessage === "SENT" && (
@@ -85,8 +85,8 @@ const PreOrderForm = () => {
             </ImageBook>
             <h5>PRICE PER BOOK: {bookPrice} EUR</h5>
             <div>
-              <label htmlFor="amount"> </label>              
-              <input               
+              <label htmlFor="amount"> </label>
+              <input
                 type="number"
                 id="amount"
                 min="0"
@@ -107,7 +107,12 @@ const PreOrderForm = () => {
             </div>
             <div>
               <label htmlFor="phone"></label>
-              <input type="tel" id="phone" required placeholder="Phone number" />
+              <input
+                type="tel"
+                id="phone"
+                required
+                placeholder="Phone number"
+              />
             </div>
             <div>
               <label htmlFor="address"></label>
@@ -148,7 +153,7 @@ const PreOrderForm = () => {
           label={status}
         />
       </SendMessageWrapper>
-    </>    
+    </>
   );
 };
 
@@ -209,7 +214,7 @@ const SentMessageForm = styled.form`
     margin-bottom: 5px;
     color: red;
   }
-  div {    
+  div {
     display: flex;
     flex-direction: row;
     flex-wrap: no wrap;
@@ -248,4 +253,3 @@ const ResponseDiv = styled.div`
     width: 50%;
   }
 `;
-

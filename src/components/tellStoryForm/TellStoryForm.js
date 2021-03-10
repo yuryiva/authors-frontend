@@ -2,7 +2,7 @@ import styled from "styled-components";
 import React, { useState, useContext } from "react";
 import axios from "axios";
 import { Context } from "../../context/Context";
-import DarkBurger from '../header/DarkBurger';
+import DarkBurger from "../header/DarkBurger";
 
 const TellStoryForm = () => {
   const [status, setStatus] = useState("Submit");
@@ -106,22 +106,16 @@ const TellStoryForm = () => {
       <TextWrapper>
         <h4>Why Share?</h4>
         <p>
-          It is a long established fact that a reader will be distracted by the
-          readable content of a page when looking at its layout. The point of
-          using Lorem Ipsum is that it has a more-or-less normal distribution of
-          letters, as opposed to using 'Content here, content here', making it
-          look like readable English. It is a long established fact that a
-          reader will be distracted by the readable content of a page when
-          looking at its layout. The point of using Lorem Ipsum is that it has a
-          more-or-less normal distribution of letters, as opposed to using
-          'Content here, content here', making it look like readable English.{" "}
+          Authxrs is open for submissions of full length manuscripts in every
+          category for our 2021 season. Novels, poetry, short story collections,
+          creative nonfiction, memoir, essay, experimental and hybrid work are
+          all considered and we’ve published multiple books in each genre. Our
+          catalog consists of 120+ full length books and short stories!
         </p>
         <p>
-          It is a long established fact that a reader will be distracted by the
-          readable content of a page when looking at its layout. The point of
-          using Lorem Ipsum is that it has a more-or-less normal distribution of
-          letters, as opposed to using 'Content here, content here', making it
-          look like readable English.{" "}
+          Check out our books and authors while you’re here and please see our
+          submissions form to upload your content and for more information on
+          how to submit.
         </p>
       </TextWrapper>
       {sentMessage ? (

@@ -115,14 +115,14 @@ const FooterDiv = styled.div`
   flex-direction: column;
   flex-wrap: wrap;
   padding: 0 5%;
-  background-color: lightgray;  
+  background-color: lightgray;
 `;
 
 const FooterWrapper = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;   
+  justify-content: space-between;
 
   p {
     font-size: 14px;
@@ -131,14 +131,13 @@ const FooterWrapper = styled.div`
   ${"" /* h4 {
     font-weight: 510;
   } */}
-  
 `;
 
 const FooterLinks = styled.div`
   display: flex;
   justify-content: space-between;
   flex-direction: row;
-  flex-wrap: wrap;  
+  flex-wrap: wrap;
 
   h4 {
     margin-bottom: 10px;
@@ -174,7 +173,6 @@ const OurWork = styled.div`
     :hover {
       text-decoration: underline;
     }
-
   }
 `;
 
@@ -189,7 +187,6 @@ const ContactUs = styled.div`
     :hover {
       text-decoration: underline;
     }
-   
   }
 `;
 
@@ -247,7 +244,7 @@ const Subscribe = styled.div`
   }
 `;
 
-const Copyright = styled.div`  
+const Copyright = styled.div`
   height: 100px;
   width: 100%;
   display: flex;
@@ -258,7 +255,7 @@ const Copyright = styled.div`
 
   p {
     font-size: 14px;
-    font-weight: 300;    
+    font-weight: 300;
   }
 `;
 

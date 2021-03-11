@@ -37,9 +37,13 @@ const DarkHeader = ({ darkDropdown, setDarkDropdown }) => {
             Short stories
           </Link>
 
-          <Link to="/join-the-movement" onClick={handleDarkDropdown}>
-            Join the movement
+          <Link to="/about-us" onClick={handleDarkDropdown}>
+            About Us
           </Link>
+
+          {/* <Link to="/join-the-movement" onClick={handleDarkDropdown}>
+            Join the movement
+          </Link> */}
         </DarkLinkContainer>
       </DarkLinkSection>
     </DarkNavigationMenu>
